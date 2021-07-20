@@ -96,9 +96,17 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://github.com/ocstringham"
   [[params.social]]
+      icon      = "google-scholar" # icon name without the 'fa-'
+      icon_pack = "ai"
+      url       = "https://scholar.google.com/citations?user=3ZhZiQgAAAAJ&hl=en"
+  [[params.social]]
       icon      = "researchgate" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://www.researchgate.net/profile/Oliver-Stringham-2"
+  [[params.social]]
+      icon      = "inaturalist" # icon name without the 'fa-'
+      icon_pack = "ai"
+      url       = "https://www.inaturalist.org/people/olistr"
 
 
 [taxonomies]
@@ -146,11 +154,11 @@ enableEmoji = true
     title = "Contact form"
     url = "/contact/"
     weight = 2
-  [[menu.footer]]
-    name = "Contributors"
-    title = "Contributors"
-    url = "/contributors/"
-    weight = 3
+#  [[menu.footer]]
+#    name = "Contributors"
+#    title = "Contributors"
+#    url = "/contributors/"
+#    weight = 3
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]
