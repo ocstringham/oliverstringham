@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oliver C. Stringham</title>
+    <link>https://oliverstringham.netlify.app/</link>
+    <description>Recent content on Oliver C. Stringham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Netlify</title>
+      <link>https://oliverstringham.netlify.app/collection/day02/01-netlify/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/collection/day02/01-netlify/</guid>
+      <description>So far, we&amp;rsquo;ve been leveraging GitHub Pages for publishing. This works great, but for blogdown we&amp;rsquo;ll start using Netlify. Let&amp;rsquo;s start RIGHT NOW with a site we&amp;rsquo;ve already built and published.
+Pre-requisites     Pick either your postcards site, or your distill site from day 01. Refresh your memory- which repository was it again?</description>
+    </item>
+    
+    <item>
+      <title>A GitHub profile</title>
+      <link>https://oliverstringham.netlify.app/collection/day01/01-github/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/collection/day01/01-github/</guid>
+      <description>Profile     https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile
+Pin projects to profile     https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/pinning-items-to-your-profile
+Profile README     This is new! Let&amp;rsquo;s do it:
+https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme</description>
+    </item>
+    
+    <item>
+      <title>Prework</title>
+      <link>https://oliverstringham.netlify.app/collection/prework/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/collection/prework/</guid>
+      <description>Welcome to the Introducing Yourself Online workshop! We look forward to meeting you. Before attending the workshop, please complete the following prework.
+Set up RStudio Cloud     Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember).</description>
+    </item>
+    
+    <item>
+      <title>A postcard</title>
+      <link>https://oliverstringham.netlify.app/collection/day01/02-postcards/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/collection/day01/02-postcards/</guid>
+      <description>Pre-requisites     First, make sure you have the latest version of the postcards package installed from CRAN:
+install.packages(&amp;quot;postcards&amp;quot;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+ Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).  packageVersion(&amp;quot;postcards&amp;quot;) [1] ‘0.2.0’  Create GitHub repo     Online.</description>
+    </item>
+    
+    <item>
+      <title>Using blogdown</title>
+      <link>https://oliverstringham.netlify.app/collection/day02/02-blogdown/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/collection/day02/02-blogdown/</guid>
+      <description>Pre-requisites     First, make sure you have the latest version of the blogdown package installed from CRAN:
+install.packages(&amp;quot;blogdoown&amp;quot;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+ Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).  packageVersion(&amp;quot;blogdown&amp;quot;) [1] ‘1.0’  Create GitHub repo     Online.</description>
+    </item>
+    
+    <item>
+      <title>A distill site</title>
+      <link>https://oliverstringham.netlify.app/collection/day01/03-distill/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/collection/day01/03-distill/</guid>
+      <description>Pre-requisites     First, make sure you have the latest version of the distill package installed from CRAN:
+install.packages(&amp;quot;distill&amp;quot;)  Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+ Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).  &amp;lt;!-- --&amp;gt; packageVersion(&amp;quot;distill&amp;quot;) [1] ‘1.2’  Create GitHub repo     Online.</description>
+    </item>
+    
+    <item>
+      <title>Warm woolen mittens</title>
+      <link>https://oliverstringham.netlify.app/collection/day02/03-blogdown/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/collection/day02/03-blogdown/</guid>
+      <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
+Here I am: content/collection\day02\03-blogdown\index.md  To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
+My content section is: collection  My layout is: single-series   part 2!     does this work?      now for some very cool things     more     get ready!</description>
+    </item>
+    
+    <item>
+      <title>Dataset of seized wildlife and their intended uses</title>
+      <link>https://oliverstringham.netlify.app/publications/illegal-wildlife-trade-seizures-dataset/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/illegal-wildlife-trade-seizures-dataset/</guid>
+      <description>Abstract     The illegal wildlife trade (IWT) threatens conservation and biosecurity efforts. The Internet has greatly facilitated the trade of wildlife, and researchers have increasingly examined the Internet to uncover illegal trade. However, most efforts to locate illegal trade on the Internet are targeted to one or few taxa or products. Large-scale efforts to find illegal wildlife on the Internet (e-commerce, social media, dark web) may be facilitated by a systematic compilation of illegally traded wildlife taxa and their uses.</description>
+    </item>
+    
+    <item>
+      <title>Reptile smuggling is predicted by trends in the legal exotic pet trade</title>
+      <link>https://oliverstringham.netlify.app/publications/australian-reptile-smuggling-predicted-by-legal-trade/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/australian-reptile-smuggling-predicted-by-legal-trade/</guid>
+      <description>Abstract     Live animal smuggling presents a suite of conservation and biosecurity concerns, including invasive species and disease risks. However, understanding why certain species are smuggled over others, and predicting which species will be smuggled, remains unexplored. Here, we compared the live reptile species smuggled to Australia (75 species) to the legal trade of live reptile species in the United States (US). Almost all smuggled species were found in the legal US exotic pet market (98.</description>
+    </item>
+    
+    <item>
+      <title>Text classification to streamline online wildlife trade analyses</title>
+      <link>https://oliverstringham.netlify.app/publications/text-classification-to-streamline-online-wildlife-trade-analyses/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/text-classification-to-streamline-online-wildlife-trade-analyses/</guid>
+      <description>Abstract     Automated monitoring of websites that trade wildlife is increasingly necessary to inform conservation and biosecurity efforts. However, e-commerce and wildlife trading websites can contain a vast number of advertisements, an unknown proportion of which may be irrelevant to researchers and practitioners. Given that many wildlife-trade advertisements have an unstructured text format, automated identification of relevant listings has not traditionally been possible, nor attempted. Other scientific disciplines have solved similar problems using machine learning and natural language processing models, such as text classifiers.</description>
+    </item>
+    
+    <item>
+      <title>Strengthening protection of endemic wildlife threatened by the international pet trade: The case of the Australian shingleback lizard</title>
+      <link>https://oliverstringham.netlify.app/publications/australian-shingleback-illegal-trade/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/australian-shingleback-illegal-trade/</guid>
+      <description>Abstract     Unsustainable wildlife trade threatens an increasing number of species globally. Australia has a particularly rich and endemic herpetofauna, which is coveted on the international pet market. While Australia implements domestic protection of most of its native species, there is little to no regulation of international trade once live animals have been smuggled out of the country. This is a threat for a variety of rare, unique and/or range-restricted species, subspecies and locality morphs.</description>
+    </item>
+    
+    <item>
+      <title>The International Vertebrate Pet Trade Network and Insights from US Imports of Exotic Pets</title>
+      <link>https://oliverstringham.netlify.app/publications/pet-trade-network/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/pet-trade-network/</guid>
+      <description>The international trade in exotic vertebrate pets provides key social and economic benefits but also drives associated ecological, ethical, and human health impacts. Here, we represent and review the structure of the pet trade as a network composed of different market actors (nodes) and trade flows (links). As a case study of how data-informed networks can realize this goal, we quantified spatial and temporal patterns in pets imported to the United States. Our framework and case study illustrate how network approaches can help to inform and manage the effects of the growing demand for exotic pets.</description>
+    </item>
+    
+    <item>
+      <title>Broadband Access [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2021-05-17-louisianna-broadband/</link>
+      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2021-05-17-louisianna-broadband/</guid>
+      <description>This week I used ggplot to create a map of broadband internet access across Louisiana, USA. I then used the ggiraph package to convert the map to html. Hover over each subdivision to view the percentage of people with access to broadband internet as of 2017. Code below plot.
+{&#34;x&#34;:{&#34;html&#34;:&#34;\n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 25%\n \n \n 50%\n \n \n 75%\n \n \n Louisiana, USA\n \n \n Acces to Broadband Internet\n \n \n&#34;</description>
+    </item>
+    
+    <item>
+      <title>Managing propagule pressure to prevent invasive species establishments: propagule size, number, and risk–release curve</title>
+      <link>https://oliverstringham.netlify.app/publications/manage-propagule-pressure-to-prevent-invasive-species-establishments/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/manage-propagule-pressure-to-prevent-invasive-species-establishments/</guid>
+      <description>Keeping propagule pressure low can reduce the probability a non-native species will establish in a new location. Here we develop a mathematical framework that can determine the required reduction in levels for propagule size and number (representative of management actions) to maintain a target establishment probability. Our tool can serve to guide the development of new invasive species management plans in a transparent and quantitative manner. Together with information on the costs associated with approaches to reducing propagule pressure, our tool can be used to identify the most cost‐effective approach to prevent invasive species establishments.</description>
+    </item>
+    
+    <item>
+      <title>HBCU Enrollment [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/</guid>
+      <description>This week I explored the TidyTuesday dataset of the week: Fall enrollment in degree-granting historically Black colleges and universities (HBCU). I plotted the proportion of student enrollment by gender over time. Plot made in R with ggplot2.</description>
+    </item>
+    
+    <item>
+      <title>The Bachelor (TV Show) [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2021-01-31-the-bachelor/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2021-01-31-the-bachelor/</guid>
+      <description>For this #TidyTuesday, I plotted the age of contestants on The Bachelor across &amp;gt;20 seasons. There was no significant trend in the age of contestants over time. The average age is between 25 and 27 with some variation from 21 to 34.</description>
+    </item>
+    
+    <item>
+      <title>Tate Art [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2021-01-15-tate-art/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2021-01-15-tate-art/</guid>
+      <description>#TidyTuesday dataset of the week is the art collection of Tate Art Museum. I made a visual of the number of acquisitions made by Tate by decade taking into account what decade the art was created.</description>
+    </item>
+    
+    <item>
+      <title>A campfire</title>
+      <link>https://oliverstringham.netlify.app/talk/campfire/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/talk/campfire/</guid>
+      <description>I&amp;rsquo;m really excited to give this talk! Stay tuned for video and slides.</description>
+    </item>
+    
+    <item>
+      <title>A seedling</title>
+      <link>https://oliverstringham.netlify.app/talk/second-seedling/</link>
+      <pubDate>Fri, 01 Jan 2021 14:15:59 -0600</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/talk/second-seedling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BBC Women of 2020 [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2020-12-09-bbc-women-of-the-year/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2020-12-09-bbc-women-of-the-year/</guid>
+      <description>#TidyTuesday dataset of the week is the BBC Women of 2020! I made an interactive web map using #rstats and LeafletJS</description>
+    </item>
+    
+    <item>
+      <title>A guide to using the Internet to monitor and quantify the wildlife trade</title>
+      <link>https://oliverstringham.netlify.app/publications/guide-to-using-internet-to-study-wildlife-trade/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/guide-to-using-internet-to-study-wildlife-trade/</guid>
+      <description>The internet is a vast source of wildlife trade data. Here, we present an accessible guide for Internet‐based wildlife trade surveillance, which uses a repeatable and systematic method to automate data collection from relevant websites. Our guide is adaptable to the multitude of trade‐based contexts including different focal taxa or derived parts, and locations of interest.</description>
+    </item>
+    
+    <item>
+      <title>Response to the Department of Agriculture, Water and the Environment&#39;s &#39;Import risk review for psittacine birds from all countries&#39;</title>
+      <link>https://oliverstringham.netlify.app/publications/response-to-dawe-parrot-risk-review/</link>
+      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/response-to-dawe-parrot-risk-review/</guid>
+      <description>We provide comments to The Department of Agriculture, Water and the Environment on their ‘Import risk review for psittacine birds from all countries’ draft report. Due to  serious key omissions, we do not support the import of psittacine birds based on the evidence provided in the risk review. The report does not provide sufficient transparency, nor evidence-based assessments of all benefits, risks, or associated costs, of allowing the import of psittacine birds. If the Department wishes to pursue this assessment, then future risk reviews must include the associated costs of facilitating new invasive species, and provide justification on the broader societal benefits of allowing import of psittacine birds. It is our professional scientific opinion that the benefits of importing psittacine birds are outweighed by the significant damages caused by the potential introduction of new invasive species.</description>
+    </item>
+    
+    <item>
+      <title>Australia’s wish list of exotic pets: biosecurity and conservation implications of desired alien and illegal pet species</title>
+      <link>https://oliverstringham.netlify.app/publications/australia-desire-for-exotic-pets/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/australia-desire-for-exotic-pets/</guid>
+      <description>The live pet trade is a major pathways for invasive species. Australia imposes tough regulations against the trade of non-native animals as pets. However, there exists an illegal trade of these animals in Australia that threatens biosecurity. Here, we used government records of enquiries from the general public to assess the characteristics of species that are likely desired as pets. We found that desired species are more likely to invasive species elsewhere or at risk of extinction due to trade. Our findings suggest that in absence of strict laws, an unregulated pet trade would threaten Australian biosecurity and global conservation efforts.</description>
+    </item>
+    
+    <item>
+      <title>Illegal Wildlife Trade: A Threat to Environmental Biosecurity, Biodiversity, Human Health and Wellbeing</title>
+      <link>https://oliverstringham.netlify.app/publications/illegal-wildlife-trade-infographic/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/illegal-wildlife-trade-infographic/</guid>
+      <description>Illegal wildlife trade (IWT) directly threatens tens of thousands of species. It is critical that it is taken seriously in order to safeguard our environmental assets and provide resilient landscapes for our unique flora and fauna. Here, we provide an infographic of IWT including: what it is, how bad is it, why can&amp;rsquo;t we stop it, and solutions.</description>
+    </item>
+    
+    <item>
+      <title>A seedling</title>
+      <link>https://oliverstringham.netlify.app/talk/seedling/</link>
+      <pubDate>Mon, 13 Jan 2020 14:15:59 -0600</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/talk/seedling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Toronto Homeless Shelters [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/</guid>
+      <description>The #TidyTuesday data of the week come from #OpenDataToronto on homeless shelters in Toronto and their occupancy from 2017 - 2019. I took a try at web map with help from #rstats and Leafletjs.</description>
+    </item>
+    
+    <item>
+      <title>Washington Hiking [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/</guid>
+      <description>#TidyTuesday of the week for Washington Hiking data from @ WTA_hikers. You’re looking at the most common words used to describe parks in each region of WA (word clouds) and the most unique words used to describe each region (tf-idf). View code here.</description>
+    </item>
+    
+    <item>
+      <title>Wildlife Trade</title>
+      <link>https://oliverstringham.netlify.app/research/wildlife_trade/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/research/wildlife_trade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tachyons for Style</title>
+      <link>https://oliverstringham.netlify.app/project/giraffes/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/project/giraffes/</guid>
+      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
+    </item>
+    
+    <item>
+      <title>The Internet</title>
+      <link>https://oliverstringham.netlify.app/research/the_internet/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/research/the_internet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Palmer Penguins</title>
+      <link>https://oliverstringham.netlify.app/project/penguins/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/project/penguins/</guid>
+      <description>“Grid is the very first CSS module created specifically to solve the layout problems we&amp;rsquo;ve all been hacking our way around for as long as we&amp;rsquo;ve been making websites.”     — Chris House, A Complete Guide to CSS Grid Layout 1
+ Since I began building websites in Y2K, I&amp;rsquo;ve lost count how many times the phrase &amp;ldquo;&amp;hellip;there&amp;rsquo;s got to be a better way to do this&amp;rdquo; has passed my lips.</description>
+    </item>
+    
+    <item>
+      <title>Bakeoff</title>
+      <link>https://oliverstringham.netlify.app/project/bakeoff/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/project/bakeoff/</guid>
+      <description>Formspree makes it easy to receive submissions from HTML forms on your static website.      Functional Form     This theme has a form-to-email feature built in, thanks to the simple Formspree integration. All you need to activate the form is a valid recipient email address saved in the front matter of the form (/content/forms/contact.md). Of course, the example shown below (your@email.here) must not be used.</description>
+    </item>
+    
+    <item>
+      <title>Wildlife Conservation</title>
+      <link>https://oliverstringham.netlify.app/research/wildlife_conservation/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/research/wildlife_conservation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When pets become pests: the role of the exotic pet trade in producing invasive vertebrate animals</title>
+      <link>https://oliverstringham.netlify.app/publications/when-pets-become-pests/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/when-pets-become-pests/</guid>
+      <description>The exotic pet trade is a multi-billion dollar industry involving thousands of animal species. Research has historically focused only the conservation and disease risks, however the risk of pets becoming invasive species has been overlooked. We show this trade is now the leading contributor of non-native establishments and invasions worldwide among vertebrates. We highlight areas of future research/policy changes needed to avoid more invasive pets in the future.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://oliverstringham.netlify.app/contact/</link>
+      <pubDate>Mon, 25 Feb 2019 13:38:41 -0600</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/contact/</guid>
+      <description>** Contact page don&amp;rsquo;t contain a body, just the front matter above. See form.html in the layouts folder.
+Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.</description>
+    </item>
+    
+    <item>
+      <title>Typography Styles &amp; Element Examples</title>
+      <link>https://oliverstringham.netlify.app/elements/</link>
+      <pubDate>Mon, 18 Feb 2019 12:27:33 -0600</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/elements/</guid>
+      <description>Font Sizes   A A A A A A A A   6rem
+(96px) 5rem
+(80px) 3rem
+(48px) 2.25rem
+(36px) 1.5rem
+(24px) 1.25rem
+(20px) 1rem
+(16px) .875rem
+(14px)     Type Samples Head&amp;shy;line Sub&amp;shy;head&amp;shy;line Level 1 Heading One page to rule them all...well, not really. This page displays sample typography and page elements to illustrate their style. Things like headings and paragraphs showing the beautiful type scale, form elements, tabular data, and image layouts just to name a few.</description>
+    </item>
+    
+    <item>
+      <title>Pet problems: Biological and economic factors that influence the release of alien reptiles and amphibians by pet owners</title>
+      <link>https://oliverstringham.netlify.app/publications/pet-problems-reptiles-amphibians-correlates-of-release/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/pet-problems-reptiles-amphibians-correlates-of-release/</guid>
+      <description>The trade of non-native animals as pets the main pathway for new invasive species if they become released into the wild. Here, we examined the trade in non-native reptiles and amphibians as pets in the United States. We found c. 1,700 species traded in the past two decades of which 126 species have been recorded as released in the wild. Using machine learning models, we show that larger-bodied, longer-lived species, who sold for cheaper prices were more likely to have been released. We propose policies and education focused on species with these characteristics in order to curb the impacts of new invasive species that originated as pets.</description>
+    </item>
+    
+    <item>
+      <title>High annual survival in infected wildlife populations may veil a persistent extinction risk from disease</title>
+      <link>https://oliverstringham.netlify.app/publications/indiana-bat-conservation/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/indiana-bat-conservation/</guid>
+      <description>White-nose syndrome (WNS) has caused catastrophic declines in some bat species, while others appear less impacted. We conducted a mark–recapture study of federally endangered Indiana bats (Myotis sodalis) during 2011–2016 and found survival had decreased by around 4 percentage points. We ran population models based on new survival data and results suggested there will be future population declines for the Indiana bat.</description>
+    </item>
+    
+    <item>
+      <title> Connecting with Our Waterways: Public Access and Its Stewardship in the New York – New Jersey Harbor Estuary</title>
+      <link>https://oliverstringham.netlify.app/publications/public-access-to-waterways-ny-nj-harbor-estuary/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/public-access-to-waterways-ny-nj-harbor-estuary/</guid>
+      <description>Report</description>
+    </item>
+    
+    <item>
+      <title>A Novel Tool for Making Policy Recommendations Based on PVA: Helping Theory Become Practice</title>
+      <link>https://oliverstringham.netlify.app/publications/conservation-policy-recommendations-from-pva/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/conservation-policy-recommendations-from-pva/</guid>
+      <description>Mathematical models that inform conservation efforts always have underlying uncertainty. We show that in many applied cases, this uncertainty results in a non-trivial probability that management action will have no benefit to conservation. We encourage future use of population viability analysis (PVA) to explicitly account for this uncertainty when considering whether or not to implement management actions.</description>
+    </item>
+    
+    <item>
+      <title>A modeling methodology to evaluate the efficacy of predator exclosures versus predator control</title>
+      <link>https://oliverstringham.netlify.app/publications/modelling-predator-exclosures-vs-control/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/modelling-predator-exclosures-vs-control/</guid>
+      <description>Endangered species face many threats, including from invasive predators. Here, we developed a modelling method to compare different management options for controlling predators. We then applied this method to compared management options for the endangered shorebird, the piping plover, which faces predation threats from the red fox along New Jersey beaches.</description>
+    </item>
+    
+    <item>
+      <title>Effects of Land Development on Water Resources of the Pinelands Region</title>
+      <link>https://oliverstringham.netlify.app/publications/pinelands-effects-of-land-development-on-water/</link>
+      <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/pinelands-effects-of-land-development-on-water/</guid>
+      <description>Report detailing the extent to which water and water-related resources are modified by land development in the protected Pinelands region of New Jersey, USA.</description>
+    </item>
+    
+    <item>
+      <title>CV - Curriculum Vitae</title>
+      <link>https://oliverstringham.netlify.app/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/cv/</guid>
+      <description>function resizeIframe(obj) {obj.style.height = 1.05*obj.contentWindow.document.body.scrollHeight + &#39;px&#39;;}</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://oliverstringham.netlify.app/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/license/</guid>
+      <description>My blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License.
+  </description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://oliverstringham.netlify.app/drafts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/drafts/</guid>
+      <description>Peer-Reviewed Papers     Stringham O.C., Moncayo, S., Thomas, E., Heinrich, S., Toomes, A., Maher, J., Hill, K.G.W., Mitchell, L., Ross, J.V., Shepherd, C.R., Cassey, P. (in review) Dataset of seized wildlife and their intended uses. Preprint
+Stringham O.C., García-Díaz, P., Toomes, A., Ross, J.V., Mitchell, L., Cassey, P. (in revision) Reptile smuggling is predicted by trends in the legal exotic pet trade. Preprint
+Stringham O.C., Moncayo, S.</description>
+    </item>
+    
+  </channel>
+</rss>

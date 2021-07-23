@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.85.0" />
+<title>Toronto Homeless Shelters [Data Visualization] | Oliver C. Stringham</title>
+
+
+<meta property="twitter:site" content="@OliverStringham">
+<meta property="twitter:creator" content="@OliverStringham">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Personal website of Oliver C. Stringham">
+
+
+<meta property="og:site_name" content="Oliver C. Stringham">
+<meta property="og:title" content="Toronto Homeless Shelters [Data Visualization] | Oliver C. Stringham">
+<meta property="og:description" content="Personal website of Oliver C. Stringham" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/featured.png" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/featured.png" >
+    
+    
+  <meta itemprop="name" content="Toronto Homeless Shelters [Data Visualization]">
+<meta itemprop="description" content="The #TidyTuesday data of the week come from #OpenDataToronto on homeless shelters in Toronto and their occupancy from 2017 - 2019. I took a try at web map with help from #rstats and Leafletjs."><meta itemprop="datePublished" content="2020-01-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-01-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="843"><meta itemprop="image" content="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/featured.png">
+<meta itemprop="keywords" content="r,tidy-tuesday,geocode,leaflet," />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/chameleon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/chameleon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.2279f698efda334a4f4d752d9b3c72537d922540c6370c54ad709a41eedf4eab.css" integrity="sha256-Inn2mO/aM0pPTXUtmzxyU32SJUDGNwxUrXCaQe7fTqs=" media="screen">
+  
+  
+  <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham.netlify.app/" title="Home">
+      <img src="/img/chameleon.ico" class="dib db-l h2 w-auto" alt="Oliver C. Stringham">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About Oliver">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/research/" title="Project Themes">Research</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publications/" title="Publications">Publications</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/cv/" title="CV">CV</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Toronto Homeless Shelters [Data Visualization]</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a>  <a href="https://oliverstringham.netlify.app/categories/gis">gis</a> </p>
+        <p class="f7 db mv0 ttu">January 12, 2020</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/jquery/jquery.min.js"></script>
+<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.css" rel="stylesheet" />
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.js"></script>
+<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/proj4/proj4.min.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-binding/leaflet.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/jquery/jquery.min.js"></script>
+<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.css" rel="stylesheet" />
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.js"></script>
+<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/proj4/proj4.min.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-binding/leaflet.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+<p>The #TidyTuesday data of the week come from #OpenDataToronto on homeless shelters in Toronto and their occupancy from 2017 - 2019. I took a try at web map with help from #rstats and 
+<a href="https://rstudio.github.io/leaflet/" target="_blank" rel="noopener">Leafletjs</a>.</p>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[43.6915897585093,43.7685974769231,43.6658599,43.6651723,43.6919186,43.6579266473684,43.6595035,43.689112648,43.660052,43.742472,43.742472,43.658445145098,43.6458855,43.763328,43.77280625,43.7607355,43.6520802,43.7156276,43.661551,43.6676332,43.656175,43.72783979,43.658377,43.71729495,43.6459665,43.68919647,43.69077164,43.69077164,43.6814522,43.6601389,43.6604847,43.6510367,43.6487433,43.665538,43.64649445,43.6522086666667,43.6646584,43.6620206,43.739153,43.7342038853474,43.65866645,43.6597004527806,43.6545261,43.7071985,43.6718012,43.659289,43.6487433,43.6625359142857,43.6179513,43.659977,43.798116454734,43.6735007,43.66582305,43.6519791,43.6518512,43.648291,43.64882675,43.66790085,43.7363042,43.7175246333333,43.6753001106565,43.6849601074389],[-79.2642263083973,-79.2673747307692,-79.4459185769231,-79.4188638,-79.4398677,-79.4071056368421,-79.3814353,-79.298146284,-79.374465,-79.4965543,-79.4965543,-79.4087305686274,-79.3979913,-79.3609144199367,-79.4147491381521,-79.1966999325361,-79.3743488,-79.4674122,-79.3788001,-79.3792530870913,-79.3624789,-79.26629156,-79.4432364,-79.2587374833333,-79.3860604,-79.46210952,-79.34949638,-79.34949638,-79.4181972,-79.3429398,-79.3717112,-79.3751524666667,-79.3931384,-79.4631271,-79.4063005317308,-79.372521,-79.3736596,-79.3294881,-79.5656501661671,-79.2225310558894,-79.4007546474985,-79.3743233544945,-79.3668494,-79.5042485576923,-79.3737851342082,-79.37272525,-79.3931384,-79.3382021428571,-79.4973594,-79.378375,-79.3950977373244,-79.406376225641,-79.3792045327615,-79.3913973451781,-79.4036296,-79.3980297,-79.39829125,-79.4055445043087,-79.5808276,-79.2831322,-79.4015187086965,-79.3891954074225],[1.985,18.275,3.83,2.395,1.86,30.265,4.13,2.995,1.555,0.83,0.845,0.365,1.665,1.35,1.11,19.03,1.505,2.4,2.01,2.06,3.375,2.78,1.01,4.585,2.895,1.515,1.245,1.365,3.07,3.21,3.63,1.335,1.285,3.395,2.17,4.125,11.705,2.05,1.47,2.315,2.475,17.03,10.15,0.605,2.22,1.715,1.305,0.73,1.37,1.505,1.03,0.83,1.18,0.98,4.63,1.36,1.36,0.8,1.795,1.42,1.745,2.035],null,null,{"interactive":true,"className":"","stroke":true,"color":["#FFA500","#FF6D00","#FFA500","#FFA500","#FFA500","#FF0000","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FF6D00","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FF6D00","#FFA500","#FFA500","#FFA500","#FFA500","#FF6D00","#FF6D00","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#FFA500","#FF6D00","#FFA500","#FFA500","#FFA500","#FF0000","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FF6D00","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FF6D00","#FFA500","#FFA500","#FFA500","#FFA500","#FF6D00","#FF6D00","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500"],"fillOpacity":0.2},null,null,["<b style='color:blue'>Birchmount Residence<\/b><br/>Average weekly Occupancy: 397<br/>Average weekly Percent Maximum Capacity: 96%","<b style='color:blue'>Birkdale Residence<\/b><br/>Average weekly Occupancy: 3655<br/>Average weekly Percent Maximum Capacity: 87%","<b style='color:blue'>Christie Ossington Men's Hostel<\/b><br/>Average weekly Occupancy: 766<br/>Average weekly Percent Maximum Capacity: 95%","<b style='color:blue'>Christie Refugee Welcome Centre<\/b><br/>Average weekly Occupancy: 479<br/>Average weekly Percent Maximum Capacity: 92%","<b style='color:blue'>Cornerstone Place<\/b><br/>Average weekly Occupancy: 372<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>COSTI Reception Centre<\/b><br/>Average weekly Occupancy: 6053<br/>Average weekly Percent Maximum Capacity: 88%","<b style='color:blue'>Covenant House<\/b><br/>Average weekly Occupancy: 826<br/>Average weekly Percent Maximum Capacity: 97%","<b style='color:blue'>Dixon Hall - Heyworth House<\/b><br/>Average weekly Occupancy: 599<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>Dixon Hall - Schoolhouse<\/b><br/>Average weekly Occupancy: 311<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>Downsview Dells<\/b><br/>Average weekly Occupancy: 166<br/>Average weekly Percent Maximum Capacity: 86%","<b style='color:blue'>Downsview Dells<\/b><br/>Average weekly Occupancy: 169<br/>Average weekly Percent Maximum Capacity: 87%","<b style='color:blue'>Eagles Nest Transition House<\/b><br/>Average weekly Occupancy: 73<br/>Average weekly Percent Maximum Capacity: 88%","<b style='color:blue'>Eva's Phoenix<\/b><br/>Average weekly Occupancy: 333<br/>Average weekly Percent Maximum Capacity: 97%","<b style='color:blue'>Eva's Place<\/b><br/>Average weekly Occupancy: 270<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>Eva's Satellite<\/b><br/>Average weekly Occupancy: 222<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>Family Residence<\/b><br/>Average weekly Occupancy: 3806<br/>Average weekly Percent Maximum Capacity: 102%","<b style='color:blue'>Fred Victor Women's Hostel<\/b><br/>Average weekly Occupancy: 301<br/>Average weekly Percent Maximum Capacity: 97%","<b style='color:blue'>Fred Victor, BUS<\/b><br/>Average weekly Occupancy: 480<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>FV Women's Transition to Housing<\/b><br/>Average weekly Occupancy: 402<br/>Average weekly Percent Maximum Capacity: 97%","<b style='color:blue'>FV Women's Transition to Housing<\/b><br/>Average weekly Occupancy: 412<br/>Average weekly Percent Maximum Capacity: 95%","<b style='color:blue'>Good Shepherd Centre<\/b><br/>Average weekly Occupancy: 675<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>HFS - Kennedy Shelter<\/b><br/>Average weekly Occupancy: 556<br/>Average weekly Percent Maximum Capacity: 97%","<b style='color:blue'>HFS - Savard's Womens' Shelter<\/b><br/>Average weekly Occupancy: 202<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>HFS - Scarborough Shelter<\/b><br/>Average weekly Occupancy: 917<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>HFS - Strachan House<\/b><br/>Average weekly Occupancy: 579<br/>Average weekly Percent Maximum Capacity: 96%","<b style='color:blue'>Horizons for Youth<\/b><br/>Average weekly Occupancy: 303<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>Kennedy House Youth shelter<\/b><br/>Average weekly Occupancy: 249<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>Kennedy House Youth Shelter<\/b><br/>Average weekly Occupancy: 273<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>Na-Me-Res<\/b><br/>Average weekly Occupancy: 614<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>Red Door Queen Street<\/b><br/>Average weekly Occupancy: 642<br/>Average weekly Percent Maximum Capacity: 93%","<b style='color:blue'>Robertson House<\/b><br/>Average weekly Occupancy: 726<br/>Average weekly Percent Maximum Capacity: 117%","<b style='color:blue'>S2H Assessment and Referral Ctre<\/b><br/>Average weekly Occupancy: 267<br/>Average weekly Percent Maximum Capacity: 92%","<b style='color:blue'>S2H Assessment and Referral Ctre<\/b><br/>Average weekly Occupancy: 257<br/>Average weekly Percent Maximum Capacity: 89%","<b style='color:blue'>Salvation Army - Evangeline Res<\/b><br/>Average weekly Occupancy: 679<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>Salvation Army - Florence Booth<\/b><br/>Average weekly Occupancy: 434<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>Salvation Army - Gateway<\/b><br/>Average weekly Occupancy: 825<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>Salvation Army - Maxwell Meighen<\/b><br/>Average weekly Occupancy: 2341<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>Salvation Army - New Hope Leslie<\/b><br/>Average weekly Occupancy: 410<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>Salvation Army Islington Seniors<\/b><br/>Average weekly Occupancy: 294<br/>Average weekly Percent Maximum Capacity: 96%","<b style='color:blue'>Scarborough Village Residence<\/b><br/>Average weekly Occupancy: 463<br/>Average weekly Percent Maximum Capacity: 96%","<b style='color:blue'>Scott Mission Men's Ministry<\/b><br/>Average weekly Occupancy: 495<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>Seaton House<\/b><br/>Average weekly Occupancy: 3406<br/>Average weekly Percent Maximum Capacity: 95%","<b style='color:blue'>Sojourn House<\/b><br/>Average weekly Occupancy: 2030<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>Sojourn House - Queens Drive<\/b><br/>Average weekly Occupancy: 121<br/>Average weekly Percent Maximum Capacity: 90%","<b style='color:blue'>St. Simon's Shelter<\/b><br/>Average weekly Occupancy: 444<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>Street Haven<\/b><br/>Average weekly Occupancy: 343<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>Streets To Homes<\/b><br/>Average weekly Occupancy: 261<br/>Average weekly Percent Maximum Capacity: 90%","<b style='color:blue'>SVDP - Amelie House<\/b><br/>Average weekly Occupancy: 146<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>SVDP - Elisa House<\/b><br/>Average weekly Occupancy: 274<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>SVDP - Mary's Home<\/b><br/>Average weekly Occupancy: 301<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>SVDP - St. Clare's Residence<\/b><br/>Average weekly Occupancy: 206<br/>Average weekly Percent Maximum Capacity: 100%","<b style='color:blue'>Toronto Community Hostel<\/b><br/>Average weekly Occupancy: 166<br/>Average weekly Percent Maximum Capacity: 92%","<b style='color:blue'>Turning Point Youth Services<\/b><br/>Average weekly Occupancy: 236<br/>Average weekly Percent Maximum Capacity: 98%","<b style='color:blue'>Univ Settlement House - OOTC<\/b><br/>Average weekly Occupancy: 196<br/>Average weekly Percent Maximum Capacity: 34%","<b style='color:blue'>Women's Residence<\/b><br/>Average weekly Occupancy: 926<br/>Average weekly Percent Maximum Capacity: 97%","<b style='color:blue'>YMCA House<\/b><br/>Average weekly Occupancy: 272<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>YMCA House<\/b><br/>Average weekly Occupancy: 272<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>YMCA Sprott House<\/b><br/>Average weekly Occupancy: 160<br/>Average weekly Percent Maximum Capacity: 93%","<b style='color:blue'>Youth Without Shelter<\/b><br/>Average weekly Occupancy: 359<br/>Average weekly Percent Maximum Capacity: 99%","<b style='color:blue'>YouthLink Shelter<\/b><br/>Average weekly Occupancy: 284<br/>Average weekly Percent Maximum Capacity: 94%","<b style='color:blue'>YWCA-348 Davenport<\/b><br/>Average weekly Occupancy: 349<br/>Average weekly Percent Maximum Capacity: 95%","<b style='color:blue'>YWCA - First Stop Woodlawn<\/b><br/>Average weekly Occupancy: 407<br/>Average weekly Percent Maximum Capacity: 99%"],null,["Birchmount Residence","Birkdale Residence","Christie Ossington Men's Hostel","Christie Refugee Welcome Centre","Cornerstone Place","COSTI Reception Centre","Covenant House","Dixon Hall - Heyworth House","Dixon Hall - Schoolhouse","Downsview Dells","Downsview Dells","Eagles Nest Transition House","Eva's Phoenix","Eva's Place","Eva's Satellite","Family Residence","Fred Victor Women's Hostel","Fred Victor, BUS","FV Women's Transition to Housing","FV Women's Transition to Housing","Good Shepherd Centre","HFS - Kennedy Shelter","HFS - Savard's Womens' Shelter","HFS - Scarborough Shelter","HFS - Strachan House","Horizons for Youth","Kennedy House Youth shelter","Kennedy House Youth Shelter","Na-Me-Res","Red Door Queen Street","Robertson House","S2H Assessment and Referral Ctre","S2H Assessment and Referral Ctre","Salvation Army - Evangeline Res","Salvation Army - Florence Booth","Salvation Army - Gateway","Salvation Army - Maxwell Meighen","Salvation Army - New Hope Leslie","Salvation Army Islington Seniors","Scarborough Village Residence","Scott Mission Men's Ministry","Seaton House","Sojourn House","Sojourn House - Queens Drive","St. Simon's Shelter","Street Haven","Streets To Homes","SVDP - Amelie House","SVDP - Elisa House","SVDP - Mary's Home","SVDP - St. Clare's Residence","Toronto Community Hostel","Turning Point Youth Services","Univ Settlement House - OOTC","Women's Residence","YMCA House","YMCA House","YMCA Sprott House","Youth Without Shelter","YouthLink Shelter","YWCA-348 Davenport","YWCA - First Stop Woodlawn"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addProviderTiles","args":["CartoDB.Positron",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addLegend","args":[{"colors":["#FFA500","#FF6D00","#FF3700","#FF0000"],"labels":["0 &ndash; 2,000","2,000 &ndash; 4,000","4,000 &ndash; 6,000","6,000 &ndash; 8,000"],"na_color":null,"na_label":"NA","opacity":1,"position":"bottomright","type":"bin","title":"Weekly\nAverage\nOccupancy","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[43.6179513,43.798116454734],"lng":[-79.5808276,-79.1966999325361]}},"evals":[],"jsHooks":[]}</script>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">January 12, 2020</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">4 minute read, 843 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a>  <a href="https://oliverstringham.netlify.app/categories/gis">gis</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://oliverstringham.netlify.app/tags/r">r</a>  <a href="https://oliverstringham.netlify.app/tags/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/tags/geocode">geocode</a>  <a href="https://oliverstringham.netlify.app/tags/leaflet">leaflet</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/2021-05-17-louisianna-broadband/">Broadband Access [Data Visualization]</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2021-02-02-hbcu-enrollment/">HBCU Enrollment [Data Visualization]</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2021-01-31-the-bachelor/">The Bachelor (TV Show) [Data Visualization]</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://oliverstringham.netlify.app/blog/2020-12-09-bbc-women-of-the-year/">&larr; BBC Women of 2020 [Data Visualization]</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/">Washington Hiking [Data Visualization] &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="apreshill/apero"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2021 Oliver C. Stringham
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="mailto:oliverstringham@gmail.com" title="envelope" >
+      <i class="fas fa-envelope fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/hashtag/OliverStringham" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/ocstringham/oliverstringham" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=3ZhZiQgAAAAJ&amp;hl=en" title="google-scholar" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Oliver-Stringham-2" title="researchgate" target="_blank" rel="noopener">
+      <i class="fab fa-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.inaturalist.org/people/olistr" title="inaturalist" target="_blank" rel="noopener">
+      <i class="ai ai-inaturalist fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+</footer>
+
+      </div>
+    </body>
+</html>

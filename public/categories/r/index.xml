@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>r on Oliver C. Stringham</title>
+    <link>https://oliverstringham.netlify.app/categories/r/</link>
+    <description>Recent content in r on Oliver C. Stringham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 17 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham.netlify.app/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Broadband Access [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2021-05-17-louisianna-broadband/</link>
+      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2021-05-17-louisianna-broadband/</guid>
+      <description>This week I used ggplot to create a map of broadband internet access across Louisiana, USA. I then used the ggiraph package to convert the map to html. Hover over each subdivision to view the percentage of people with access to broadband internet as of 2017. Code below plot.
+{&#34;x&#34;:{&#34;html&#34;:&#34;\n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 25%\n \n \n 50%\n \n \n 75%\n \n \n Louisiana, USA\n \n \n Acces to Broadband Internet\n \n \n&#34;</description>
+    </item>
+    
+    <item>
+      <title>HBCU Enrollment [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/</guid>
+      <description>This week I explored the TidyTuesday dataset of the week: Fall enrollment in degree-granting historically Black colleges and universities (HBCU). I plotted the proportion of student enrollment by gender over time. Plot made in R with ggplot2.</description>
+    </item>
+    
+    <item>
+      <title>The Bachelor (TV Show) [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2021-01-31-the-bachelor/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2021-01-31-the-bachelor/</guid>
+      <description>For this #TidyTuesday, I plotted the age of contestants on The Bachelor across &amp;gt;20 seasons. There was no significant trend in the age of contestants over time. The average age is between 25 and 27 with some variation from 21 to 34.</description>
+    </item>
+    
+    <item>
+      <title>Tate Art [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2021-01-15-tate-art/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2021-01-15-tate-art/</guid>
+      <description>#TidyTuesday dataset of the week is the art collection of Tate Art Museum. I made a visual of the number of acquisitions made by Tate by decade taking into account what decade the art was created.</description>
+    </item>
+    
+    <item>
+      <title>BBC Women of 2020 [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2020-12-09-bbc-women-of-the-year/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2020-12-09-bbc-women-of-the-year/</guid>
+      <description>#TidyTuesday dataset of the week is the BBC Women of 2020! I made an interactive web map using #rstats and LeafletJS</description>
+    </item>
+    
+    <item>
+      <title>Toronto Homeless Shelters [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/</guid>
+      <description>The #TidyTuesday data of the week come from #OpenDataToronto on homeless shelters in Toronto and their occupancy from 2017 - 2019. I took a try at web map with help from #rstats and Leafletjs.</description>
+    </item>
+    
+    <item>
+      <title>Washington Hiking [Data Visualization]</title>
+      <link>https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/</guid>
+      <description>#TidyTuesday of the week for Washington Hiking data from @ WTA_hikers. You’re looking at the most common words used to describe parks in each region of WA (word clouds) and the most unique words used to describe each region (tf-idf). View code here.</description>
+    </item>
+    
+    <item>
+      <title>Tachyons for Style</title>
+      <link>https://oliverstringham.netlify.app/project/giraffes/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/project/giraffes/</guid>
+      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
+    </item>
+    
+    <item>
+      <title>Palmer Penguins</title>
+      <link>https://oliverstringham.netlify.app/project/penguins/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/project/penguins/</guid>
+      <description>“Grid is the very first CSS module created specifically to solve the layout problems we&amp;rsquo;ve all been hacking our way around for as long as we&amp;rsquo;ve been making websites.”     — Chris House, A Complete Guide to CSS Grid Layout 1
+ Since I began building websites in Y2K, I&amp;rsquo;ve lost count how many times the phrase &amp;ldquo;&amp;hellip;there&amp;rsquo;s got to be a better way to do this&amp;rdquo; has passed my lips.</description>
+    </item>
+    
+    <item>
+      <title>Bakeoff</title>
+      <link>https://oliverstringham.netlify.app/project/bakeoff/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/project/bakeoff/</guid>
+      <description>Formspree makes it easy to receive submissions from HTML forms on your static website.      Functional Form     This theme has a form-to-email feature built in, thanks to the simple Formspree integration. All you need to activate the form is a valid recipient email address saved in the front matter of the form (/content/forms/contact.md). Of course, the example shown below (your@email.here) must not be used.</description>
+    </item>
+    
+  </channel>
+</rss>

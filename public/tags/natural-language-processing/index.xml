@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>natural language processing on Oliver C. Stringham</title>
+    <link>https://oliverstringham.netlify.app/tags/natural-language-processing/</link>
+    <description>Recent content in natural language processing on Oliver C. Stringham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham.netlify.app/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Text classification to streamline online wildlife trade analyses</title>
+      <link>https://oliverstringham.netlify.app/publications/text-classification-to-streamline-online-wildlife-trade-analyses/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/text-classification-to-streamline-online-wildlife-trade-analyses/</guid>
+      <description>Abstract     Automated monitoring of websites that trade wildlife is increasingly necessary to inform conservation and biosecurity efforts. However, e-commerce and wildlife trading websites can contain a vast number of advertisements, an unknown proportion of which may be irrelevant to researchers and practitioners. Given that many wildlife-trade advertisements have an unstructured text format, automated identification of relevant listings has not traditionally been possible, nor attempted. Other scientific disciplines have solved similar problems using machine learning and natural language processing models, such as text classifiers.</description>
+    </item>
+    
+  </channel>
+</rss>

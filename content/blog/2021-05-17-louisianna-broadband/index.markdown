@@ -1,0 +1,94 @@
+---
+title: "Broadband Access [Data Visualization]"
+author: Oliver C. Stringham
+date: '2021-05-17'
+slug: [louisianna-broadband-access-data-visualization]
+categories: [tidy-tuesday, data-visualization, r, gis]
+tags: [r, ggiraph, ggplot2, gis]
+summary: "Map of broadband internet access across Louisiana, USA"
+---
+
+This week I used ggplot to create a map of broadband internet access across Louisiana, USA. I then used the ggiraph package to convert the map to html. Hover over each subdivision to view the percentage of people with access to broadband internet as of 2017. Code below plot. 
+
+
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+
+
+## R Code
+
+
+```r
+library(tidyverse)
+library(ggiraph)
+library(tidylog)
+library(sf)
+
+# load data
+broadband <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-05-11/broadband.csv')
+
+## create fields for join
+broadband = 
+  broadband %>% 
+  mutate(STATEFP = str_extract(`COUNTY ID`, "^[0-9]{2}"),
+         COUNTYFP = str_extract(`COUNTY ID`, "[0-9]{3}$")) %>% 
+  distinct(STATEFP, COUNTYFP, .keep_all = TRUE) %>% 
+  mutate(`BROADBAND AVAILABILITY PER FCC` = as.numeric(`BROADBAND AVAILABILITY PER FCC`))
+
+# load in county shapefiles from https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
+temp <- tempfile(); temp2 <- tempfile()
+download.file("https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_county_20m.zip",temp)
+data = unzip(zipfile = temp, exdir = temp2)
+county = read_sf(file.path(temp2, "cb_2018_us_county_20m.shp"))
+unlink(c(temp, temp2))
+
+# join & make tooltip
+df = 
+  county %>% 
+  select(STATEFP, COUNTYFP, NAME) %>% 
+  left_join(broadband) %>% 
+  mutate(state_id = as.numeric(STATEFP)) %>% 
+  filter(state_id == 22) %>% 
+  # filter(state_id <= 56,
+  #        state_id != 15 , state_id != 2) %>% 
+  mutate(tooltip = paste0(`COUNTY NAME`, "<br>",
+                          paste0(`BROADBAND AVAILABILITY PER FCC`*100, "%"), 
+                          " people with broadband access")
+  ) 
+
+
+# plot
+p = df %>% 
+  ggplot(aes(fill = `BROADBAND AVAILABILITY PER FCC`*100)) + 
+  geom_sf_interactive(color = 'gray50', size = 0.2, data_id = df$`COUNTY ID`,
+                      aes(tooltip = tooltip)) + 
+  scale_fill_fermenter(direction = 1, labels = c("25%", "50%", "75%")) + 
+  # scale_color_manual_interactive() + 
+  labs(fill = "", title = "Acces to Broadband Internet", subtitle = "Louisiana, USA") + 
+  theme_void() + 
+  theme(panel.grid.minor = element_blank(), 
+        panel.grid.major = element_blank(),
+        plot.background = element_rect(fill = "transparent", colour = NA))
+
+p
+
+# saveRDS(p, 'plot.rds')
+
+# to girafe
+tooltip_css = paste0("border-radius: 5px;",
+                     "border: 2px solid gray;",
+                     "background: white;",
+                     "padding: 5px;",
+                     "text-align: center;",
+                     "opactiy: 0.5")
+g = girafe(ggobj =  p, 
+           options = list(
+             opts_tooltip(css = tooltip_css),
+             opts_zoom(max = 5),
+             opts_hover_inv(css = "opacity:0.5;"),
+             opts_hover(css = "stroke:red;stroke-width:2;")
+           ) )
+g
+
+# saveRDS(g, 'plot.rds')
+```
+

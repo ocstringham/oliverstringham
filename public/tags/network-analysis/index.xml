@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>network analysis on Oliver C. Stringham</title>
+    <link>https://oliverstringham.netlify.app/tags/network-analysis/</link>
+    <description>Recent content in network analysis on Oliver C. Stringham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham.netlify.app/tags/network-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The International Vertebrate Pet Trade Network and Insights from US Imports of Exotic Pets</title>
+      <link>https://oliverstringham.netlify.app/publications/pet-trade-network/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/pet-trade-network/</guid>
+      <description>The international trade in exotic vertebrate pets provides key social and economic benefits but also drives associated ecological, ethical, and human health impacts. Here, we represent and review the structure of the pet trade as a network composed of different market actors (nodes) and trade flows (links). As a case study of how data-informed networks can realize this goal, we quantified spatial and temporal patterns in pets imported to the United States. Our framework and case study illustrate how network approaches can help to inform and manage the effects of the growing demand for exotic pets.</description>
+    </item>
+    
+  </channel>
+</rss>

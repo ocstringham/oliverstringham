@@ -2,7 +2,7 @@
 
 ## to do
 
-* Finish all research pieces
+* Add summaries to last research pieces
 * Port over blog posts (try to convert some to RMarkdown)
 * Finish About me page
 
@@ -11,3 +11,5 @@
 
 * Make a resume, add to CV page
 * new blog pieces
+- gis
+- tidymodels

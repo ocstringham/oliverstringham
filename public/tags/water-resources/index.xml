@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>water resources on Oliver C. Stringham</title>
+    <link>https://oliverstringham.netlify.app/tags/water-resources/</link>
+    <description>Recent content in water resources on Oliver C. Stringham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham.netlify.app/tags/water-resources/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effects of Land Development on Water Resources of the Pinelands Region</title>
+      <link>https://oliverstringham.netlify.app/publications/pinelands-effects-of-land-development-on-water/</link>
+      <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham.netlify.app/publications/pinelands-effects-of-land-development-on-water/</guid>
+      <description>Report detailing the extent to which water and water-related resources are modified by land development in the protected Pinelands region of New Jersey, USA.</description>
+    </item>
+    
+  </channel>
+</rss>

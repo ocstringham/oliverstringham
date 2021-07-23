@@ -1,0 +1,118 @@
+---
+title: "The Bachelor (TV Show) [Data Visualization]"
+author: Oliver C. Stringham
+date: '2021-01-31'
+slug: [the-bachelor-data-visualization]
+categories: [tidy-tuesday, data-visualization, r]
+tags: [r, ggiraph, ggplot2]
+summary: "For this #TidyTuesday, I plotted the age of contestants on The Bachelor across >20 seasons. There was no significant trend in the age of contestants over time. The average age is between 25 and 27 with some variation from 21 to 34."
+---
+
+
+This week I explored a [dataset](https://data.world/aerispaha/the-bachelor-contestants/workspace/file?filename=historical_bachelor_contestants.csv) of contestants on the TV show The Bachelor (>20 seasons). I plotted the age of contestants across seasons with available data. Basically, the age of contestants has not changed over time (linear regression backs this up). The average age is between 25 and 27 with some variation from 21 to 34. On the plot, the dots show the average age and vertical lines represent 95 quantile intervals. Hover over each dot (on desktop) to see the data value. Plot made in R with ggplot2 and converted to html using ggiraph. Code below plot.
+
+
+```{r echo = FALSE, eval=TRUE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(ggiraph)
+library(glue)
+library(htmlwidgets)
+
+
+# load data from https://data.world/aerispaha/the-bachelor-contestants/workspace/file?filename=historical_bachelor_contestants.csv
+df = read.csv('historical_bachelor_contestants.csv')
+
+
+
+# dot plot median age per year
+p = 
+  df %>% 
+  group_by(Season) %>% 
+  summarise(mean_age = mean(Age, na.rm = TRUE),
+            sd = sd(Age, na.rm = TRUE),
+            lower = quantile(Age, probs = 0.025, na.rm = TRUE),
+            upper = quantile(Age, probs = 0.975, na.rm = TRUE)) %>% 
+  mutate(hover = glue("Season: {Season}\nMean Age: {round(mean_age,1)}")) %>% 
+  ggplot(aes(y = mean_age, x = Season)) +
+  geom_pointrange_interactive(aes(ymin = lower, ymax = upper,
+                                  data_id = mean_age, tooltip = hover)) +
+  # geom_pointrange(aes(ymin = lower, ymax = upper)) +
+  scale_x_continuous(breaks = scales::breaks_width(2)) +
+  scale_y_continuous(breaks = scales::breaks_width(4)) +
+  labs(y = "Age") +
+  # coord_flip() + 
+  theme_bw()
+
+# p
+
+x = girafe(ggobj = p)
+x
+
+```
+
+
+## R Code
+
+```{r echo = TRUE, eval=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(ggiraph)
+library(glue)
+library(htmlwidgets)
+
+
+# load data from https://data.world/aerispaha/the-bachelor-contestants/workspace/file?filename=historical_bachelor_contestants.csv
+df = read.csv('historical_bachelor_contestants.csv')
+
+
+
+# dot plot median age per year
+p = 
+  df %>% 
+  group_by(Season) %>% 
+  summarise(mean_age = mean(Age, na.rm = TRUE),
+            sd = sd(Age, na.rm = TRUE),
+            lower = quantile(Age, probs = 0.025, na.rm = TRUE),
+            upper = quantile(Age, probs = 0.975, na.rm = TRUE)) %>% 
+  mutate(hover = glue("Season: {Season}\nMean Age: {round(mean_age,1)}")) %>% 
+  ggplot(aes(y = mean_age, x = Season)) +
+  geom_pointrange_interactive(aes(ymin = lower, ymax = upper,
+                                  data_id = mean_age, tooltip = hover)) +
+  # geom_pointrange(aes(ymin = lower, ymax = upper)) +
+  scale_x_continuous(breaks = scales::breaks_width(2)) +
+  scale_y_continuous(breaks = scales::breaks_width(4)) +
+  labs(y = "Age") +
+  # coord_flip() + 
+  theme_bw()
+
+# p
+
+x = girafe(ggobj = p)
+x
+
+
+# save html
+# saveWidget(x, file = 'plots/bachelor_age.html', selfcontained = TRUE)
+# saveRDS(x, 'plot.rds')
+
+
+# linear regression of age across seasons
+df %>% 
+  lm(formula = Age ~ Season) %>% 
+  summary()
+
+# linear regression of the variation of age across seasons
+df %>% 
+  group_by(Season) %>% 
+  summarise(sd = sd(Age, na.rm = TRUE),
+            mean = mean(Age, na.rm = TRUE),
+            cv = sd/mean) %>% 
+  lm(formula = cv ~ Season) %>% 
+  summary()
+
+
+```
+
