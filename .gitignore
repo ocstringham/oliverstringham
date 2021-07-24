@@ -1,3 +1,6 @@
+/public/
+/resources/
+
 # https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/#step-4-create-content
 .DS_Store
 Thumbs.db
