@@ -1,0 +1,160 @@
+---
+title: "Global Deforestation Rates [Data Visualization]"
+author: Oliver C. Stringham
+date: '2021-05-23'
+slug: [global-deforestation-rates-data-visualization]
+categories: [tidy-tuesday, data-visualization, r, gis]
+tags: [r, leaflet, gis]
+summary: "Interactive map of broadband internet access across Louisiana, USA"
+---
+
+This week I took a deeper look at LeafletJS in R using the leaflet package. Leaflet renders maps using Javascript, making them viewable in a web browser and interactivity (like a popup) can be programmed in. The R package allows it all to be done neatly in R :) I’d like to get better at producing these types of maps for viewing on web pages, so you might see more in the future. Hopefully, they become more aesthetically pleasing as I practice. I’d like to investigate CSS to customize the aesthetics of the maps, including the popups. This map has simple popup (hover over on desktop). Also, I changed the map projection to the Robinson projection, which better represents the actual shapes and sizes of countries compared to the commonly used projection in default web maps (Mercator projection).
+
+The map shows the annual (de)forestation rate per country in hectares. Code is shown below plot.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (file.exists('plot.rds')) {
+  library(leaflet)
+  x = readRDS('plot.rds')
+  x
+} else {
+  "The item does not exist yet."
+}
+```
+
+## R Code
+
+```{r echo = TRUE, eval=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(tidylog)
+library(leaflet)
+library(leaflet.extras)
+library(rnaturalearth)
+library(htmltools)
+library(scales)
+library(sf)
+
+# https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-04-06/readme.md
+
+# load in data
+forest <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-04-06/forest.csv')
+
+# filter df and get yearly average forest change
+forest %>% distinct(year)
+df = 
+  forest %>% 
+  group_by(code, entity) %>% 
+  mutate(n = n()) %>% 
+  summarise(estimate = mean(net_forest_conversion)/(n*5)) %>% # times 5 bc in 5 year intervals
+  ungroup() %>% 
+  distinct()
+
+# get first year of data for label in map
+first_year = 
+  forest %>% 
+  group_by(code, entity) %>% 
+  slice_min(year) %>% 
+  select(code, year)
+
+
+# load in world shapefile
+world = ne_countries(scale = 110, returnclass = "sf")
+
+
+# join in geo data and first year
+df2 = 
+  world %>% 
+  select(geounit, admin, gu_a3) %>% 
+  left_join(df, by = c('gu_a3' = 'code')) %>% 
+  filter(!admin %in% c("Antarctica", "Fiji")) %>% 
+  st_set_crs(st_crs(54030)) %>% 
+  left_join(first_year)
+
+# # see which ones didn't join
+# df2b = 
+#   df %>% 
+#   anti_join(world, by = c('code' = 'gu_a3'))
+
+
+
+# to leaflet
+
+
+## color ramp
+
+# hist(df2$estimate)
+# 
+# ## Create a continuous palette function
+# pal <- colorNumeric(
+#   palette = "RdYlGn",
+#   domain = df2$estimate)
+
+## discrete
+pal <- colorBin("RdYlGn", df2$estimate, 8, pretty = TRUE)
+
+
+
+## create label ... have to use map and leave as list to work with HTML
+df2$label = 
+  pmap(list(df2$geounit, df2$estimate, df2$year),
+       function(x,y,z){
+         if(is.na(y)){
+           HTML(paste0("<div class='map_tooltip'>",
+                       "<b>", x, "</b>",
+                       "<br>",
+                       "No data",
+                       "</div>"))
+           
+         }else if(y > 0){
+           HTML(paste0("<div class='map_tooltip'>",
+                       "<b>", x, "</b>",
+                       "<br>",
+                       "Rate of forestation: ", comma(y), 
+                       " heactares per year",
+                       "<br>",
+                       "Since ", z,
+                       "</div>"))
+         }else if(y <=0){
+           HTML(paste0( "<div class='map_tooltip'>",
+                       "<b>", x, "</b>",
+                       "<br>",
+                       "Rate of deforestation: ", comma(y), 
+                       " hectares per year",
+                       "<br>",
+                       "Since ", z,
+                       "</div>"))
+         }
+         
+       })
+
+## define projection
+world_robinson = leafletCRS(crsClass = "L.Proj.CRS", code = "EPSG:54030",
+                            proj4def = "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs",
+                            resolutions = 2.028^(16:12), # 8192 down to 0.5
+                            origin = c(0, 0)
+)
+
+
+## map
+m = 
+  df2 %>% 
+    leaflet(options = leafletOptions(crs = world_robinson)) %>% 
+    addPolygons(fillColor = ~pal(estimate),
+                label= ~label,
+                color = "#444444", weight = 1, smoothFactor = 0.5,
+                opacity = 1.0, fillOpacity = 0.5) %>% 
+    setView(0, 10, zoom = 1) %>% 
+  setMapWidgetStyle(list(background= "transparent")) %>% 
+    addLegend("bottomleft", pal = pal, values = ~estimate,
+              title = "Avg. (De)Forestation Rate<br>[Hectares]<br>",
+              labFormat = labelFormat(between = " to "),
+              na.label = "No data",
+              opacity = 1
+    ) 
+
+m
+
+
+# saveRDS(m, 'plot.rds')
+```
+

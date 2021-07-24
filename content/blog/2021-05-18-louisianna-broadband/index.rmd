@@ -2,22 +2,32 @@
 title: "Broadband Access [Data Visualization]"
 author: Oliver C. Stringham
 date: '2021-05-17'
-slug: [louisianna-broadband-access-data-visualization]
+slug: [louisianna-usa-broadband-access-data-visualization]
 categories: [tidy-tuesday, data-visualization, r, gis]
 tags: [r, ggiraph, ggplot2, gis]
-summary: "Map of broadband internet access across Louisiana, USA"
+summary: "Interactive map of broadband internet access across Louisiana, USA"
 ---
 
 This week I used ggplot to create a map of broadband internet access across Louisiana, USA. I then used the ggiraph package to convert the map to html. Hover over each subdivision to view the percentage of people with access to broadband internet as of 2017. Code below plot. 
 
 
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (file.exists('plot.rds')) {
+  library(ggplot2)
+  library(ggiraph)
+  library(sf)
+  x = readRDS('plot.rds')
+  x
+} else {
+  "The item does not exist yet."
+}
+```
 
 
 ## R Code
 
-
-```r
+```{r echo = TRUE, eval=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(ggiraph)
 library(tidylog)
@@ -90,5 +100,7 @@ g = girafe(ggobj =  p,
 g
 
 # saveRDS(g, 'plot.rds')
+
+
 ```
 

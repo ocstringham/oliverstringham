@@ -14,6 +14,8 @@ Read more about the gender gap at HBCUs [here](https://hbcubuzz.com/2020/07/blac
 
 ![HBCU Enrollment by Gender](hbcu_gender.png)
 
+## R Code
+
 ```{r echo = TRUE, eval=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 
