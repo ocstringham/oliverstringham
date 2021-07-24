@@ -31,30 +31,42 @@
 <meta property="og:title" content="HBCU Enrollment [Data Visualization] | Oliver C. Stringham">
 <meta property="og:description" content="Personal website of Oliver C. Stringham" />
 <meta property="og:type" content="page" />
-<meta property="og:url" content="https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/" />
+<meta property="og:url" content="https://oliverstringham/blog/2021-02-02-hbcu-enrollment/" />
 <meta property="og:locale" content="en">
 
 
 
 
     
-        <meta property="og:image" content="https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/featured.png" >
+        <meta property="og:image" content="https://oliverstringham/blog/2021-02-02-hbcu-enrollment/featured.png" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/featured.png" >
+        <meta name="twitter:image" content="https://oliverstringham/blog/2021-02-02-hbcu-enrollment/featured.png" >
     
     
   <meta itemprop="name" content="HBCU Enrollment [Data Visualization]">
 <meta itemprop="description" content="This week I explored the TidyTuesday dataset of the week: Fall enrollment in degree-granting historically Black colleges and universities (HBCU). I plotted the proportion of student enrollment by gender over time. Plot made in R with ggplot2."><meta itemprop="datePublished" content="2021-02-02T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-02-02T00:00:00+00:00" />
-<meta itemprop="wordCount" content="203"><meta itemprop="image" content="https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/featured.png">
+<meta itemprop="wordCount" content="205"><meta itemprop="image" content="https://oliverstringham/blog/2021-02-02-hbcu-enrollment/featured.png">
 <meta itemprop="keywords" content="r,ggplot2," />
   
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KW8HV15CK3', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/chameleon.ico" type="image/x-icon">
   <link rel="icon" href="/img/chameleon.ico" type="image/x-icon">
   
   
-  <link rel="stylesheet" href="/style.main.min.2279f698efda334a4f4d752d9b3c72537d922540c6370c54ad709a41eedf4eab.css" integrity="sha256-Inn2mO/aM0pPTXUtmzxyU32SJUDGNwxUrXCaQe7fTqs=" media="screen">
+  <link rel="stylesheet" href="/style.main.min.73e736bd4383f8090e0c7bb46d2b9fe5208816195891be73629cff4d163878c9.css" integrity="sha256-c&#43;c2vUOD&#43;AkODHu0bSuf5SCIFhlYkb5zYpz/TRY4eMk=" media="screen">
   
   
   <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
@@ -66,7 +78,7 @@
       <div class="grid-container">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
-    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham.netlify.app/" title="Home">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham/" title="Home">
       <img src="/img/chameleon.ico" class="dib db-l h2 w-auto" alt="Oliver C. Stringham">
     </a>
     <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
@@ -107,7 +119,7 @@
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">HBCU Enrollment [Data Visualization]</h1>
         
-        <p class="f6 measure lh-copy mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a> </p>
+        <p class="f6 measure lh-copy mv1">By Oliver C. Stringham in <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/r">r</a> </p>
         <p class="f7 db mv0 ttu">February 2, 2021</p>
 
       
@@ -119,45 +131,55 @@
 <a href="https://hbcubuzz.com/2020/07/black-men-the-minority-at-hbcus/" target="_blank" rel="noopener">here</a>. Please consider donating to HBCUs, to help fund student’s financial assistance programs: 
 <a href="https://thehbcufoundation.org/donate/" target="_blank" rel="noopener">https://thehbcufoundation.org/donate/</a>.</p>
 <p><img src="hbcu_gender.png" alt="HBCU Enrollment by Gender"></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#900;font-weight:bold">library</span>(tidyverse)
 
 
-<span style="color:#998;font-style:italic">#  https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-01-26/readme.md</span>
-hbcu_all <span style="color:#000;font-weight:bold">&lt;-</span> readr<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">read_csv</span>(<span style="color:#d14">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-02-02/hbcu_all.csv&#39;</span>)
 
-df <span style="color:#000;font-weight:bold">=</span> 
-hbcu_all <span style="color:#000;font-weight:bold">%&gt;%</span> 
-  <span style="color:#900;font-weight:bold">mutate</span>(
-         <span style="color:#998;font-style:italic"># p_4yr = `4-year - Public`/`Total enrollment`,</span>
-         <span style="color:#998;font-style:italic"># p_2yr = `2-year - Private`/`Total enrollment`,</span>
-         p_male <span style="color:#000;font-weight:bold">=</span> Males<span style="color:#000;font-weight:bold">/</span>`Total enrollment`,
-         p_female <span style="color:#000;font-weight:bold">=</span> Females<span style="color:#000;font-weight:bold">/</span>`Total enrollment`,
-         p_public <span style="color:#000;font-weight:bold">=</span> `Total - Public`<span style="color:#000;font-weight:bold">/</span>`Total enrollment`,
-         p_private <span style="color:#000;font-weight:bold">=</span> `Total - Private`<span style="color:#000;font-weight:bold">/</span>`Total enrollment`) <span style="color:#000;font-weight:bold">%&gt;%</span> 
-  <span style="color:#900;font-weight:bold">select</span>(Year, p_male<span style="color:#000;font-weight:bold">:</span>p_private) <span style="color:#000;font-weight:bold">%&gt;%</span> 
-  <span style="color:#900;font-weight:bold">pivot_longer</span>(cols <span style="color:#000;font-weight:bold">=</span> p_male<span style="color:#000;font-weight:bold">:</span>p_private)
+
+<h2 id="r-code">R Code
+  <a href="#r-code"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#000">library</span>(<span style="color:#000">tidyverse</span>)
+
+
+<span style="color:#888;font-style:italic">#  https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-01-26/readme.md</span>
+<span style="color:#000">hbcu_all</span> &lt;- <span style="color:#000">readr</span>::<span style="color:#000">read_csv</span>(<span style="color:#5a2">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-02-02/hbcu_all.csv&#39;</span>)
+
+<span style="color:#000">df</span> = 
+<span style="color:#000">hbcu_all</span> %&gt;% 
+  <span style="color:#000">mutate</span>(
+         <span style="color:#888;font-style:italic"># p_4yr = `4-year - Public`/`Total enrollment`,</span>
+         <span style="color:#888;font-style:italic"># p_2yr = `2-year - Private`/`Total enrollment`,</span>
+         <span style="color:#000">p_male</span> = <span style="color:#000">Males</span>/<span style="color:#000">`Total enrollment`</span>,
+         <span style="color:#000">p_female</span> = <span style="color:#000">Females</span>/<span style="color:#000">`Total enrollment`</span>,
+         <span style="color:#000">p_public</span> = <span style="color:#000">`Total - Public`</span>/<span style="color:#000">`Total enrollment`</span>,
+         <span style="color:#000">p_private</span> = <span style="color:#000">`Total - Private`</span>/<span style="color:#000">`Total enrollment`</span>) %&gt;% 
+  <span style="color:#000">select</span>(<span style="color:#000">Year</span>, <span style="color:#000">p_male</span>:<span style="color:#000">p_private</span>) %&gt;% 
+  <span style="color:#000">pivot_longer</span>(<span style="color:#000">cols</span> = <span style="color:#000">p_male</span>:<span style="color:#000">p_private</span>)
   
-p <span style="color:#000;font-weight:bold">=</span> 
-  df <span style="color:#000;font-weight:bold">%&gt;%</span> 
-  <span style="color:#900;font-weight:bold">filter</span>(name <span style="color:#000;font-weight:bold">%in%</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;p_female&#34;</span>, <span style="color:#d14">&#34;p_male&#34;</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span> 
-  <span style="color:#900;font-weight:bold">ggplot</span>(<span style="color:#900;font-weight:bold">aes</span>(x <span style="color:#000;font-weight:bold">=</span> Year)) <span style="color:#000;font-weight:bold">+</span>
-  <span style="color:#900;font-weight:bold">geom_point</span>(size <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">2</span>, <span style="color:#900;font-weight:bold">aes</span>(y <span style="color:#000;font-weight:bold">=</span> value, group <span style="color:#000;font-weight:bold">=</span> name, color <span style="color:#000;font-weight:bold">=</span> name)) <span style="color:#000;font-weight:bold">+</span>
-  <span style="color:#900;font-weight:bold">labs</span>(y <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Proportion&#34;</span>, x <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Year&#34;</span>, color <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;&#34;</span>, 
-       title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Proportion enrollment in HBCUs by gender&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
-  <span style="color:#900;font-weight:bold">scale_color_manual</span>(values <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;purple&#34;</span>, <span style="color:#d14">&#34;red&#34;</span>), labels <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;Female&#34;</span>, <span style="color:#d14">&#34;Male&#34;</span>)) <span style="color:#000;font-weight:bold">+</span>
-  <span style="color:#900;font-weight:bold">scale_y_continuous</span>(breaks <span style="color:#000;font-weight:bold">=</span> scales<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">pretty_breaks</span>()) <span style="color:#000;font-weight:bold">+</span>
-  <span style="color:#998;font-style:italic"># theme_minimal() +</span>
-  <span style="color:#900;font-weight:bold">theme_bw</span>() <span style="color:#000;font-weight:bold">+</span> 
-  <span style="color:#900;font-weight:bold">theme</span>(legend.position <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">0.08</span>,<span style="color:#099">0.91</span>), 
-        legend.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_blank</span>(), 
-        legend.box.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_blank</span>(),
-        panel.grid.minor.y <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_blank</span>(),
-        text<span style="color:#000;font-weight:bold">=</span><span style="color:#900;font-weight:bold">element_text</span>(family<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;serif&#34;</span>))
+<span style="color:#000">p</span> = 
+  <span style="color:#000">df</span> %&gt;% 
+  <span style="color:#000">filter</span>(<span style="color:#000">name</span> %in% <span style="color:#000">c</span>(<span style="color:#5a2">&#34;p_female&#34;</span>, <span style="color:#5a2">&#34;p_male&#34;</span>)) %&gt;% 
+  <span style="color:#000">ggplot</span>(<span style="color:#000">aes</span>(<span style="color:#000">x</span> = <span style="color:#000">Year</span>)) +
+  <span style="color:#000">geom_point</span>(<span style="color:#000">size</span> = <span style="color:#3af">2</span>, <span style="color:#000">aes</span>(<span style="color:#000">y</span> = <span style="color:#000">value</span>, <span style="color:#000">group</span> = <span style="color:#000">name</span>, <span style="color:#000">color</span> = <span style="color:#000">name</span>)) +
+  <span style="color:#000">labs</span>(<span style="color:#000">y</span> = <span style="color:#5a2">&#34;Proportion&#34;</span>, <span style="color:#000">x</span> = <span style="color:#5a2">&#34;Year&#34;</span>, <span style="color:#000">color</span> = <span style="color:#5a2">&#34;&#34;</span>, 
+       <span style="color:#000">title</span> = <span style="color:#5a2">&#34;Proportion enrollment in HBCUs by gender&#34;</span>) +
+  <span style="color:#000">scale_color_manual</span>(<span style="color:#000">values</span> = <span style="color:#000">c</span>(<span style="color:#5a2">&#34;purple&#34;</span>, <span style="color:#5a2">&#34;red&#34;</span>), <span style="color:#000">labels</span> = <span style="color:#000">c</span>(<span style="color:#5a2">&#34;Female&#34;</span>, <span style="color:#5a2">&#34;Male&#34;</span>)) +
+  <span style="color:#000">scale_y_continuous</span>(<span style="color:#000">breaks</span> = <span style="color:#000">scales</span>::<span style="color:#000">pretty_breaks</span>()) +
+  <span style="color:#888;font-style:italic"># theme_minimal() +</span>
+  <span style="color:#000">theme_bw</span>() + 
+  <span style="color:#000">theme</span>(<span style="color:#000">legend.position</span> = <span style="color:#000">c</span>(<span style="color:#3af">0.08</span>,<span style="color:#3af">0.91</span>), 
+        <span style="color:#000">legend.background</span> = <span style="color:#000">element_blank</span>(), 
+        <span style="color:#000">legend.box.background</span> = <span style="color:#000">element_blank</span>(),
+        <span style="color:#000">panel.grid.minor.y</span> = <span style="color:#000">element_blank</span>(),
+        <span style="color:#000">text</span>=<span style="color:#000">element_text</span>(<span style="color:#000">family</span>=<span style="color:#5a2">&#34;serif&#34;</span>))
 
-p
+<span style="color:#000">p</span>
 
-<span style="color:#900;font-weight:bold">ggsave</span>(p, filename <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;hbcu_gender.png&#39;</span>, 
-       width <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">5</span>, height <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">4</span>)
+<span style="color:#000">ggsave</span>(<span style="color:#000">p</span>, <span style="color:#000">filename</span> = <span style="color:#5a2">&#39;hbcu_gender.png&#39;</span>, 
+       <span style="color:#000">width</span> = <span style="color:#3af">5</span>, <span style="color:#000">height</span> = <span style="color:#3af">4</span>)
 </code></pre></div>
         
         <details closed class="f6 fw7 input-reset">
@@ -167,29 +189,29 @@ p
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">1 minute read, 203 words</dd>
+    <dd class="fw5 ml0">1 minute read, 205 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Categories:</dt>
-    <dd class="fw5 ml0"> <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/r">r</a> </dd>
   </dl>
   
   
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="https://oliverstringham.netlify.app/tags/r">r</a>  <a href="https://oliverstringham.netlify.app/tags/ggplot2">ggplot2</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://oliverstringham/tags/r">r</a>  <a href="https://oliverstringham/tags/ggplot2">ggplot2</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
     
-    <dd class="fw5 ml0"><a href="/blog/2021-05-17-louisianna-broadband/">Broadband Access [Data Visualization]</a></dd>
+    <dd class="fw5 ml0"><a href="/blog/2021-05-23-global-deforestation-rates/">Global Deforestation Rates [Data Visualization]</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2021-05-18-louisianna-broadband/">Broadband Access [Data Visualization]</a></dd>
     
     <dd class="fw5 ml0"><a href="/blog/2021-01-31-the-bachelor/">The Bachelor (TV Show) [Data Visualization]</a></dd>
-    
-    <dd class="fw5 ml0"><a href="/blog/2021-01-15-tate-art/">Tate Art [Data Visualization]</a></dd>
     
   </dl>
 </details>
@@ -200,12 +222,12 @@ p
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="https://oliverstringham.netlify.app/blog/2021-05-17-louisianna-broadband/">&larr; Broadband Access [Data Visualization]</a>
+    href="https://oliverstringham/blog/2021-05-18-louisianna-broadband/">&larr; Broadband Access [Data Visualization]</a>
   
   
   
     <a class="next dtc pl2 tr v-top fw6"
-    href="https://oliverstringham.netlify.app/blog/2021-01-31-the-bachelor/">The Bachelor (TV Show) [Data Visualization] &rarr;</a>
+    href="https://oliverstringham/blog/2021-01-31-the-bachelor/">The Bachelor (TV Show) [Data Visualization] &rarr;</a>
   
 </div>
 

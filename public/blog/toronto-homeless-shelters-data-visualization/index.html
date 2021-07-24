@@ -31,30 +31,42 @@
 <meta property="og:title" content="Toronto Homeless Shelters [Data Visualization] | Oliver C. Stringham">
 <meta property="og:description" content="Personal website of Oliver C. Stringham" />
 <meta property="og:type" content="page" />
-<meta property="og:url" content="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/" />
+<meta property="og:url" content="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/" />
 <meta property="og:locale" content="en">
 
 
 
 
     
-        <meta property="og:image" content="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/featured.png" >
+        <meta property="og:image" content="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/featured.png" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/featured.png" >
+        <meta name="twitter:image" content="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/featured.png" >
     
     
   <meta itemprop="name" content="Toronto Homeless Shelters [Data Visualization]">
 <meta itemprop="description" content="The #TidyTuesday data of the week come from #OpenDataToronto on homeless shelters in Toronto and their occupancy from 2017 - 2019. I took a try at web map with help from #rstats and Leafletjs."><meta itemprop="datePublished" content="2020-01-12T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-01-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="843"><meta itemprop="image" content="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/featured.png">
+<meta itemprop="wordCount" content="843"><meta itemprop="image" content="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/featured.png">
 <meta itemprop="keywords" content="r,tidy-tuesday,geocode,leaflet," />
   
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KW8HV15CK3', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/chameleon.ico" type="image/x-icon">
   <link rel="icon" href="/img/chameleon.ico" type="image/x-icon">
   
   
-  <link rel="stylesheet" href="/style.main.min.2279f698efda334a4f4d752d9b3c72537d922540c6370c54ad709a41eedf4eab.css" integrity="sha256-Inn2mO/aM0pPTXUtmzxyU32SJUDGNwxUrXCaQe7fTqs=" media="screen">
+  <link rel="stylesheet" href="/style.main.min.73e736bd4383f8090e0c7bb46d2b9fe5208816195891be73629cff4d163878c9.css" integrity="sha256-c&#43;c2vUOD&#43;AkODHu0bSuf5SCIFhlYkb5zYpz/TRY4eMk=" media="screen">
   
   
   <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
@@ -66,7 +78,7 @@
       <div class="grid-container">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
-    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham.netlify.app/" title="Home">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham/" title="Home">
       <img src="/img/chameleon.ico" class="dib db-l h2 w-auto" alt="Oliver C. Stringham">
     </a>
     <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
@@ -107,35 +119,35 @@
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">Toronto Homeless Shelters [Data Visualization]</h1>
         
-        <p class="f6 measure lh-copy mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a>  <a href="https://oliverstringham.netlify.app/categories/gis">gis</a> </p>
+        <p class="f6 measure lh-copy mv1">By Oliver C. Stringham in <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/r">r</a>  <a href="https://oliverstringham/categories/gis">gis</a> </p>
         <p class="f7 db mv0 ttu">January 12, 2020</p>
 
       
 
       </header>
       <section class="post-body pt5 pb4">
-        <script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/htmlwidgets/htmlwidgets.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/jquery/jquery.min.js"></script>
-<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.css" rel="stylesheet" />
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.js"></script>
-<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leafletfix/leafletfix.css" rel="stylesheet" />
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/proj4/proj4.min.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/Proj4Leaflet/proj4leaflet.js"></script>
-<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-binding/leaflet.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers/leaflet-providers_1.9.0.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/htmlwidgets/htmlwidgets.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/jquery/jquery.min.js"></script>
-<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.css" rel="stylesheet" />
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.js"></script>
-<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leafletfix/leafletfix.css" rel="stylesheet" />
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/proj4/proj4.min.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/Proj4Leaflet/proj4leaflet.js"></script>
-<link href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-binding/leaflet.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers/leaflet-providers_1.9.0.js"></script>
-<script src="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+        <script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/jquery/jquery.min.js"></script>
+<link href="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.css" rel="stylesheet" />
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.js"></script>
+<link href="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/proj4/proj4.min.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-binding/leaflet.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/jquery/jquery.min.js"></script>
+<link href="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.css" rel="stylesheet" />
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet/leaflet.js"></script>
+<link href="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/proj4/proj4.min.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-binding/leaflet.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+<script src="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/index_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
 <p>The #TidyTuesday data of the week come from #OpenDataToronto on homeless shelters in Toronto and their occupancy from 2017 - 2019. I took a try at web map with help from #rstats and 
 <a href="https://rstudio.github.io/leaflet/" target="_blank" rel="noopener">Leafletjs</a>.</p>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
@@ -154,24 +166,24 @@
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Categories:</dt>
-    <dd class="fw5 ml0"> <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a>  <a href="https://oliverstringham.netlify.app/categories/gis">gis</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/r">r</a>  <a href="https://oliverstringham/categories/gis">gis</a> </dd>
   </dl>
   
   
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="https://oliverstringham.netlify.app/tags/r">r</a>  <a href="https://oliverstringham.netlify.app/tags/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/tags/geocode">geocode</a>  <a href="https://oliverstringham.netlify.app/tags/leaflet">leaflet</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://oliverstringham/tags/r">r</a>  <a href="https://oliverstringham/tags/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/tags/geocode">geocode</a>  <a href="https://oliverstringham/tags/leaflet">leaflet</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
     
-    <dd class="fw5 ml0"><a href="/blog/2021-05-17-louisianna-broadband/">Broadband Access [Data Visualization]</a></dd>
+    <dd class="fw5 ml0"><a href="/blog/2021-05-23-global-deforestation-rates/">Global Deforestation Rates [Data Visualization]</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2021-05-18-louisianna-broadband/">Broadband Access [Data Visualization]</a></dd>
     
     <dd class="fw5 ml0"><a href="/blog/2021-02-02-hbcu-enrollment/">HBCU Enrollment [Data Visualization]</a></dd>
-    
-    <dd class="fw5 ml0"><a href="/blog/2021-01-31-the-bachelor/">The Bachelor (TV Show) [Data Visualization]</a></dd>
     
   </dl>
 </details>
@@ -182,12 +194,12 @@
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="https://oliverstringham.netlify.app/blog/2020-12-09-bbc-women-of-the-year/">&larr; BBC Women of 2020 [Data Visualization]</a>
+    href="https://oliverstringham/blog/2020-12-09-bbc-women-of-the-year/">&larr; BBC Women of 2020 [Data Visualization]</a>
   
   
   
     <a class="next dtc pl2 tr v-top fw6"
-    href="https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/">Washington Hiking [Data Visualization] &rarr;</a>
+    href="https://oliverstringham/blog/2019-11-24-washington-hiking/">Washington Hiking [Data Visualization] &rarr;</a>
   
 </div>
 

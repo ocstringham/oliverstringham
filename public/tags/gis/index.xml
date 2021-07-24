@@ -2,45 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gis on Oliver C. Stringham</title>
-    <link>https://oliverstringham.netlify.app/tags/gis/</link>
+    <link>https://oliverstringham/tags/gis/</link>
     <description>Recent content in gis on Oliver C. Stringham</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 17 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham.netlify.app/tags/gis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham/tags/gis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Global Deforestation Rates [Data Visualization]</title>
+      <link>https://oliverstringham/blog/2021-05-23-global-deforestation-rates/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://oliverstringham/blog/2021-05-23-global-deforestation-rates/</guid>
+      <description>Interactive map of of global deforestation rates using Leaflet and R.</description>
+    </item>
+    
     <item>
       <title>Broadband Access [Data Visualization]</title>
-      <link>https://oliverstringham.netlify.app/blog/2021-05-17-louisianna-broadband/</link>
+      <link>https://oliverstringham/blog/2021-05-18-louisianna-broadband/</link>
       <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/blog/2021-05-17-louisianna-broadband/</guid>
-      <description>This week I used ggplot to create a map of broadband internet access across Louisiana, USA. I then used the ggiraph package to convert the map to html. Hover over each subdivision to view the percentage of people with access to broadband internet as of 2017. Code below plot.
-{&#34;x&#34;:{&#34;html&#34;:&#34;\n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 25%\n \n \n 50%\n \n \n 75%\n \n \n Louisiana, USA\n \n \n Acces to Broadband Internet\n \n \n&#34;</description>
+      <guid>https://oliverstringham/blog/2021-05-18-louisianna-broadband/</guid>
+      <description>Interactive map of broadband internet access across Louisiana, USA</description>
     </item>
     
     <item>
       <title>Tate Art [Data Visualization]</title>
-      <link>https://oliverstringham.netlify.app/blog/2021-01-15-tate-art/</link>
+      <link>https://oliverstringham/blog/2021-01-15-tate-art/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/blog/2021-01-15-tate-art/</guid>
+      <guid>https://oliverstringham/blog/2021-01-15-tate-art/</guid>
       <description>#TidyTuesday dataset of the week is the art collection of Tate Art Museum. I made a visual of the number of acquisitions made by Tate by decade taking into account what decade the art was created.</description>
     </item>
     
     <item>
       <title> Connecting with Our Waterways: Public Access and Its Stewardship in the New York – New Jersey Harbor Estuary</title>
-      <link>https://oliverstringham.netlify.app/publications/public-access-to-waterways-ny-nj-harbor-estuary/</link>
+      <link>https://oliverstringham/publications/public-access-to-waterways-ny-nj-harbor-estuary/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/publications/public-access-to-waterways-ny-nj-harbor-estuary/</guid>
+      <guid>https://oliverstringham/publications/public-access-to-waterways-ny-nj-harbor-estuary/</guid>
       <description>Report</description>
     </item>
     
     <item>
       <title>Effects of Land Development on Water Resources of the Pinelands Region</title>
-      <link>https://oliverstringham.netlify.app/publications/pinelands-effects-of-land-development-on-water/</link>
+      <link>https://oliverstringham/publications/pinelands-effects-of-land-development-on-water/</link>
       <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/publications/pinelands-effects-of-land-development-on-water/</guid>
+      <guid>https://oliverstringham/publications/pinelands-effects-of-land-development-on-water/</guid>
       <description>Report detailing the extent to which water and water-related resources are modified by land development in the protected Pinelands region of New Jersey, USA.</description>
     </item>
     

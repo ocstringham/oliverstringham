@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>internet on Oliver C. Stringham</title>
-    <link>https://oliverstringham.netlify.app/tags/internet/</link>
+    <link>https://oliverstringham/tags/internet/</link>
     <description>Recent content in internet on Oliver C. Stringham</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham.netlify.app/tags/internet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham/tags/internet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dataset of seized wildlife and their intended uses</title>
-      <link>https://oliverstringham.netlify.app/publications/illegal-wildlife-trade-seizures-dataset/</link>
+      <link>https://oliverstringham/publications/illegal-wildlife-trade-seizures-dataset/</link>
       <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/publications/illegal-wildlife-trade-seizures-dataset/</guid>
+      <guid>https://oliverstringham/publications/illegal-wildlife-trade-seizures-dataset/</guid>
       <description>Abstract     The illegal wildlife trade (IWT) threatens conservation and biosecurity efforts. The Internet has greatly facilitated the trade of wildlife, and researchers have increasingly examined the Internet to uncover illegal trade. However, most efforts to locate illegal trade on the Internet are targeted to one or few taxa or products. Large-scale efforts to find illegal wildlife on the Internet (e-commerce, social media, dark web) may be facilitated by a systematic compilation of illegally traded wildlife taxa and their uses.</description>
     </item>
     
     <item>
       <title>Text classification to streamline online wildlife trade analyses</title>
-      <link>https://oliverstringham.netlify.app/publications/text-classification-to-streamline-online-wildlife-trade-analyses/</link>
+      <link>https://oliverstringham/publications/text-classification-to-streamline-online-wildlife-trade-analyses/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/publications/text-classification-to-streamline-online-wildlife-trade-analyses/</guid>
+      <guid>https://oliverstringham/publications/text-classification-to-streamline-online-wildlife-trade-analyses/</guid>
       <description>Abstract     Automated monitoring of websites that trade wildlife is increasingly necessary to inform conservation and biosecurity efforts. However, e-commerce and wildlife trading websites can contain a vast number of advertisements, an unknown proportion of which may be irrelevant to researchers and practitioners. Given that many wildlife-trade advertisements have an unstructured text format, automated identification of relevant listings has not traditionally been possible, nor attempted. Other scientific disciplines have solved similar problems using machine learning and natural language processing models, such as text classifiers.</description>
     </item>
     
     <item>
       <title>A guide to using the Internet to monitor and quantify the wildlife trade</title>
-      <link>https://oliverstringham.netlify.app/publications/guide-to-using-internet-to-study-wildlife-trade/</link>
+      <link>https://oliverstringham/publications/guide-to-using-internet-to-study-wildlife-trade/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/publications/guide-to-using-internet-to-study-wildlife-trade/</guid>
+      <guid>https://oliverstringham/publications/guide-to-using-internet-to-study-wildlife-trade/</guid>
       <description>The internet is a vast source of wildlife trade data. Here, we present an accessible guide for Internet‐based wildlife trade surveillance, which uses a repeatable and systematic method to automate data collection from relevant websites. Our guide is adaptable to the multitude of trade‐based contexts including different focal taxa or derived parts, and locations of interest.</description>
     </item>
     

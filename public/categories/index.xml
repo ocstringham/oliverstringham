@@ -2,116 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Oliver C. Stringham</title>
-    <link>https://oliverstringham.netlify.app/categories/</link>
+    <link>https://oliverstringham/categories/</link>
     <description>Recent content in Categories on Oliver C. Stringham</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://oliverstringham/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Research</title>
-      <link>https://oliverstringham.netlify.app/categories/research/</link>
+      <link>https://oliverstringham/categories/research/</link>
       <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/categories/research/</guid>
+      <guid>https://oliverstringham/categories/research/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data-visualization</title>
-      <link>https://oliverstringham.netlify.app/categories/data-visualization/</link>
-      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      <link>https://oliverstringham/categories/data-visualization/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/categories/data-visualization/</guid>
+      <guid>https://oliverstringham/categories/data-visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gis</title>
-      <link>https://oliverstringham.netlify.app/categories/gis/</link>
-      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      <link>https://oliverstringham/categories/gis/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/categories/gis/</guid>
+      <guid>https://oliverstringham/categories/gis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>r</title>
-      <link>https://oliverstringham.netlify.app/categories/r/</link>
-      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      <link>https://oliverstringham/categories/r/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/categories/r/</guid>
+      <guid>https://oliverstringham/categories/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tidy-tuesday</title>
-      <link>https://oliverstringham.netlify.app/categories/tidy-tuesday/</link>
-      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      <link>https://oliverstringham/categories/tidy-tuesday/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/categories/tidy-tuesday/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>workshop</title>
-      <link>https://oliverstringham.netlify.app/categories/workshop/</link>
-      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://oliverstringham.netlify.app/categories/workshop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>meetup</title>
-      <link>https://oliverstringham.netlify.app/categories/meetup/</link>
-      <pubDate>Fri, 01 Jan 2021 14:15:59 -0600</pubDate>
-      
-      <guid>https://oliverstringham.netlify.app/categories/meetup/</guid>
+      <guid>https://oliverstringham/categories/tidy-tuesday/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Report</title>
-      <link>https://oliverstringham.netlify.app/categories/report/</link>
+      <link>https://oliverstringham/categories/report/</link>
       <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/categories/report/</guid>
+      <guid>https://oliverstringham/categories/report/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wordcloud</title>
-      <link>https://oliverstringham.netlify.app/categories/wordcloud/</link>
+      <link>https://oliverstringham/categories/wordcloud/</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/categories/wordcloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>package</title>
-      <link>https://oliverstringham.netlify.app/categories/package/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://oliverstringham.netlify.app/categories/package/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theme Features</title>
-      <link>https://oliverstringham.netlify.app/categories/theme-features/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://oliverstringham.netlify.app/categories/theme-features/</guid>
+      <guid>https://oliverstringham/categories/wordcloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reports</title>
-      <link>https://oliverstringham.netlify.app/categories/reports/</link>
+      <link>https://oliverstringham/categories/reports/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://oliverstringham.netlify.app/categories/reports/</guid>
+      <guid>https://oliverstringham/categories/reports/</guid>
       <description></description>
     </item>
     

@@ -31,29 +31,41 @@
 <meta property="og:title" content="Blog | Oliver C. Stringham">
 <meta property="og:description" content="Blog of Oliver Stringham featuring data analysis, modelling, and visualization." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://oliverstringham.netlify.app/blog/" />
+<meta property="og:url" content="https://oliverstringham/blog/" />
 <meta property="og:locale" content="en">
 
 
 
 
     
-        <meta property="og:image" content="https://oliverstringham.netlify.app/blog/sidebar-listing.jpg" >
+        <meta property="og:image" content="https://oliverstringham/blog/sidebar-listing.jpg" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="https://oliverstringham.netlify.app/blog/sidebar-listing.jpg" >
+        <meta name="twitter:image" content="https://oliverstringham/blog/sidebar-listing.jpg" >
     
     
   <meta itemprop="name" content="Blog">
 <meta itemprop="description" content="Blog of Oliver Stringham featuring data analysis, modelling, and visualization.">
   
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KW8HV15CK3', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/chameleon.ico" type="image/x-icon">
   <link rel="icon" href="/img/chameleon.ico" type="image/x-icon">
   
-    <link rel="alternate" type="application/rss+xml" href="https://oliverstringham.netlify.app/blog/index.xml" title="Oliver C. Stringham" />
+    <link rel="alternate" type="application/rss+xml" href="https://oliverstringham/blog/index.xml" title="Oliver C. Stringham" />
   
   
-  <link rel="stylesheet" href="/style.main.min.2279f698efda334a4f4d752d9b3c72537d922540c6370c54ad709a41eedf4eab.css" integrity="sha256-Inn2mO/aM0pPTXUtmzxyU32SJUDGNwxUrXCaQe7fTqs=" media="screen">
+  <link rel="stylesheet" href="/style.main.min.73e736bd4383f8090e0c7bb46d2b9fe5208816195891be73629cff4d163878c9.css" integrity="sha256-c&#43;c2vUOD&#43;AkODHu0bSuf5SCIFhlYkb5zYpz/TRY4eMk=" media="screen">
   
   
   <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
@@ -62,10 +74,10 @@
   <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
 </head>
 <body>
-      <div class="grid-container list-sidebar">
+      <div class="grid-container list">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
-    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham.netlify.app/" title="Home">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham/" title="Home">
       <img src="/img/chameleon.ico" class="dib db-l h2 w-auto" alt="Oliver C. Stringham">
     </a>
     <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
@@ -100,9 +112,14 @@
   </nav>
 </header>
 
-
-<main class="page-main pa4 section" role="main">
+<main class="page-main pa4" role="main">
+  <section class="blog-intro mw7 center mb5">
+    <h2 class="f2 f1-ns lh-solid tc center fw4">Blog</h2>
+    <p class="f6 f5-ns measure lh-copy tc center">Blog of Oliver Stringham featuring data analysis, modelling, and visualization.</p>
+    <p class="f7 measure lh-copy tc center i">Written by Oliver C. Stringham</p>
+  </section>
   <section class="blog-content mw7 center">
+    
     
       
         
@@ -116,23 +133,59 @@
   
   <div class="flex flex-column mb4 mb5-l  flex-row-ns">
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
-      <a href="/blog/2021-05-17-louisianna-broadband/" class="db">
+      <a href="/blog/2021-05-23-global-deforestation-rates/" class="db">
         
-          <img src="https://oliverstringham.netlify.app/blog/2021-05-17-louisianna-broadband/featured.png" class="db ma0 dim" alt="">
+          <img src="https://oliverstringham/blog/2021-05-23-global-deforestation-rates/featured.png" class="db ma0 dim" alt="">
         
       </a>
     </figure>
     <div class="flex flex-column w-100 w-60-ns pr3-ns">
       <header class="w-100">
-        <h1 class="f3 mv2 lh-title underline"><a href="/blog/2021-05-17-louisianna-broadband/" class="db">Broadband Access [Data Visualization]</a></h1>
+        <h1 class="f3 mv2 lh-title underline"><a href="/blog/2021-05-23-global-deforestation-rates/" class="db">Global Deforestation Rates [Data Visualization]</a></h1>
         
       </header>
       
-      <p class="f6 lh-copy mv2 flex-auto">This week I used ggplot to create a map of broadband internet access across Louisiana, USA. I then used the ggiraph package to convert the map to html. Hover over each subdivision to view the percentage of people with access to broadband internet as of 2017. Code below plot.
-{&ldquo;x&rdquo;:{&ldquo;html&rdquo;:&quot;\n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 25%\n \n \n 50%\n \n \n 75%\n \n \n Louisiana, USA\n \n \n Acces to Broadband Internet\n \n \n&quot;</p>
+      <p class="f6 lh-copy mv2 flex-auto">Interactive map of of global deforestation rates using Leaflet and R.</p>
       <footer class="w-100">
       
-      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a>  <a href="https://oliverstringham.netlify.app/categories/gis">gis</a> </p>
+      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/r">r</a>  <a href="https://oliverstringham/categories/gis">gis</a> </p>
+      <p class="f7 db mv1">May 23, 2021</p>
+    </footer>
+    </div>
+  </div>
+  
+  
+  
+</article>
+
+      
+        
+                                   
+     
+     
+<article class="mv4 mv5-l bb">
+  
+  
+  
+  
+  <div class="flex flex-column mb4 mb5-l  flex-row-ns">
+    <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
+      <a href="/blog/2021-05-18-louisianna-broadband/" class="db">
+        
+          <img src="https://oliverstringham/blog/2021-05-18-louisianna-broadband/featured.png" class="db ma0 dim" alt="">
+        
+      </a>
+    </figure>
+    <div class="flex flex-column w-100 w-60-ns pr3-ns">
+      <header class="w-100">
+        <h1 class="f3 mv2 lh-title underline"><a href="/blog/2021-05-18-louisianna-broadband/" class="db">Broadband Access [Data Visualization]</a></h1>
+        
+      </header>
+      
+      <p class="f6 lh-copy mv2 flex-auto">Interactive map of broadband internet access across Louisiana, USA</p>
+      <footer class="w-100">
+      
+      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/r">r</a>  <a href="https://oliverstringham/categories/gis">gis</a> </p>
       <p class="f7 db mv1">May 17, 2021</p>
     </footer>
     </div>
@@ -156,7 +209,7 @@
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="/blog/2021-02-02-hbcu-enrollment/" class="db">
         
-          <img src="https://oliverstringham.netlify.app/blog/2021-02-02-hbcu-enrollment/featured.png" class="db ma0 dim" alt="">
+          <img src="https://oliverstringham/blog/2021-02-02-hbcu-enrollment/featured.png" class="db ma0 dim" alt="">
         
       </a>
     </figure>
@@ -169,7 +222,7 @@
       <p class="f6 lh-copy mv2 flex-auto">This week I explored the TidyTuesday dataset of the week: Fall enrollment in degree-granting historically Black colleges and universities (HBCU). I plotted the proportion of student enrollment by gender over time. Plot made in R with ggplot2.</p>
       <footer class="w-100">
       
-      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a> </p>
+      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/r">r</a> </p>
       <p class="f7 db mv1">February 2, 2021</p>
     </footer>
     </div>
@@ -193,7 +246,7 @@
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="/blog/2021-01-31-the-bachelor/" class="db">
         
-          <img src="https://oliverstringham.netlify.app/blog/2021-01-31-the-bachelor/featured.png" class="db ma0 dim" alt="">
+          <img src="https://oliverstringham/blog/2021-01-31-the-bachelor/featured.png" class="db ma0 dim" alt="">
         
       </a>
     </figure>
@@ -206,7 +259,7 @@
       <p class="f6 lh-copy mv2 flex-auto">For this #TidyTuesday, I plotted the age of contestants on The Bachelor across &gt;20 seasons. There was no significant trend in the age of contestants over time. The average age is between 25 and 27 with some variation from 21 to 34.</p>
       <footer class="w-100">
       
-      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a> </p>
+      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/r">r</a> </p>
       <p class="f7 db mv1">January 31, 2021</p>
     </footer>
     </div>
@@ -230,7 +283,7 @@
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="/blog/2021-01-15-tate-art/" class="db">
         
-          <img src="https://oliverstringham.netlify.app/blog/2021-01-15-tate-art/featured.png" class="db ma0 dim" alt="">
+          <img src="https://oliverstringham/blog/2021-01-15-tate-art/featured.png" class="db ma0 dim" alt="">
         
       </a>
     </figure>
@@ -243,45 +296,8 @@
       <p class="f6 lh-copy mv2 flex-auto">#TidyTuesday dataset of the week is the art collection of Tate Art Museum. I made a visual of the number of acquisitions made by Tate by decade taking into account what decade the art was created.</p>
       <footer class="w-100">
       
-      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a> </p>
+      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham/categories/r">r</a> </p>
       <p class="f7 db mv1">January 15, 2021</p>
-    </footer>
-    </div>
-  </div>
-  
-  
-  
-</article>
-
-      
-        
-                                   
-     
-     
-<article class="mv4 mv5-l bb">
-  
-  
-  
-  
-  <div class="flex flex-column mb4 mb5-l  flex-row-ns">
-    <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
-      <a href="/blog/2020-12-09-bbc-women-of-the-year/" class="db">
-        
-          <img src="https://oliverstringham.netlify.app/blog/2020-12-09-bbc-women-of-the-year/featured.png" class="db ma0 dim" alt="">
-        
-      </a>
-    </figure>
-    <div class="flex flex-column w-100 w-60-ns pr3-ns">
-      <header class="w-100">
-        <h1 class="f3 mv2 lh-title underline"><a href="/blog/2020-12-09-bbc-women-of-the-year/" class="db">BBC Women of 2020 [Data Visualization]</a></h1>
-        
-      </header>
-      
-      <p class="f6 lh-copy mv2 flex-auto">#TidyTuesday dataset of the week is the BBC Women of 2020! I made an interactive web map using #rstats and LeafletJS</p>
-      <footer class="w-100">
-      
-      <p class="f7 db mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a>  <a href="https://oliverstringham.netlify.app/categories/tidy-tuesday">tidy-tuesday</a>  <a href="https://oliverstringham.netlify.app/categories/r">r</a>  <a href="https://oliverstringham.netlify.app/categories/gis">gis</a> </p>
-      <p class="f7 db mv1">December 9, 2020</p>
     </footer>
     </div>
   </div>
@@ -316,51 +332,6 @@
 
   </section>
 </main>
-<aside class="page-sidebar" role="complementary">
-                         
- 
-
-
-                       
- 
-
-
-
-
-
-
-
-
-
-
-
-  <img src="/blog/sidebar-listing.jpg" class="db ma0">
-
-
-<div class="blog-info ph4 pt4 pb4 pb0-l">
-  
-
-  <h1 class="f3">A Sidebar for Your Thoughts</h1>
-  <p class="f6 lh-copy measure"><p>This is a fully featured blog that supports categories,
-tags, series, and pagination. Even this sidebar offers
-a ton of customizations.</p>
-<p>Check out the _index.md file in the /blog folder
-to edit this content.</p>
-</p>
-  <p class="f7 measure lh-copy i mh0-l">Written by Oliver C. Stringham</p>
-
-
-  <small class="db f7"><a href="/index.xml" class="dib fw7 ttu bt bw1 b--black-10 pt3">Subscribe via RSS</a></small>
-</div>
-
-
-<div class="ad-unit pa4">
-  
-  <p class="f7 measure-narrow lh-copy mv0 pt5"><span class="b ttu db">Made by Formspree</span><span><a href="https://formspree.io" target="_blank">Formspree is a form backend, API and email  service for HTML forms</a>. It is the simplest way to collect form submissions on your static website.</span></p>
-  
-</div>
-
-</aside>
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">

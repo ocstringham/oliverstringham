@@ -31,30 +31,42 @@
 <meta property="og:title" content="Washington Hiking [Data Visualization] | Oliver C. Stringham">
 <meta property="og:description" content="Personal website of Oliver C. Stringham" />
 <meta property="og:type" content="page" />
-<meta property="og:url" content="https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/" />
+<meta property="og:url" content="https://oliverstringham/blog/2019-11-24-washington-hiking/" />
 <meta property="og:locale" content="en">
 
 
 
 
     
-        <meta property="og:image" content="https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/featured.png" >
+        <meta property="og:image" content="https://oliverstringham/blog/2019-11-24-washington-hiking/featured.png" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/featured.png" >
+        <meta name="twitter:image" content="https://oliverstringham/blog/2019-11-24-washington-hiking/featured.png" >
     
     
   <meta itemprop="name" content="Washington Hiking [Data Visualization]">
 <meta itemprop="description" content="#TidyTuesday of the week for Washington Hiking data from @ WTA_hikers. You’re looking at the most common words used to describe parks in each region of WA (word clouds) and the most unique words used to describe each region (tf-idf). View code here."><meta itemprop="datePublished" content="2019-11-24T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-11-24T00:00:00+00:00" />
-<meta itemprop="wordCount" content="43"><meta itemprop="image" content="https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/featured.png">
+<meta itemprop="wordCount" content="43"><meta itemprop="image" content="https://oliverstringham/blog/2019-11-24-washington-hiking/featured.png">
 <meta itemprop="keywords" content="r,worldcloud,tidytext,ggwordcloud," />
   
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KW8HV15CK3', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/chameleon.ico" type="image/x-icon">
   <link rel="icon" href="/img/chameleon.ico" type="image/x-icon">
   
   
-  <link rel="stylesheet" href="/style.main.min.2279f698efda334a4f4d752d9b3c72537d922540c6370c54ad709a41eedf4eab.css" integrity="sha256-Inn2mO/aM0pPTXUtmzxyU32SJUDGNwxUrXCaQe7fTqs=" media="screen">
+  <link rel="stylesheet" href="/style.main.min.73e736bd4383f8090e0c7bb46d2b9fe5208816195891be73629cff4d163878c9.css" integrity="sha256-c&#43;c2vUOD&#43;AkODHu0bSuf5SCIFhlYkb5zYpz/TRY4eMk=" media="screen">
   
   
   <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
@@ -66,7 +78,7 @@
       <div class="grid-container">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
-    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham.netlify.app/" title="Home">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://oliverstringham/" title="Home">
       <img src="/img/chameleon.ico" class="dib db-l h2 w-auto" alt="Oliver C. Stringham">
     </a>
     <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
@@ -107,7 +119,7 @@
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">Washington Hiking [Data Visualization]</h1>
         
-        <p class="f6 measure lh-copy mv1">By Oliver C. Stringham in <a href="https://oliverstringham.netlify.app/categories/r">r</a>  <a href="https://oliverstringham.netlify.app/categories/wordcloud">wordcloud</a>  <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a> </p>
+        <p class="f6 measure lh-copy mv1">By Oliver C. Stringham in <a href="https://oliverstringham/categories/r">r</a>  <a href="https://oliverstringham/categories/wordcloud">wordcloud</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a> </p>
         <p class="f7 db mv0 ttu">November 24, 2019</p>
 
       
@@ -117,7 +129,7 @@
         <p>#TidyTuesday of the week for Washington Hiking data from @
 <a href="https://twitter.com/wta_hikers?lang=en" target="_blank" rel="noopener">WTA_hikers</a>. You’re looking at the most common words used to describe parks in each region of WA (word clouds) and the most unique words used to describe each region (tf-idf). View code 
 <a href="https://github.com/ocstringham/tidy_tuesday/blob/main/scripts/2020-11-25-washington-hiking.R" target="_blank" rel="noopener">here</a>.</p>
-<p><img src="https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/index_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="https://oliverstringham.netlify.app/blog/2019-11-24-washington-hiking/index_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<p><img src="https://oliverstringham/blog/2019-11-24-washington-hiking/index_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="https://oliverstringham/blog/2019-11-24-washington-hiking/index_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
 
         
         <details closed class="f6 fw7 input-reset">
@@ -132,24 +144,24 @@
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Categories:</dt>
-    <dd class="fw5 ml0"> <a href="https://oliverstringham.netlify.app/categories/r">r</a>  <a href="https://oliverstringham.netlify.app/categories/wordcloud">wordcloud</a>  <a href="https://oliverstringham.netlify.app/categories/data-visualization">data-visualization</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://oliverstringham/categories/r">r</a>  <a href="https://oliverstringham/categories/wordcloud">wordcloud</a>  <a href="https://oliverstringham/categories/data-visualization">data-visualization</a> </dd>
   </dl>
   
   
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="https://oliverstringham.netlify.app/tags/r">r</a>  <a href="https://oliverstringham.netlify.app/tags/worldcloud">worldcloud</a>  <a href="https://oliverstringham.netlify.app/tags/tidytext">tidytext</a>  <a href="https://oliverstringham.netlify.app/tags/ggwordcloud">ggwordcloud</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://oliverstringham/tags/r">r</a>  <a href="https://oliverstringham/tags/worldcloud">worldcloud</a>  <a href="https://oliverstringham/tags/tidytext">tidytext</a>  <a href="https://oliverstringham/tags/ggwordcloud">ggwordcloud</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
     
-    <dd class="fw5 ml0"><a href="/blog/2021-05-17-louisianna-broadband/">Broadband Access [Data Visualization]</a></dd>
+    <dd class="fw5 ml0"><a href="/blog/2021-05-23-global-deforestation-rates/">Global Deforestation Rates [Data Visualization]</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2021-05-18-louisianna-broadband/">Broadband Access [Data Visualization]</a></dd>
     
     <dd class="fw5 ml0"><a href="/blog/2021-02-02-hbcu-enrollment/">HBCU Enrollment [Data Visualization]</a></dd>
-    
-    <dd class="fw5 ml0"><a href="/blog/2021-01-31-the-bachelor/">The Bachelor (TV Show) [Data Visualization]</a></dd>
     
   </dl>
 </details>
@@ -160,7 +172,7 @@
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="https://oliverstringham.netlify.app/blog/toronto-homeless-shelters-data-visualization/">&larr; Toronto Homeless Shelters [Data Visualization]</a>
+    href="https://oliverstringham/blog/toronto-homeless-shelters-data-visualization/">&larr; Toronto Homeless Shelters [Data Visualization]</a>
   
   
   
