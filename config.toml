@@ -1,4 +1,4 @@
-baseURL = "www.oliverstringham.com/"
+baseURL = "https://www.oliverstringham.com/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Oliver C. Stringham"
