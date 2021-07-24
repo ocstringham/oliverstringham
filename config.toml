@@ -1,4 +1,4 @@
-baseURL = "https://oliverstringham/"
+baseURL = "https://oliverstringham.netlify.app/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Oliver C. Stringham"
