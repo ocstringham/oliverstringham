@@ -13,10 +13,12 @@ tags:
   - internet
 doi: '10.1111/cobi.13675'
 publishDate: '2020-12-05'
+# featured: 1
 # publication_types:
 #   - '2'
 # publication: 'PDF'
 summary: 'The internet is a vast source of wildlife trade data. Here, we present an accessible guide for Internet‐based wildlife trade surveillance, which uses a repeatable and systematic method to automate data collection from relevant websites. Our guide is adaptable to the multitude of trade‐based contexts including different focal taxa or derived parts, and locations of interest.'
+subtitle: 'The internet is a vast source of wildlife trade data. Here, we present an accessible guide for Internet‐based wildlife trade surveillance, which uses a repeatable and systematic method to automate data collection from relevant websites. Our guide is adaptable to the multitude of trade‐based contexts including different focal taxa or derived parts, and locations of interest.'
 featured: no
 links:
 - icon: researchgate

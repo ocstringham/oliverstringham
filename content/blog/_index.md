@@ -10,19 +10,19 @@ cascade:
     text_link_label: View recent posts
     text_link_url: /blog/
 description: "Blog of Oliver Stringham featuring data analysis, modelling, and visualization."
-layout: list-sidebar
+layout: list
 show_author_byline: true
 show_post_date: true
 show_post_thumbnail: true
-sidebar:
-  author: Oliver C. Stringham
-  description: "This is a fully featured blog that supports categories,\ntags, series,
-    and pagination. Even this sidebar offers \na ton of customizations.\n\nCheck out
-    the _index.md file in the /blog folder \nto edit this content. \n"
-  show_sidebar_adunit: true
-  text_link_label: Subscribe via RSS
-  text_link_url: /index.xml
-  title: A Sidebar for Your Thoughts
+# sidebar:
+#   author: Oliver C. Stringham
+#   description: "This is a fully featured blog that supports categories,\ntags, series,
+#     and pagination. Even this sidebar offers \na ton of customizations.\n\nCheck out
+#     the _index.md file in the /blog folder \nto edit this content. \n"
+#   show_sidebar_adunit: true
+#   text_link_label: Subscribe via RSS
+#   text_link_url: /index.xml
+#   title: Some R packages I commonly use
 thumbnail_left: true
 title: Blog
 ---

@@ -12,3 +12,7 @@
 * new blog pieces
 - gis
 - tidymodels
+
+* rss feed?
+* google analytics
+* google ads

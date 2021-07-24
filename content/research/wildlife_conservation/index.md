@@ -6,5 +6,6 @@ excerpt: Wildlife populations face numerous threats to their existence including
 layout: single
 show_post_thumbnail: true
 title: Wildlife Conservation
+slug: "../tags/conservation"
 ---
 

@@ -6,5 +6,6 @@ excerpt: Millions of animals, plants, and wildlife products are moved across the
 layout: single
 show_post_thumbnail: true
 title: Wildlife Trade
+slug: "../tags/wildlife-trade/"
 ---
 

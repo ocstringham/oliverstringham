@@ -6,5 +6,6 @@ excerpt: "Invasive species cause ecological, economic damage, and can even endan
 layout: single
 show_post_thumbnail: true
 title: Biological Invasions & Biosecurity
+slug: "../tags/invasive-species"
 ---
 

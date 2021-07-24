@@ -33,7 +33,7 @@ enableEmoji = true
   description = "Personal website of Oliver C. Stringham"
   favicon = "/img/chameleon.ico"
   logo = "/img/chameleon.ico"
-  mainSections = ["blog", "project", "talk"]
+  mainSections = ["blog", "publications", "research"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -48,7 +48,7 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water 
-  theme = "plum"
+  theme = "sky"
   
   # or, leave theme empty & make your own palette
   # see docs at https://hugo-apero.netlify.app/blog/color-themes/

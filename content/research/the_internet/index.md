@@ -6,5 +6,6 @@ excerpt: The Internet is a vast source of data on the wildlife trade. Data colle
 layout: single
 show_post_thumbnail: true
 title: The Internet
+slug: "../tags/internet"
 ---
 

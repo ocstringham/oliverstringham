@@ -5,7 +5,7 @@ date: '2021-05-23'
 slug: [global-deforestation-rates-data-visualization]
 categories: [tidy-tuesday, data-visualization, r, gis]
 tags: [r, leaflet, gis]
-summary: "Interactive map of broadband internet access across Louisiana, USA"
+summary: "Interactive map of of global deforestation rates using Leaflet and R."
 ---
 
 <script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>

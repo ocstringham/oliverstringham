@@ -5,7 +5,7 @@ date: '2021-05-23'
 slug: [global-deforestation-rates-data-visualization]
 categories: [tidy-tuesday, data-visualization, r, gis]
 tags: [r, leaflet, gis]
-summary: "Interactive map of broadband internet access across Louisiana, USA"
+summary: "Interactive map of of global deforestation rates using Leaflet and R."
 ---
 
 This week I took a deeper look at LeafletJS in R using the leaflet package. Leaflet renders maps using Javascript, making them viewable in a web browser and interactivity (like a popup) can be programmed in. The R package allows it all to be done neatly in R :) I’d like to get better at producing these types of maps for viewing on web pages, so you might see more in the future. Hopefully, they become more aesthetically pleasing as I practice. I’d like to investigate CSS to customize the aesthetics of the maps, including the popups. This map has simple popup (hover over on desktop). Also, I changed the map projection to the Robinson projection, which better represents the actual shapes and sizes of countries compared to the commonly used projection in default web maps (Mercator projection).
