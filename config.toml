@@ -162,12 +162,12 @@ enableEmoji = true
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]
-  [privacy.disqus]
-    disable = false
   [privacy.googleAnalytics]
     disable = false
-    anonymizeIP = true
-    respectDoNotTrack = true
+    anonymizeIP = false
+    respectDoNotTrack = false
+  [privacy.disqus]
+    disable = false
   [privacy.instagram]
     disable = false
     simple = true
