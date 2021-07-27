@@ -16,6 +16,7 @@ publishDate: '2018-06-24'
 #   - '2'
 # publication: 'PDF'
 summary: 'The trade of non-native animals as pets the main pathway for new invasive species if they become released into the wild. Here, we examined the trade in non-native reptiles and amphibians as pets in the United States. We found c. 1,700 species traded in the past two decades of which 126 species have been recorded as released in the wild. Using machine learning models, we show that larger-bodied, longer-lived species, who sold for cheaper prices were more likely to have been released. We propose policies and education focused on species with these characteristics in order to curb the impacts of new invasive species that originated as pets.'
+subtitle: 'The trade of non-native animals as pets the main pathway for new invasive species if they become released into the wild. Here, we examined the trade in non-native reptiles and amphibians as pets in the United States. We found c. 1,700 species traded in the past two decades of which 126 species have been recorded as released in the wild. Using machine learning models, we show that larger-bodied, longer-lived species, who sold for cheaper prices were more likely to have been released. We propose policies and education focused on species with these characteristics in order to curb the impacts of new invasive species that originated as pets.'
 featured: no
 links:
 - icon: researchgate

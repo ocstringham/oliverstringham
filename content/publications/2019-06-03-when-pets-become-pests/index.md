@@ -16,6 +16,7 @@ publishDate: '2019-06-03'
 #   - '2'
 # publication: 'PDF'
 summary: 'The exotic pet trade is a multi-billion dollar industry involving thousands of animal species. Research has historically focused only the conservation and disease risks, however the risk of pets becoming invasive species has been overlooked. We show this trade is now the leading contributor of non-native establishments and invasions worldwide among vertebrates. We highlight areas of future research/policy changes needed to avoid more invasive pets in the future.'
+subtitle: 'The exotic pet trade is a multi-billion dollar industry involving thousands of animal species. Research has historically focused only the conservation and disease risks, however the risk of pets becoming invasive species has been overlooked. We show this trade is now the leading contributor of non-native establishments and invasions worldwide among vertebrates. We highlight areas of future research/policy changes needed to avoid more invasive pets in the future.'
 featured: no
 links:
 - icon: file-pdf

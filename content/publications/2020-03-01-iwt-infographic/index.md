@@ -20,6 +20,9 @@ publishDate: '2020-03-01'
 summary: "Illegal wildlife trade (IWT) directly threatens tens of thousands of species. It is critical 
 that it is taken seriously in order to safeguard our environmental assets and provide resilient landscapes for our 
 unique flora and fauna. Here, we provide an infographic of IWT including: what it is, how bad is it, why can't we stop it, and solutions."
+subtitle: "Illegal wildlife trade (IWT) directly threatens tens of thousands of species. It is critical 
+that it is taken seriously in order to safeguard our environmental assets and provide resilient landscapes for our 
+unique flora and fauna. Here, we provide an infographic of IWT including: what it is, how bad is it, why can't we stop it, and solutions."
 featured: no
 links:
 - icon: file-pdf

@@ -15,7 +15,8 @@ publishDate: '2021-07-09'
 # publication_types:
 #   - '2'
 # publication: 'PDF'
-summary: ''
+summary: 'The Internet can be vast source of data for the wildlife trade. However, data collected from the Internet is often numerous and messy, making data cleaning a task the requires a lot time and effort. Here, we tested if text classification can be used to speed up the process of data cleaning in relation to online data collected on the wildlife trade. We found that text classification models can predict with great accuracy relaxant advertisements, including the taxonomy of relevant species, using the text found in online advertisements. We recommend using text classification as a method to make data cleaning more efficient. Future efforts should try to pair text classification with image classification for improved efficiency.'
+subtitle: 'The Internet can be vast source of data for the wildlife trade. However, data collected from the Internet is often numerous and messy, making data cleaning a task the requires a lot time and effort. Here, we tested if text classification can be used to speed up the process of data cleaning in relation to online data collected on the wildlife trade. We found that text classification models can predict with great accuracy relaxant advertisements, including the taxonomy of relevant species, using the text found in online advertisements. We recommend using text classification as a method to make data cleaning more efficient. Future efforts should try to pair text classification with image classification for improved efficiency.'
 featured: no
 links:
 - icon: file-pdf

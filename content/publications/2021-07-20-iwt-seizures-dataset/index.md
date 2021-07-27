@@ -15,7 +15,8 @@ publishDate: '2021-07-20'
 # publication_types:
 #   - '2'
 # publication: 'PDF'
-summary: ''
+summary: 'We compiled a dataset consisting of all the species involved in the illegal wildlife trade along with the reason (i.e., use-type) they were being traded. In total, the dataset includes c. 4.9k distinct taxa representing c. 3.3k species and contains c. 11k taxa-use combinations from 110 unique use-types. Our dataset can be used to conduct large-scale broad searches of the Internet to find illegally traded wildlife.'
+subtitle: 'We compiled a dataset consisting of all the species involved in the illegal wildlife trade along with the reason (i.e., use-type) they were being traded. In total, the dataset includes c. 4.9k distinct taxa representing c. 3.3k species and contains c. 11k taxa-use combinations from 110 unique use-types. Our dataset can be used to conduct large-scale broad searches of the Internet to find illegally traded wildlife.'
 featured: no
 links:
 - icon: biorxiv

@@ -17,6 +17,7 @@ publishDate: '2021-06-09'
 #   - '2'
 # publication: 'PDF'
 summary: 'The international trade in exotic vertebrate pets provides key social and economic benefits but also drives associated ecological, ethical, and human health impacts. Here, we represent and review the structure of the pet trade as a network composed of different market actors (nodes) and trade flows (links). As a case study of how data-informed networks can realize this goal, we quantified spatial and temporal patterns in pets imported to the United States. Our framework and case study illustrate how network approaches can help to inform and manage the effects of the growing demand for exotic pets.'
+subtitle: 'The international trade in exotic vertebrate pets provides key social and economic benefits but also drives associated ecological, ethical, and human health impacts. Here, we represent and review the structure of the pet trade as a network composed of different market actors (nodes) and trade flows (links). As a case study of how data-informed networks can realize this goal, we quantified spatial and temporal patterns in pets imported to the United States. Our framework and case study illustrate how network approaches can help to inform and manage the effects of the growing demand for exotic pets.'
 featured: no
 links:
 - icon: file-pdf

@@ -15,7 +15,7 @@ publication_types:
   - '2'
 # publication: 'arXiv'
 summary: 'Report detailing the extent to which water and water-related resources are modified by land development in the protected Pinelands region of New Jersey, USA.'
-# subtitle: 'Report detailing the extent to which water and water-related resources are modified by land development in the protected Pinelands region of New Jersey, USA.'
+subtitle: 'Report detailing the extent to which water and water-related resources are modified by land development in the protected Pinelands region of New Jersey, USA.'
 featured: no
 links:
 - icon: file-pdf

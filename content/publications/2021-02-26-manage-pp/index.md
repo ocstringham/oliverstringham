@@ -14,6 +14,7 @@ publishDate: '2021-02-26'
 #   - '2'
 # publication: 'PDF'
 summary: 'Keeping propagule pressure low can reduce the probability a non-native species will establish in a new location. Here we develop a mathematical framework that can determine the required reduction in levels for propagule size and number (representative of management actions) to maintain a target establishment probability. Our tool can serve to guide the development of new invasive species management plans in a transparent and quantitative manner. Together with information on the costs associated with approaches to reducing propagule pressure, our tool can be used to identify the most cost‐effective approach to prevent invasive species establishments.'
+subtitle: 'Keeping propagule pressure low can reduce the probability a non-native species will establish in a new location. Here we develop a mathematical framework that can determine the required reduction in levels for propagule size and number (representative of management actions) to maintain a target establishment probability. Our tool can serve to guide the development of new invasive species management plans in a transparent and quantitative manner. Together with information on the costs associated with approaches to reducing propagule pressure, our tool can be used to identify the most cost‐effective approach to prevent invasive species establishments.'
 featured: no
 links:
 - icon: researchgate

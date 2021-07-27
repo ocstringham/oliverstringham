@@ -15,6 +15,7 @@ publication_types:
   - '2'
 # publication: 'PDF'
 summary: 'Mathematical models that inform conservation efforts always have underlying uncertainty. We show that in many applied cases, this uncertainty results in a non-trivial probability that management action will have no benefit to conservation. We encourage future use of population viability analysis (PVA) to explicitly account for this uncertainty when considering whether or not to implement management actions.'
+subtitle: 'Mathematical models that inform conservation efforts always have underlying uncertainty. We show that in many applied cases, this uncertainty results in a non-trivial probability that management action will have no benefit to conservation. We encourage future use of population viability analysis (PVA) to explicitly account for this uncertainty when considering whether or not to implement management actions.'
 featured: no
 links:
 - icon: file-pdf

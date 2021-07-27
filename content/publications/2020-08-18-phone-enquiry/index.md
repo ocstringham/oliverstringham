@@ -17,6 +17,7 @@ publishDate: '2020-08-18'
 #   - '2'
 # publication: 'PDF'
 summary: 'The live pet trade is a major pathways for invasive species. Australia imposes tough regulations against the trade of non-native animals as pets. However, there exists an illegal trade of these animals in Australia that threatens biosecurity. Here, we used government records of enquiries from the general public to assess the characteristics of species that are likely desired as pets. We found that desired species are more likely to invasive species elsewhere or at risk of extinction due to trade. Our findings suggest that in absence of strict laws, an unregulated pet trade would threaten Australian biosecurity and global conservation efforts.'
+subtitle: 'The live pet trade is a major pathways for invasive species. Australia imposes tough regulations against the trade of non-native animals as pets. However, there exists an illegal trade of these animals in Australia that threatens biosecurity. Here, we used government records of enquiries from the general public to assess the characteristics of species that are likely desired as pets. We found that desired species are more likely to invasive species elsewhere or at risk of extinction due to trade. Our findings suggest that in absence of strict laws, an unregulated pet trade would threaten Australian biosecurity and global conservation efforts.'
 featured: no
 links:
 - icon: file-pdf

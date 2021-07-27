@@ -15,6 +15,7 @@ publishDate: '2017-09-27'
 #   - '2'
 # publication: 'PDF'
 summary: 'White-nose syndrome (WNS) has caused catastrophic declines in some bat species, while others appear less impacted. We conducted a mark–recapture study of federally endangered Indiana bats (Myotis sodalis) during 2011–2016 and found survival had decreased by around 4 percentage points. We ran population models based on new survival data and results suggested there will be future population declines for the Indiana bat.'
+subtitle: 'White-nose syndrome (WNS) has caused catastrophic declines in some bat species, while others appear less impacted. We conducted a mark–recapture study of federally endangered Indiana bats (Myotis sodalis) during 2011–2016 and found survival had decreased by around 4 percentage points. We ran population models based on new survival data and results suggested there will be future population declines for the Indiana bat.'
 featured: no
 links:
 - icon: file-pdf
