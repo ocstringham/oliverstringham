@@ -15,7 +15,7 @@ publishDate: '2015-01-21'
 #   - '2'
 # publication: 'PDF'
 summary: 'Endangered species face many threats, including from invasive predators. Here, we developed a modelling method to compare different management options for controlling predators. We then applied this method to compared management options for the endangered shorebird, the piping plover, which faces predation threats from the red fox along New Jersey beaches.'
-subtitle: 'summary: 'Endangered species face many threats, including from invasive predators. Here, we developed a modelling method to compare different management options for controlling predators. We then applied this method to compared management options for the endangered shorebird, the piping plover, which faces predation threats from the red fox along New Jersey beaches.'
+subtitle: 'Endangered species face many threats, including from invasive predators. Here, we developed a modelling method to compare different management options for controlling predators. We then applied this method to compared management options for the endangered shorebird, the piping plover, which faces predation threats from the red fox along New Jersey beaches.'
 featured: no
 links:
 - icon: researchgate
