@@ -1,0 +1,34 @@
+
+
+Before we can run the CREATE TABLE script, we must first activate PostGIS. To do so, right click Extension –> Create –> Extension
+
+Activate PostGIS
+
+The from the drop down menu, select "postgis"
+
+Select PostGIS
+
+!!!!!!!! in definition tab select schema us_census !!!!!!!!! !!!!
+
+!!! Doesn't let run …. use query tool
+
+After clicking Save, PostGIS will now be activated for the us_census schema.
+
+
+The first step is open the Query Tool in pgAmin. Go to Tool –> Query Tool.
+
+Open query tool
+
+This will open a blank text editor. Copy and paste the CREATE TABLE code to the text editor and press Execute button (see cursor position in image below):
+
+pgAmin execute create table
+
+You should receive a green message in the bottom right of pgAmin that says "Query returned successfully in xxx msec.". Our table has been created! To view in in pgAmin, right click the us_census schema and click refresh:
+
+Refresh schema
+
+Now under Tables, our new table us_census_county_2010 should be visible:
+
+View created table
+
+Our table was successfully created and now exists in postgres. One quick note, is that you can save the CREATE TABLE code as a .sql to access later by either the Save feature in pgAmin or copying to another text editor and saving there. 

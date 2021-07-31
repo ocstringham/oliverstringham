@@ -1,0 +1,560 @@
+---
+title: Setting up PostgreSQL and PostGIS to Run Spatial Queries in R [SQL Database Tutorial]
+date: '2021-07-31'
+slug: setting-up-postgres-postgis-to-run-spatial-queries-in-r-tutorial
+categories:
+  - sql
+  - postgres
+  - postgis
+  - r
+  - gis
+tags:
+  - sql
+  - postgres
+  - postgis
+  - r
+  - gis
+subtitle: 'In this tutorial I will show how to set up PostgreSQL with PostGIS to run spatial queries in R. I cover installation of PostgresSQL, creating schemas, saving data to tables, connecting from R, and running spatial queries.'
+excerpt: 'In this tutorial I will show how to set up PostgreSQL with PostGIS to run spatial queries in R. I cover installation of PostgresSQL, creating schemas, saving data to tables, connecting from R, and running spatial queries.'
+# series: Data Science Tutorials
+layout: single
+draft: false
+# set up common front matter for all individual pages in series
+cascade:
+  layout: single-series       # for a series, do not change
+  series: Data Science Tutorials # name your series
+  author: Oliver C. Stringham
+  show_author_byline: true
+  show_post_date: true
+  sidebar:
+    text_link_label: ""
+    text_link_url: ""
+    # show_sidebar_adunit: false # show ad container
+    text_series_label: "In this series" 
+    text_contents_label: "On this page" 
+---
+
+```{r setup, include = FALSE}
+# knitr::opts_chunk$set(eval = FALSE)
+# knitr::opts_chunk$set(cache = TRUE)
+library(tidycensus)
+library(tigris)
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(mapview)
+library(htmlwidgets)
+library(DBI)
+library(RPostgres)
+
+
+variables_d2010 = read_rds("data/variables_d2010.rds")
+df = read_rds('data/df.rds')
+df_w_geom = read_rds('data/df_w_geom.rds')
+geoms = read_rds('data/geoms.rds')
+# map1 = read_rds('map1.rds')
+counties_query = read_rds('data/countries_query.rds')
+
+source('data/pw.r')
+con <- dbConnect(RPostgres::Postgres(),
+                 host = 'localhost', # host name, can be website/server
+                 port = 5432, # default port of postgres
+                 dbname = 'postgres', # name of database in postgres
+                 user = 'postgres', # the default user
+                 password = pw, # password of user
+                 options="-c search_path=us_census" # specify what schema to connect to
+)
+
+```
+
+# Motivation
+
+I've used MySQL for the past 3 years now as my SQL database manager of choice. However, I have two reasons for wanting to learn a new SQL RDMS (relational database management system). First, I would like to be proficient in more than one SQL RDMS. Also, since diving into GIS and the spatial world, I would like to learn PostgreSQL since it supports storing spatial files in an SQL table using the extension PostGIS. In particular, this aspect of PostgreSQL offers much more than most (free) database systems. I think the ability to query using SQL based on spatial operation can be very powerful, especially considering spatial files usually take up a lot space - thus querying to only retrieve needed records is desirable. Also, if storing and retrieving spatial data online (e.g., for web applications), then using SQL is needed to save money on data retrieval and processing time. Here is one example of a spatial query: given a table containing all the counties in the US, query only the counties within 100km of a specific location. We can use the following SQL pseudo-code to achieve this:
+
+``` sql
+SELECT population_size
+FROM us_cenesus_county_2010
+WHERE ST_DWithin(
+        geometry,
+        ST_GeomFromText('POINT(-74.14967 40.79315)', 4269),
+        100000
+      );
+```
+
+which will return all the counties within 100 km (100,000 m) from a specified point. This query is visualized below, with a 100km circle added around the point of interest:
+
+```{r echo=FALSE}
+# define sf point where Belleville is
+belleville = st_sfc(st_point(c(-74.14967, 40.79315)), crs = 4269) 
+
+# define 100km around Belleville
+belleville_buffer = st_buffer(belleville %>% st_transform("ESRI:102003"), 100000 ) # transform to a crs with units of meters in order to buffer in meters
+
+# plot Population size and Belleville Buffer
+map1 = 
+  mapview(belleville, 
+          col.regions = "red", 
+          label = "Belleville Township, NJ", 
+          layer.name = "Belleville Township, NJ") + 
+    
+  mapview(belleville_buffer, color = "red", alpha.regions = 0,
+          label = "Belleville 100km Buffer",
+          layer.name = "Belleville 100km Buffer") +
+    
+  mapview(counties_query, 
+        zcol = "p001001", 
+        label = paste0(counties_query$county_name, ", ", counties_query$state_abb),
+        layer.name = "Population Size") 
+
+map1
+```
+
+So, instead of loading the entire spatial database, only the subset requested from the query is returned. Hopefully this gives a glimpse of the power of a spatial query. This is what I will work up to in this tutorial - from nothing to being able to run spatial queries in R.
+
+# Getting started with PostgreSQL and PostGIS
+
+## Installation
+
+First step is to install PostgreSQL (or postgres for short) on your either your local computer or a remote server. For personal use and learning, I recommend installing to your local computer. Visit postgres' [website](https://www.postgresql.org/download/) and select the installation file that matches your operating system. Run the installer, following all the defaults. You need to provide a password - don't forget it! Once, installation of postgres is complete, it should auto-launch a window to select additional extensions to install. Select then PostGIS extension under spatial extensions and follow the prompts to install. That's it - postgres and PostGIS are now installed on your computer. Next thing is to set it up postgres to store data.
+
+## Data Structure of PostgreSQL
+
+Data is stored in tables. Postgres and other RDMS have a tiered structure of different entities. For postgres, it's desirable to have one 'database' that contains different 'schema', each 'schema' can have its own tables. One can use schemas to keep tables organized. For instance, one schema might contain census data tables and another schema might contain weather data tables. Think of a schema as a collection of tables. A 'database' can contain multiple schemas. Now is about time where the terminology becomes confusing, but a 'database' is higher than a schema, so a database can be a collection of schema. I drew a diagram for this:
+
+![postgres structure](db-schema-table.png "postgres structure")
+
+## Creating Schemas
+
+Before we can store our data in a table(s), we need to first create a schema and then create tables. I'm interested in working with US census data, which is publicly available, so let's create a schema to eventually have tables with this data.
+
+### Using pgAdmin 4 to Create Schemas
+
+Postgres comes with a GUI interface called pgAdmin 4, which allows one to interact with postgres in a point and click manner, which I prefer. On startup of pgAdmin 4 it will ask for the password you provided upon installing postgres. Then click to expand "Servers" (it may ask for password again):
+
+![pgAdmin 4 on startup](2021-07-19 21_41_43-pgAdmin 4.png "pgAdmin 4 on startup")
+
+Postgres comes with a 'database' built by default called postgres (highlighted in image).
+
+For most data science work, all you need to worry about is schemas and tables. If all your data tables are in the same 'database' then they can be queried in the same SQL statement (even if in different schema). So, let's just stick with the default 'database' called postgres. This database comes with a default schema called **public** which is fine to use. However, let's walk through creating our own schema.
+
+To create a new schema, right click the postgres database \> Create \> Schema ... . Type in the desired name, in my case it will be called **us_census**, and click Save.
+
+![postgres create new schema](pgAdmin-create-schema.png "postgres create new schema")
+
+Now, there exists a new schema called **us_census**, where we can create data tables to store our data! (Note you might have to right click Schemas and click Refresh for it to show up).
+
+![postgres view new schema](pgAdmin-new-schema.png "postgres view new schema")
+
+### Using R to Create Schemas
+To create schemas from R, we first need to create a 'connection' to postgres, using the `DBI` and `RPostgres` packages:
+
+```{r eval=FALSE}
+library(DBI)
+library(RPostgres)
+
+# define postgres user password
+pw <- "your-password-goes-here"
+
+# create connection to postgres 
+con <- dbConnect(RPostgres::Postgres(),
+                 host = 'localhost', # host name, can be website/server
+                 port = 5432, # default port of postgres
+                 dbname = 'postgres', # name of database in postgres
+                 user = 'postgres', # the default user
+                 password = pw # password of user
+)
+
+```
+
+To create a schema in R use:
+```{r eval=FALSE}
+dbSendQuery(con, "CREATE SCHEMA us_census")
+```
+
+To check if the query worked, use:
+
+```{r message=FALSE}
+dbGetQuery(con, "SELECT schema_name
+                 FROM information_schema.schemata;")
+```
+
+
+## Gather Data: US census data
+
+Before going any further, let's first get some data to eventually store in our SQL table. For this tutorial, let work with 2010 US census data at the county level. We'll collect the following: population size, and the spatial files for counties. US census data is available for download [here](https://data.census.gov/cedsci/advanced) - however, the R package `tidycensus` ([link](https://walker-data.com/tidycensus/index.html)) provides a very interface to download the data and the package `tigris` ([link](https://github.com/walkerke/tigris)) lets us easily download the spatial files of the counties.
+
+First let's load in packages needed here:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+library(tidycensus)
+library(tigris)
+library(tidyverse)
+library(sf)
+```
+
+In order to download census data via `tidycensus`, you have to get an API code [here](http://api.census.gov/data/key_signup.html). Once they email it to you (took a few minutes for me), set the key in R with the following:
+
+```{r echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
+census_api_key("YOUR API KEY GOES HERE")
+```
+
+Let's view the variables available in the 2010 US census:
+
+```{r eval=FALSE}
+variables_d2010 = load_variables(2010, "sf1")
+head(variables_d2010)
+```
+
+```{r echo = FALSE}
+head(variables_d2010)
+```
+
+I'll download just 3 variables: total population, total population of white alone, and median age of every county in the US.
+
+```{r message=FALSE, eval=FALSE}
+# Define which variables I want
+v10 = c("P001001", # Total population
+        "P003002", # Total population white alone
+        "P013001" # Median age both sexes
+        )
+
+# Download data from US census (requires Internet connection)
+df <- get_decennial(geography = "county", # at the level of county
+                    variables = v10, 
+                    year = 2010, 
+                    output = "wide" # gives one column per variable
+                    )
+
+head(df)
+```
+
+```{r echo=FALSE}
+head(df)
+```
+
+Now download the geometries of each county from the `tigris` package:
+
+```{r eval=FALSE}
+geoms = counties(cb = TRUE, year = 2010)
+head(geoms)
+```
+
+```{r echo=FALSE}
+head(geoms)
+```
+
+From there, I'll join the census data to the geometries and select the desired wanted columns.
+
+```{r eval=FALSE}
+
+# join in State Name
+data("fips_codes")
+
+geoms = geoms %>% 
+  left_join(fips_codes, by = c("COUNTYFP"="county_code", "STATEFP"="state_code")) %>% 
+  mutate(GEOID = str_extract(GEO_ID, "[0-9]+$")) %>% # adjust GEO_ID column to match other census data
+  select(GEOID, STATEFP, COUNTYFP, 
+         state, state_name, county, geometry)
+
+# Combine census data with geometries
+df_w_geom = df %>% 
+  left_join(geoms, by = "GEOID") %>% 
+  st_as_sf()
+
+# re order & rename columns
+df_w_geom = df_w_geom %>% 
+  select(GEOID, STATEFP:county, P001001:P013001, geometry) %>% 
+  rename(STATE_ABB = state,
+         STATE_NAME = state_name,
+         COUNTY_NAME = county) %>% 
+  rename_all(tolower) # all columns to lowercase for postgres
+
+head(df_w_geom %>% st_drop_geometry())
+```
+
+```{r echo=FALSE}
+head(df_w_geom)
+```
+
+OK, the data is all ready! We have 10 columns: 3 containing the census variables I chose, 6 with the codes or names, and 1 with the geometry as simple feature data type.
+
+## Creating Tables & Writing Data to Tables
+
+Once a schema is created, we can create a table that will eventually store our data. Here is where data storage can differ compared to excel/csv data sheets. One approach is to manual specify SQL tables, which involves specifying the names of the columns along with the data types (e.g., numeric, text, logical) of the columns. This approach allows for greater flexibility and optimized data storage, which may be required if new data will be continuous added to the table or if being used in web applications. However, if you don't care too much about the inner workings of SQL tables and just want to create a one time table, there is a quicker way.  I will detail both the quick way and long way below.
+
+
+
+### The Quick Way to Create a Table: Direct Export from R
+
+The quick way to create a table is to export the data directly from R. The first step is to create a 'connection' to postgres in R using the `DBI` and `RPostgres` packages. Note in this case, we specify what schama to connect to using the `options` parameter. 
+
+```{r eval=FALSE}
+library(DBI)
+library(RPostgres)
+
+# define postgres user password
+pw <- "your-password-goes-here"
+
+# create connection to postgres 
+con <- dbConnect(RPostgres::Postgres(),
+                 host = 'localhost', # host name, can be website/server
+                 port = 5432, # default port of postgres
+                 dbname = 'postgres', # name of database in postgres
+                 user = 'postgres', # the default user
+                 password = pw, # password of user
+                 options="-c search_path=us_census" # specify what schema to connect to
+)
+
+```
+
+Before we can create a new table, we must first activate the PostGIS extension in postgres. This can be done easily once a connection is created:
+
+```{r eval=FALSE, message=FALSE}
+dbSendQuery(con, "CREATE EXTENSION postgis SCHEMA us_census;")
+```
+
+Now let's save (or 'write') our dataframe to a new postgres table using the `sf` package's `st_write`:
+
+```{r eval=FALSE, message=FALSE}
+st_write(obj = df_w_geom, 
+         dsn = con, 
+         Id(schema="us_census", table = "us_census_county_2010"))
+```
+
+The `DBI` package also supports writing tables and is probably preferred when not working with spatial data (code not run):
+
+```{r eval=FALSE, message=FALSE}
+dbWriteTable(con, 
+             name = "us_census_county_2010", 
+             value = df_w_geom)
+```
+
+Let's check to see if it worked by first seeing if the table exists:
+
+```{r}
+dbListTables(con)
+```
+
+You'll see our table **us_census_county_2010** along with other tables that PostGIS added and are required. Now, let's check the the data was written correctly using `st_read` to load it from postres to R:
+
+```{r}
+test = st_read(con, "us_census_county_2010")
+head(test)
+```
+
+And there it is, the quick way to save data to postgres. The long way will help with optimizing table sizes and develop a deeper understanding of SQL in general. But, if you don't care about the long way, skip to [Running Spatial Queries to Postgres from R](#run_queries).
+
+### The Long Way to Create a Table: Manual Specification
+
+#### Figuring Out Data Types of Columns
+
+Let's view the columns and their data types in R:
+
+```{r}
+df_w_geom %>% 
+  map(class)
+```
+
+Great, so the first 6 columns are character, the next 3 are numeric and the last is mulitpolygon. Now, we need slightly more specific information about the data types, since this is what is required in for an SQL table. See [here](https://www.postgresql.org/docs/9.5/datatype.html) for a list of postgres data types. Let's start with the character columns. We need to know the length of the longest string. If you look under \[character\](PostgreSQL: Documentation: 9.5: Character Types
+
+) data types in postgres, you'll see there are 3 different character data types: *varchar*, *char*, and *text*. For our purposes, we'll use *varchar.* We could be lazy and just use the *text* data type since it can handle characters of unlimited length, however, choosing *text* over *varchar* would result in the database being larger (in storage space) that needed. Now, we just need to know the maximum length of each column. Let's find that out in R:
+
+```{r}
+df_w_geom %>% 
+  st_drop_geometry() %>% 
+  select_if(is.character) %>% 
+  map(~max(nchar(.)))
+```
+
+Perfect, we will use these values to populate the script to create a postgres SQL table. Now, let's move on the numeric columns. Similar to the character columns, we first need to know the maximum size. But, we also need to know if decimal places are involved:
+
+```{r}
+df_w_geom %>% 
+  st_drop_geometry() %>% 
+  select_if(is.numeric) %>% 
+  map(~max(.))
+```
+
+Looking through the [numeric](https://www.postgresql.org/docs/9.5/datatype-numeric.html) postgres data types, we can see that the *integer* data type will work for columns P001001 and P003002. Since P013001 has one decimal place, we'll use *numeric* data type, where we'll set the precision (total number of digits) to 3 and scale (number of decimal places) to 1.
+
+Now on to the last and most special data type: geography. This data type is handled by PostGIS, an extension of postgres. View the different types of geography data types [here](https://postgis.net/docs/manual-dev/using_postgis_dbmanagement.html#PostGIS_Geography). In this case, we need to know what kind of geometry (point, line, polygon, multipolygon, etc.) and the spatial reference system. We already know our geometry is multipolygon. Let's figure out the spatial reference system in R:
+
+```{r}
+df_w_geom %>% 
+  st_crs()
+```
+
+We can see we're working with the NAD83 coordinate reference system, which is common for US-wide spatial data. What we need to know is the EPGS number on the last line of the above output: 4269.
+
+#### Specifying Table
+
+We now know the data types for all our columns. Yay! Now, we can construct and SQL statement that will create our table. For simplicity, let me first just write SQL statement:
+
+``` sql
+CREATE TABLE us_census.us_census_county_2010 (
+  id serial primary key,
+  geoid varchar(5),
+  statefp varchar(2),
+  countyfp varchar(3),
+  state_abb varchar(2),
+  state_name varchar(20),
+  county_name varchar(33),
+  p001001 integer,
+  p003002 integer,
+  p013001 numeric(3, 1),
+  geometry geography(MultiPolygon, 4269)
+);
+```
+
+`CREATE TABLE` creates a new table. Followed after that is the name we want to call the table: **us_census_county_2010**. In addition, we need to specify the schema to create the table in, that is why **us_census.** is placed before the table name. Next, each column is specified along with their data types.
+
+The first column in SQL tables is usually a unique identifier; I called this column *id.* The term *serial* is a data type equivalent to an auto-increment integer, meaning that as new rows are adding to the table, *id* will increase by units of 1 (starting at 1). The `primary key` term indicates that this column is a unique identifier and that no two values of *id* can repeat in another row. In general, all SQL tables have a primary key. Note, a primary key wasn't created in the quick way. I have to look into if this is possible or not.
+
+The next 6 column names and data types come directly from what we worked on above. Each are *varchar* data type and the number inside the parentheses indicates the length of the longest string. I decided to use the exact number here because I know that the data will not change. If I thought the maximum length would increase as more data was added, I would account for that by making that number larger. For example, if I thought new counties will be added to the table in the future, I might change county_name from *varchar(33)* to *varchar(50)* to account for potentially longer county names. Note: the maximum character length can always be adjusted later.
+
+The next 3 columns are the numeric columns, as discussed in above.
+
+The last column is what will store the spatial information. The column is called *geometry* and the data type is *geography*. The syntax here is the first parameter is the type of geography (point, line, polygon, etc.) and the second parameter is the EPGS code of the spatial coordinate system (4269 in this case).
+
+#### Running the Script to Create the Table
+
+##### Activate PostGIS
+
+If you haven't already activated PostGIS in R (showed above), do so now:
+
+```{r eval=FALSE}
+dbSendQuery(con, "CREATE EXTENSION postgis SCHEMA us_census;")
+```
+
+Note: activating PostGIS only needs to be done one time ever, per schema.
+
+##### Running the SQL statement
+
+Now let's run the `CREATE TABLE` statement from R. I'll call it a slightly different name, so we can compare with the table made before:
+
+```{r eval = FALSE}
+dbSendQuery(con,
+  "CREATE TABLE us_census.us_census_county_2010_v2 (
+    id serial primary key,
+    geoid varchar(5),
+    statefp varchar(2),
+    countyfp varchar(3),
+    state_abb varchar(2),
+    state_name varchar(20),
+    county_name varchar(33),
+    p001001 integer,
+    p003002 integer,
+    p013001 numeric(3, 1),
+    geometry geography(MultiPolygon, 4269)
+  );"
+)
+```
+
+Let's double check that the tables was made:
+
+```{r}
+dbListTables(con)
+```
+
+All good, we can see **us_census_county_2010_v2** was created (although it was already there before because I ran the code prior to posting the tutorial). Now, on the the important part ... adding data to the table!
+
+#### Adding Data to a Table
+
+We will add data to our postgres table using R, since that is where we collecting and curated the data already. We'll use the same up as before:
+
+```{r eval=FALSE}
+library(DBI)
+library(RPostgres)
+library(sf)
+
+pw <- "your-password-goes-here"
+
+con <- dbConnect(RPostgres::Postgres(),
+                 host = 'localhost', # host name, can be website/server
+                 port = 5432, # default port of postgres
+                 dbname = 'postgres', # name of database in postgres
+                 user = 'postgres', # the default user
+                 password = pw, # password of user
+                 options="-c search_path=us_census" # specify what schema to connect to
+)
+```
+
+Now, we'll add the data the same way did before, except specify `append = TRUE`, which tells postgres to add new rows instead of creating a new table:
+
+```{r eval=FALSE}
+dbWriteTable(con, 
+             name = "us_census_county_2010_v2", 
+             value = df_w_geom,
+             append = TRUE)
+```
+
+And finally, let's check the data was saved properly to postgres by loading it back into R:
+
+```{r}
+test2 = st_read(con, "us_census_county_2010_v2", geometry_column ='geometry')
+head(test2 %>% tibble())
+```
+
+All looks good. Note, in this case, we need to specific `geometry_column ='geometry'` for the `st_read` function. I'm not sure why it's needed here and not in the other method.
+
+# Running Spatial Queries to Postgres from R {#run_queries}
+
+I mentioned in the introduction one of the great benefits of postgres and PostGIS is that all the tools of SQL are available to use. I'll show one here, selecting polygons within a certain distance of a point. Spatial queries can be added to the `st_read` function with the parameter `query=`.
+
+Let's select all the counties with 100 kilometers of where I was born, Belleville, New Jersey:
+
+```{r}
+counties_query = 
+  st_read(con, 
+    query = 
+      "SELECT * FROM us_census_county_2010 
+       WHERE ST_DWithin(geometry::geography,
+        ST_GeomFromText('POINT(-74.14967 40.79315)', 4269)::geography, 100000);"
+    )
+```
+
+The PostGIS function used to query within a distance is called `ST_DWithin`, whose inputs are: geometry column of table, the point of where to calculate the distance, and the distance buffer. Since the projection of our SQL table is NAD83, the units of the buffer will be in degrees - which is really not that useful. However, we can easily adjust the function to use meters instead, by placing `::geography` after the geometry columns and point specification. Since we used the `::geometry` notation our buffer distance is now 100km (100,000 m).
+
+Let's view our results here by plotting the population size of each county returned in the query:
+
+```{r}
+library(mapview)
+
+# define sf point where Belleville is
+belleville = st_sfc(st_point(c(-74.14967, 40.79315)), crs = 4269) 
+
+# define 100km around Belleville
+belleville_buffer = st_buffer(belleville %>% st_transform("ESRI:102003"), 100000 ) # transform to a crs with units of meters in order to buffer in meters
+
+# plot Population size and Belleville Buffer
+map1 = 
+  mapview(belleville, 
+          col.regions = "red", 
+          label = "Belleville Township, NJ", 
+          layer.name = "Belleville Township, NJ") + 
+    
+  mapview(belleville_buffer, color = "red", alpha.regions = 0,
+          label = "Belleville 100km Buffer",
+          layer.name = "Belleville 100km Buffer") +
+    
+  mapview(counties_query, 
+        zcol = "p001001", 
+        label = paste0(counties_query$county_name, ", ", counties_query$state_abb),
+        layer.name = "Population Size") 
+
+map1
+```
+
+We can visually see that the query worked! Note that `ST_DWithin` will return counties that intersect with the buffer distance (red circle). If we only wanted counties that are fully within the buffer, we can use `ST_DFullyWithin` (see [here](https://postgis.net/docs/ST_DWithin.html) for documentation).
+
+# What Next?
+
+I plan to continue to learn more and postgres and PostGIS functions and hopefully have more posts about them in the future. One thing to mention is [BigQuery](https://cloud.google.com/bigquery), a sql-like database server provided by Google that supports spatial data. The syntax is extremely similar to PostGIS (as far as I can tell). Google gives a decent amount of free credits per month, so it's worth giving a try. The advantage is that your database will live on Google's servers and not on your local computer, so it can be accessed from anywhere at anytime. I hope to explore this product and integration to a web platform in the future.
+
+This is the first in hopefully more data science tutorial series. Please feel free to leave feedback or comments.
+
+## Session Info
+
+```{r echo=FALSE}
+sessionInfo()
+```
