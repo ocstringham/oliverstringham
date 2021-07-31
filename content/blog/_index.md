@@ -9,7 +9,7 @@ cascade:
     show_sidebar_adunit: false
     text_link_label: View recent posts
     text_link_url: /blog/
-description: "Blog of Oliver Stringham featuring data analysis, modelling, and visualization."
+description: "Featuring data science tutorials, modelling, and visualization."
 layout: list
 show_author_byline: true
 show_post_date: true
