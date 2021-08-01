@@ -147,7 +147,7 @@ con <- dbConnect(RPostgres::Postgres(),
 To create a schema in R use:
 
 ``` r
-dbSendQuery(con, "CREATE SCHEMA us_census")
+dbSendQuery(con, "CREATE SCHEMA us_census;")
 ```
 
 To check if the query worked, use:
