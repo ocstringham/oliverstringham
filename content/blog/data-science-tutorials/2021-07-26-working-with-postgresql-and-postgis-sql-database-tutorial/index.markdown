@@ -103,7 +103,7 @@ Data is stored in tables. Postgres and other RDMS have a tiered structure of dif
 
 ## Creating Schemas
 
-Before we can store our data in a table(s), we need to first create a schema and then create tables. I’m interested in working with US census data, which is publicly available, so let’s create a schema to eventually have tables with this data.
+Before we can store our data in a table(s), we need to first create a schema and then create tables. I’m interested in working with US census data, which is publicly available, so let’s create a schema to eventually have tables with this data. I will demonstrate two ways to create schemas: using pgAmin 4 (a GUI for postgres) and using R. 
 
 ### Using pgAdmin 4 to Create Schemas
 

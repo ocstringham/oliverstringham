@@ -19,19 +19,19 @@ excerpt: 'In this tutorial I will show how to set up PostgreSQL with PostGIS to 
 # series: Data Science Tutorials
 layout: single
 draft: false
-# set up common front matter for all individual pages in series
-cascade:
-  layout: single-series       # for a series, do not change
-  series: Data Science Tutorials # name your series
-  author: Oliver C. Stringham
-  show_author_byline: true
-  show_post_date: true
-  sidebar:
-    text_link_label: ""
-    text_link_url: ""
-    # show_sidebar_adunit: false # show ad container
-    text_series_label: "In this series" 
-    text_contents_label: "On this page" 
+# # set up common front matter for all individual pages in series
+# cascade:
+#   layout: single-series       # for a series, do not change
+#   series: Data Science Tutorials # name your series
+#   author: Oliver C. Stringham
+#   show_author_byline: true
+#   show_post_date: true
+#   sidebar:
+#     text_link_label: ""
+#     text_link_url: ""
+#     # show_sidebar_adunit: false # show ad container
+#     text_series_label: "In this series" 
+#     text_contents_label: "On this page" 
 ---
 
 ```{r setup, include = FALSE}
@@ -125,7 +125,7 @@ Data is stored in tables. Postgres and other RDMS have a tiered structure of dif
 
 ## Creating Schemas
 
-Before we can store our data in a table(s), we need to first create a schema and then create tables. I'm interested in working with US census data, which is publicly available, so let's create a schema to eventually have tables with this data.
+Before we can store our data in a table(s), we need to first create a schema and then create tables. I'm interested in working with US census data, which is publicly available, so let's create a schema to eventually have tables with this data. I will demonstrate two ways to create schemas: using pgAmin 4 (a GUI for postgres) and using R.
 
 ### Using pgAdmin 4 to Create Schemas
 
