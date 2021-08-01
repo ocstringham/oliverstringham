@@ -387,7 +387,7 @@ head(test)
     ## 5    44.5 MULTIPOLYGON (((-122.4187 3...
     ## 6    47.7 MULTIPOLYGON (((-92.14328 3...
 
-And there it is, the quick way to save data to postgres. The long way will help with optimizing table sizes and develop a deeper understanding of SQL in general. But, if you don’t care about the long way, skip to [Running Spatial Queries to Postgres from R](#run_queries).
+And there it is, the quick way to save data to postgres. The long way will help with optimizing table sizes and develop a deeper understanding of SQL in general. But, if you don’t care about the long way, skip to the next section.
 
 ### The Long Way to Create a Table: Manual Specification
 
@@ -630,7 +630,7 @@ head(test2 %>% tibble())
 
 All looks good. Note, in this case, we need to specific `geometry_column ='geometry'` for the `st_read` function. I’m not sure why it’s needed here and not in the other method.
 
-# Running Spatial Queries to Postgres from R {\#run\_queries}
+# Running Spatial Queries to Postgres from R
 
 I mentioned in the introduction one of the great benefits of postgres and PostGIS is that all the tools of SQL are available to use. I’ll show one here, selecting polygons within a certain distance of a point. Spatial queries can be added to the `st_read` function with the parameter `query=`.
 
