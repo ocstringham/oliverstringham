@@ -90,7 +90,7 @@ enableEmoji = true
   [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://twitter.com/hashtag/OliverStringham"
+      url       = "https://twitter.com/OliverStringham"
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
