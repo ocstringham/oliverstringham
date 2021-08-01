@@ -131,7 +131,7 @@ Before we can store our data in a table(s), we need to first create a schema and
 
 Postgres comes with a GUI interface called pgAdmin 4, which allows one to interact with postgres in a point and click manner, which I prefer. On startup of pgAdmin 4 it will ask for the password you provided upon installing postgres. Then click to expand "Servers" (it may ask for password again):
 
-![pgAdmin 4 on startup](2021-07-19 21_41_43-pgAdmin 4.png "pgAdmin 4 on startup")
+![pgAdmin 4 on startup](2021-07-19%2021_41_43-pgAdmin%204.png "pgAdmin 4 on startup")
 
 Postgres comes with a 'database' built by default called postgres (highlighted in image).
 
@@ -146,6 +146,7 @@ Now, there exists a new schema called **us_census**, where we can create data ta
 ![postgres view new schema](pgAdmin-new-schema.png "postgres view new schema")
 
 ### Using R to Create Schemas
+
 To create schemas from R, we first need to create a 'connection' to postgres, using the `DBI` and `RPostgres` packages:
 
 ```{r eval=FALSE}
@@ -167,6 +168,7 @@ con <- dbConnect(RPostgres::Postgres(),
 ```
 
 To create a schema in R use:
+
 ```{r eval=FALSE}
 dbSendQuery(con, "CREATE SCHEMA us_census")
 ```
@@ -177,7 +179,6 @@ To check if the query worked, use:
 dbGetQuery(con, "SELECT schema_name
                  FROM information_schema.schemata;")
 ```
-
 
 ## Gather Data: US census data
 
@@ -280,13 +281,11 @@ OK, the data is all ready! We have 10 columns: 3 containing the census variables
 
 ## Creating Tables & Writing Data to Tables
 
-Once a schema is created, we can create a table that will eventually store our data. Here is where data storage can differ compared to excel/csv data sheets. One approach is to manual specify SQL tables, which involves specifying the names of the columns along with the data types (e.g., numeric, text, logical) of the columns. This approach allows for greater flexibility and optimized data storage, which may be required if new data will be continuous added to the table or if being used in web applications. However, if you don't care too much about the inner workings of SQL tables and just want to create a one time table, there is a quicker way.  I will detail both the quick way and long way below.
-
-
+Once a schema is created, we can create a table that will eventually store our data. Here is where data storage can differ compared to excel/csv data sheets. One approach is to manual specify SQL tables, which involves specifying the names of the columns along with the data types (e.g., numeric, text, logical) of the columns. This approach allows for greater flexibility and optimized data storage, which may be required if new data will be continuous added to the table or if being used in web applications. However, if you don't care too much about the inner workings of SQL tables and just want to create a one time table, there is a quicker way. I will detail both the quick way and long way below.
 
 ### The Quick Way to Create a Table: Direct Export from R
 
-The quick way to create a table is to export the data directly from R. The first step is to create a 'connection' to postgres in R using the `DBI` and `RPostgres` packages. Note in this case, we specify what schama to connect to using the `options` parameter. 
+The quick way to create a table is to export the data directly from R. The first step is to create a 'connection' to postgres in R using the `DBI` and `RPostgres` packages. Note in this case, we specify what schama to connect to using the `options` parameter.
 
 ```{r eval=FALSE}
 library(DBI)
@@ -355,9 +354,7 @@ df_w_geom %>%
   map(class)
 ```
 
-Great, so the first 6 columns are character, the next 3 are numeric and the last is mulitpolygon. Now, we need slightly more specific information about the data types, since this is what is required in for an SQL table. See [here](https://www.postgresql.org/docs/9.5/datatype.html) for a list of postgres data types. Let's start with the character columns. We need to know the length of the longest string. If you look under \[character\](PostgreSQL: Documentation: 9.5: Character Types
-
-) data types in postgres, you'll see there are 3 different character data types: *varchar*, *char*, and *text*. For our purposes, we'll use *varchar.* We could be lazy and just use the *text* data type since it can handle characters of unlimited length, however, choosing *text* over *varchar* would result in the database being larger (in storage space) that needed. Now, we just need to know the maximum length of each column. Let's find that out in R:
+Great, so the first 6 columns are character, the next 3 are numeric and the last is mulitpolygon. Now, we need slightly more specific information about the data types, since this is what is required in for an SQL table. See [here](https://www.postgresql.org/docs/9.5/datatype.html) for a list of postgres data types. Let's start with the character columns. We need to know the length of the longest string. If you look under [character](https://www.postgresql.org/docs/9.5/datatype.html) data types in postgres, you'll see there are 3 different character data types: *varchar*, *char*, and *text*. For our purposes, we'll use *varchar.* We could be lazy and just use the *text* data type since it can handle characters of unlimited length, however, choosing *text* over *varchar* would result in the database being larger (in storage space) that needed. Now, we just need to know the maximum length of each column. Let's find that out in R:
 
 ```{r}
 df_w_geom %>% 
@@ -497,7 +494,7 @@ head(test2 %>% tibble())
 
 All looks good. Note, in this case, we need to specific `geometry_column ='geometry'` for the `st_read` function. I'm not sure why it's needed here and not in the other method.
 
-# Running Spatial Queries to Postgres from R {#run_queries}
+# Running Spatial Queries to Postgres from R {\#run_queries}
 
 I mentioned in the introduction one of the great benefits of postgres and PostGIS is that all the tools of SQL are available to use. I'll show one here, selecting polygons within a certain distance of a point. Spatial queries can be added to the `st_read` function with the parameter `query=`.
 
