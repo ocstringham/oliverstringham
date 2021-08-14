@@ -6,7 +6,7 @@ cascade:
   show_comments: true
   show_post_date: true
   sidebar:
-    show_sidebar_adunit: false
+    show_sidebar_adunit: true
     text_link_label: View recent posts
     text_link_url: /blog/
 description: "Featuring data science tutorials, modelling, and visualization."
