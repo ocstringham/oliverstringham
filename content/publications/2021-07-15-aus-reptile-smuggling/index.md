@@ -17,14 +17,18 @@ publishDate: '2021-07-15'
 # publication_types:
 #   - '2'
 # publication: 'PDF'
-summary: 'The transnational smuggling of live animals is a considerable threat to biodiversity conservation, environmental biosecurity, animal welfare and human health and wellbeing. Understanding which species are smuggled is understudied due to the occluded nature of the illegal trade. We compared illegal smuggling of reptiles into Australia to the legal pet trade of reptiles in the US. Both countries share common cultural values, but have very different laws in relation to the animal trade, where the US imposes little to no regulations while Australia bans the import and trade of all non-native species. We found that almost every species smuggled to Australia is found legally in the US trade and on average took about 6 six years from first appearing in the US trade to be smuggled to Australia. The popularity of a species in the US, and internationally, was associated with the likelihood that a species would be smuggled into Australia. We suggest that the US and other Western countries influence Australian desire for illegal reptile species. We provide the first empirical risk watch-list for desirable reptile species being trafficked into Australia. Our findings give insight into the drivers of illegal wildlife trade and our approach provides a framework for anticipating future trends in wildlife smuggling.'
+summary: 'We found a pattern between US reptile trade and smuggling of live reptiles to Australia. Almost all species smuggled to Aus are legal in US trade and are popular We compared illegal smuggling of reptiles into Australia to the legal pet trade of reptiles in the US. We provide the first empirical risk watch-list for desirable reptile species being trafficked into Australia. Our findings give insight into the drivers of illegal wildlife trade and our approach provides a framework for anticipating future trends in wildlife smuggling.'
 subtitle: 'The transnational smuggling of live animals is a considerable threat to biodiversity conservation, environmental biosecurity, animal welfare and human health and wellbeing. Understanding which species are smuggled is understudied due to the occluded nature of the illegal trade. We compared illegal smuggling of reptiles into Australia to the legal pet trade of reptiles in the US. Both countries share common cultural values, but have very different laws in relation to the animal trade, where the US imposes little to no regulations while Australia bans the import and trade of all non-native species. We found that almost every species smuggled to Australia is found legally in the US trade and on average took about 6 six years from first appearing in the US trade to be smuggled to Australia. The popularity of a species in the US, and internationally, was associated with the likelihood that a species would be smuggled into Australia. We suggest that the US and other Western countries influence Australian desire for illegal reptile species. We provide the first empirical risk watch-list for desirable reptile species being trafficked into Australia. Our findings give insight into the drivers of illegal wildlife trade and our approach provides a framework for anticipating future trends in wildlife smuggling.'
 featured: no
 links:
-- icon: biorxiv
-  icon_pack: ai
-  name: Preprint Full Text
-  url: https://doi.org/10.32942/osf.io/t42fd
+- icon: file-pdf
+  icon_pack: fas
+  name: Full Text & PDF
+  url: https://doi.org/10.1111/conl.12833
+- icon: newspaper
+  icon_pack: far
+  name: Cosmos Magazine
+  url: https://cosmosmagazine.com/people/society/illegal-reptiles-smuggled-australia-us/
 ---
 
 ## Abstract
