@@ -11,7 +11,7 @@ tags:
   - illegal wildlife trade
   - cites
   - exotic pet trade
-doi: '10.1111/acv.12721'
+doi: '10.1111/acv.12721' 
 publishDate: '2021-07-05'
 # publication_types:
 #   - '2'
@@ -23,11 +23,11 @@ links:
 - icon: file-pdf
   icon_pack: fas
   name: PDF
-  url: publications/Heinrich et al 2021 - Strengthening protection of endemic wildlife threatened by the international pet trade The case of the Australian shingleback lizard.pdf
+  url: https://mcrsociety.org/wp-content/uploads/2021/07/Heinrich-et-al-2021-Strengthening-protection-of-endemic-wildlife-threatened-by-the-international-pet-trade.pdf
 - icon: doi
   icon_pack: ai
   name: Publication
-  url: https://doi.org/10.1093/10.1111/acv.12721
+  url: https://doi.org/10.1111/acv.12721
 - icon: newspaper
   icon_pack: far
   name: ABC Australia
