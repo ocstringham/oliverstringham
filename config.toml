@@ -137,9 +137,9 @@ enableEmoji = true
     url = "/publications/"
     weight = 4
   [[menu.header]]
-    name = "CV"
-    title = "CV"
-    url = "/cv/"
+    name = "Resume & CV"
+    title = "Resume & CV"
+    url = "/resume-cv/"
     weight = 5
 
     
