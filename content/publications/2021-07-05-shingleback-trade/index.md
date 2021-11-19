@@ -28,7 +28,7 @@ links:
   icon_pack: ai
   name: Publication
   url: https://doi.org/10.1111/acv.12721
-  - icon: newspaper
+- icon: newspaper
   icon_pack: far
   name: National Geographic
   url: https://www.nationalgeographic.com/animals/article/shingleback-lizard-is-one-of-australias-most-trafficked-animals
