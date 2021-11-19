@@ -13,8 +13,8 @@ tags:
   - wildlife trade
   - illegal wildlife trade
 publishDate: '2021-11-19'
-summary: "We provide comments to The Department of Agriculture, Water and the Environment on their ‘Proposed amendments to the Appendices of CITES for Australian Native Reptiles’. In short, we independently verify that the 13 proposed genera by the Department should be listed to Appendix III of CITES. Further, we recommend the Department consider an additional 21 genera, that face identical threats to the proposed genera, for Appendix III."
-subtitle: "We provide comments to The Department of Agriculture, Water and the Environment on their ‘Proposed amendments to the Appendices of CITES for Australian Native Reptiles’. In short, we independently verify that the 13 proposed genera by the Department should be listed to Appendix III of CITES. Further, we recommend the Department consider an additional 21 genera, that face identical threats to the proposed genera, for Appendix III."
+summary: "In short, we independently verify that the 13 proposed genera by the Department should be listed to Appendix III of CITES. Further, we recommend the Department consider an additional 21 genera, that face identical threats to the proposed genera, for Appendix III."
+subtitle: "In short, we independently verify that the 13 proposed genera by the Department should be listed to Appendix III of CITES. Further, we recommend the Department consider an additional 21 genera, that face identical threats to the proposed genera, for Appendix III."
 featured: no
 links:
 - icon: file-pdf
