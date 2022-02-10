@@ -2,17 +2,27 @@
 
 ## to do
 
-* Add summaries to last research pieces
-* Finish About me page
-* PhD to home page
+* Trim reserach summaries
 
-* finalize port to new site, including domain
 
-* Make a resume, add to CV page
 * new blog pieces
-- gis
-- tidymodels
+    - text classification tidymodels
+    - Direction/Isochrones in R
+    - gis
+    - tidymodels
+    - python ML: sci kit, tensorflow, pytorch
+    - advanced NLP: BERT, XLM, XLNet, entity recog
 
-* rss feed?
-* google analytics
 * google ads
+
+* add all coding repos to github (incl. NLP)
+
+* Hire me section
+
+* added LinkedIn button
+
+* Update LinkedIn ... add summary 
+
+* Update GitHub, model after Rob, Pin text classification
+
+* Add UpWork button and add UpWork to Hire me Section
