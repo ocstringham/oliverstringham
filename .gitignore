@@ -52,3 +52,4 @@ docs/
 
 # translation temp files
 po/*~
+static/resume.html
