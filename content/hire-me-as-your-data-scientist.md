@@ -15,9 +15,6 @@ date: "2021-12-11"
 #   name: CV (PDF)
 #   url: cv/Oliver_C_Stringham__CV.pdf
 ---
-
-
-
 <div id="contact" class="section level2">
 
 <h2><i class='fa fa-user'></i> Contact</h2>
