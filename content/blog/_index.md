@@ -9,7 +9,7 @@ cascade:
     show_sidebar_adunit: true
     text_link_label: View recent posts
     text_link_url: /blog/
-description: "Featuring data science tutorials, modelling, and visualization."
+description: "Featuring data science tutorials, modelling, and visualization." # add in hire me here
 layout: list
 show_author_byline: true
 show_post_date: true

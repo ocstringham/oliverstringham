@@ -2,14 +2,14 @@
 action_label: More about me &rarr;
 action_link: /about
 action_type: text
-description: I am an postdoctoral researcher at the University of Adelaide, Australia. I specialize in using data science tools including statistics, machine learning, and natural language processing to answer questions about underlying systems. My current research focusses on the wildlife trade and its intersection with conservation and biological invasions. 
+description: I am a Research Associate at the University of Adelaide, Australia. I specialize in using data science tools including statistics, machine learning, and natural language processing to answer questions about underlying systems. My current research focusses on the wildlife trade and its intersection with conservation and biological invasions. 
 image_left: true
 images:
 - /img/IMG_7351.JPG
 image_shape: rounded
 show_action_link: true
 show_social_links: true
-subtitle: "Data Scientist | Conservation Biologist"
+subtitle: "Data Scientist | Research Scientist"
 text_align_left: false
 title: Oliver C. Stringham
 type: home

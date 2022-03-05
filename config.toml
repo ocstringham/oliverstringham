@@ -88,13 +88,9 @@ enableEmoji = true
       icon_pack = "fas"
       url       = "mailto:oliverstringham@gmail.com"
   [[params.social]]
-      icon      = "twitter" # icon name without the 'fa-'
+      icon      = "linkedin-in" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://twitter.com/OliverStringham"
-  [[params.social]]
-      icon      = "github" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://github.com/ocstringham/oliverstringham"
+      url       = "https://www.linkedin.com/in/oliver-c-stringham/"
   [[params.social]]
       icon      = "google-scholar" # icon name without the 'fa-'
       icon_pack = "ai"
@@ -104,9 +100,17 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://www.researchgate.net/profile/Oliver-Stringham-2"
   [[params.social]]
+      icon      = "twitter" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://twitter.com/OliverStringham"
+  [[params.social]]
+      icon      = "github" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://github.com/ocstringham"
+  [[params.social]]
       icon      = "inaturalist" # icon name without the 'fa-'
       icon_pack = "ai"
-      url       = "https://www.inaturalist.org/people/olistr"
+      url       = "https://www.inaturalist.org/observations?place_id=any&subview=map&user_id=olistr&verifiable=any"
 
 
 [taxonomies]
@@ -126,11 +130,16 @@ enableEmoji = true
     title = "Blog"
     url = "/blog/"
     weight = 2
+#  [[menu.header]]
+#    name = "Research"
+#    title = "Project Themes"
+#    url = "/research/"
+#    weight = 3
   [[menu.header]]
-    name = "Research"
-    title = "Project Themes"
-    url = "/research/"
-    weight = 3
+    name = "Hire me"
+    title = "Hire me as your freelance data scientist"
+    url = "/hire-me-as-your-data-scientist/"
+    weight = 6
   [[menu.header]]
     name = "Publications"
     title = "Publications"

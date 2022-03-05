@@ -16,9 +16,7 @@ links:
 #   icon_pack: fab
 #   name: CV (Google Doc)
 #   url: https://docs.google.com/document/d/1nncUjYOiQUjsx56D7oXGP-abpjgAxbgH7oIZ__AuKjU/edit?usp=sharing
-# 
-
-  
+#  
 ---
 
 

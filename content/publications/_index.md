@@ -1,7 +1,7 @@
 ---
-title: Publications
+title: Research Publications
 description: |
-  My publications and reports, each linked with accompanying PDFs, preprints, and/or news pieces.
+  My publications and reports, each linked with accompanying PDFs, preprints, and/or news pieces. See my [CV](../resume-cv/#cv) for full list of publications and see [here](/research) for  my Research Themes. 
 author: "Oliver C. Stringham"
 show_post_thumbnail: true
 thumbnail_left: true # for list-sidebar only
