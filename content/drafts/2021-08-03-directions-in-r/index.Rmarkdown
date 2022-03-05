@@ -1,0 +1,38 @@
+---
+title: 'Directions in R two ways with traffic'
+author: Oliver C. Stringham
+date: '2021-08-03'
+slug: directions-in-r
+categories:
+  - gis
+  - r
+tags:
+  - directions
+  - r
+  - gis
+  - openstreetmap
+---
+
+
+# The free way: Open Source Routing Machine (OSRM)
+
+https://github.com/riatelab/osrm
+
+
+# define point of interest
+
+
+```{r}
+library(osrm)
+library(sf)
+library(mapview)
+poi = st_point(c(-74.2, 40.7)) %>% 
+  st_sfc(crs = 4326) %>% st_transform(crs = 'ESRI:102003') %>% st_sf()
+
+bks <- seq(from = 0, to = 60, by = 2)
+iso = osrmIsochrone(loc = poi, breaks = bks, 
+                    osrm.profile = "car", returnclass="sf")
+
+mapview(iso, zcol = "min")
+mapview(iso, zcol = "max")
+```
