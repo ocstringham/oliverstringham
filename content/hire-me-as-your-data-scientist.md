@@ -1,8 +1,11 @@
 ---
 text_align_right: false
 show_title_as_headline: false
-Title: Hire me!
-subtitle: "I'm looking for full time work.\nI'm also available for freelance contract work."
+title: Hire me as your Data Scientist!
+subtitle: 
+    I'm looking for full time work.
+    I'm also available for freelance/contract work.
+    I'm a trained research scientist who applies rigor to all facets of data science. I specialize in machine learning and geospatial analysis.
 slug: hire-me-as-your-data-scientist
 date: "2021-12-11"
 # links:
@@ -21,14 +24,14 @@ date: "2021-12-11"
 <h2></h2>
 <!-- <hr style="height:1px;border-width:0;color:gray;background-color:gray"> -->
 <ul>
-<li><p><i class="fa fa-envelope"></i> <a href="mailto:oliverstringham@gmail.com" class="email">oliverstringham@gmail.com</a></p></li>
-<li><p><i class="fab fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/oliver-c-stringham/" class="linkedin">LinkedIn</a></p></li>
+<li><p><i class="fa fa-envelope"></i> <a target="_blank" href="mailto:oliverstringham@gmail.com" class="email">oliverstringham@gmail.com</a></p></li>
+<li><p><i class="fab fa-linkedin-in"></i> <a target="_blank" href="https://www.linkedin.com/in/oliver-c-stringham/" class="linkedin">LinkedIn</a></p></li>
 <li><p><span class="iconify" data-icon="simple-icons:upwork"></span>
-<a href="https://www.upwork.com/freelancers/~01a8aca4a8c8b4d38a" class="upwork">UpWork</a></p></li>
+<a target="_blank" href="https://www.upwork.com/freelancers/~01a8aca4a8c8b4d38a" class="upwork">UpWork</a></p></li>
 <li><p><i class="ai ai-google-scholar-square ai-1x"></i>
-<a href="https://scholar.google.com/citations?user=3ZhZiQgAAAAJ&amp;hl=en" class="google-scholar">Google Scholar</a></p></li>
+<a target="_blank" href="https://scholar.google.com/citations?user=3ZhZiQgAAAAJ&amp;hl=en" class="google-scholar">Google Scholar</a></p></li>
 <li><p><i class="fab fa-github"></i>
-<a href="https://github.com/ocstringham" class="github">GitHub</a></p></li>
+<a target="_blank" href="https://github.com/ocstringham" class="github">GitHub</a></p></li>
 </ul>
 
 
@@ -48,11 +51,11 @@ date: "2021-12-11"
 <h2><i class="fas fa-chart-pie"></i> Data analysis skills</h2>
 <ul>
 <li>Machine Learning, Regression:<br>
-<i style="margin-left: 20px;">scikit-learn / tidymodels</i></li>
+<i style="margin-left: 20px;">scikit-learn | tidymodels</i></li>
 <li>Geospatial Analysis:<br>
-<i style="margin-left: 20px;">sf / geopandas / PostGIS</i></li>
+<i style="margin-left: 20px;">sf | geopandas | PostGIS</i></li>
 <li>Data Visualization:<br>
-<i style="margin-left: 20px;">ggplot2 / seaborn</i></li>
+<i style="margin-left: 20px;">ggplot2 | seaborn</i></li>
 </ul>
 
 
@@ -71,9 +74,6 @@ date: "2021-12-11"
 
 <div id="technical-papers" class="section level2" data-icon="newspaper">
 <h2><i class="fa fa-newspaper"></i> Technical Papers</h2>
-<div id="scientific-papers-200-citations" class="section level3">
-<h3>19 scientific papers, &gt;200 citations</h3>
-<p><a href="https://scholar.google.com/citations?user=3ZhZiQgAAAAJ&amp;hl=en">Google Scholar Profile</a></p>
 <div id="text-classification-to-streamline-online-wildlife-trade-analyses" class="section level3">
 <h3>Text classification to streamline online wildlife trade analyses</h3>
 <p>PLOS ONE, 2021</p>
@@ -84,8 +84,14 @@ date: "2021-12-11"
 <p>Conservation Biology, 2020</p>
 <p><a href="https://doi.org/10.1111/cobi.13675" class="uri">https://doi.org/10.1111/cobi.13675</a> <a href="https://www.researchgate.net/profile/Oliver-Stringham-2/publication/347366161_A_guide_to_using_the_Internet_to_monitor_and_quantify_the_wildlife_trade/links/6046912e299bf1e07865fd6a/A-guide-to-using-the-Internet-to-monitor-and-quantify-the-wildlife-trade.pdf">(PDF)</a></p>
 </div>
-
-
+<div id="" class="section level3">
+<h3>Live reptile smuggling is predicted by trends in the legal exotic pet trade</h3>
+<p>Conservation Letters, 2021</p>
+<p><a href="https://doi.org/10.1111/conl.12833" class="uri">https://doi.org/10.1111/conl.12833</a></p>
+</div>
+<div id="scientific-papers-200-citations" class="section level3">
+<h3>19 scientific papers, &gt;200 citations</h3>
+<p><a href="https://scholar.google.com/citations?user=3ZhZiQgAAAAJ&amp;hl=en">Google Scholar Profile</a></p>
 
 
 
