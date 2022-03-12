@@ -77,21 +77,21 @@ date: "2021-12-11"
 <div id="text-classification-to-streamline-online-wildlife-trade-analyses" class="section level3">
 <h3>Text classification to streamline online wildlife trade analyses</h3>
 <p>PLOS ONE, 2021</p>
-<p><a href="https://doi.org/10.1371/journal.pone.0254007" class="uri">https://doi.org/10.1371/journal.pone.0254007</a></p>
+<p><a target="_blank" href="https://doi.org/10.1371/journal.pone.0254007" class="uri">https://doi.org/10.1371/journal.pone.0254007</a></p>
 </div>
 <div id="a-guide-to-using-the-internet-to-study-the-wildlife-trade" class="section level3">
 <h3>A guide to using the internet to study the wildlife trade</h3>
 <p>Conservation Biology, 2020</p>
-<p><a href="https://doi.org/10.1111/cobi.13675" class="uri">https://doi.org/10.1111/cobi.13675</a> <a href="https://www.researchgate.net/profile/Oliver-Stringham-2/publication/347366161_A_guide_to_using_the_Internet_to_monitor_and_quantify_the_wildlife_trade/links/6046912e299bf1e07865fd6a/A-guide-to-using-the-Internet-to-monitor-and-quantify-the-wildlife-trade.pdf">(PDF)</a></p>
+<p><a target="_blank" href="https://doi.org/10.1111/cobi.13675" class="uri">https://doi.org/10.1111/cobi.13675</a> <a href="https://www.researchgate.net/profile/Oliver-Stringham-2/publication/347366161_A_guide_to_using_the_Internet_to_monitor_and_quantify_the_wildlife_trade/links/6046912e299bf1e07865fd6a/A-guide-to-using-the-Internet-to-monitor-and-quantify-the-wildlife-trade.pdf">(PDF)</a></p>
 </div>
 <div id="" class="section level3">
 <h3>Live reptile smuggling is predicted by trends in the legal exotic pet trade</h3>
 <p>Conservation Letters, 2021</p>
-<p><a href="https://doi.org/10.1111/conl.12833" class="uri">https://doi.org/10.1111/conl.12833</a></p>
+<p><a target="_blank" href="https://doi.org/10.1111/conl.12833" class="uri">https://doi.org/10.1111/conl.12833</a></p>
 </div>
 <div id="scientific-papers-200-citations" class="section level3">
 <h3>19 scientific papers, &gt;200 citations</h3>
-<p><a href="https://scholar.google.com/citations?user=3ZhZiQgAAAAJ&amp;hl=en">Google Scholar Profile</a></p>
+<p><a target="_blank" href="https://scholar.google.com/citations?user=3ZhZiQgAAAAJ&amp;hl=en">Google Scholar Profile</a></p>
 
 
 
