@@ -2,7 +2,7 @@
 title: "Add your (R) plots and maps to Wikipedia!"
 author: "Oliver C. Stringham"
 date: "2022-03-15"
-slug: [add-r-plots-to-wikipedia]
+slug: add-r-plots-to-wikipedia
 categories: [data-visualization, r, gis]
 tags: [r, gis, wikipedia]
 summary: "There are plenty of opportunities to submit new (R) plots to Wikipedia. Let’s do it!"
