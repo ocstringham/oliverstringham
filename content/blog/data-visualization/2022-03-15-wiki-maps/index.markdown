@@ -5,7 +5,7 @@ date: "2022-03-15"
 slug: [add-r-plots-to-wikipedia]
 categories: [data-visualization, r, gis]
 tags: [r, gis, wikipedia]
-summary: "There are plently of opportunities to sumbit new (R) plots to Wikipedia. Let's do it!"
+summary: "There are plenty of opportunities to submit new (R) plots to Wikipedia. Let’s do it!"
 ---
 
 [1]: https://www.nytimes.com/2022/03/12/us/census-data-counting-changes.html
