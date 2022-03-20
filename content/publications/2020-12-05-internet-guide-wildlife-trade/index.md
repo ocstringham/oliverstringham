@@ -21,6 +21,10 @@ summary: 'The internet is a vast source of wildlife trade data. Here, we present
 subtitle: 'The internet is a vast source of wildlife trade data. Here, we present an accessible guide for Internet‐based wildlife trade surveillance, which uses a repeatable and systematic method to automate data collection from relevant websites. Our guide is adaptable to the multitude of trade‐based contexts including different focal taxa or derived parts, and locations of interest.'
 featured: no
 links:
+- icon: file-pdf
+  icon_pack: fas
+  name: PDF
+  url: publications/Stringham_et_al_2020_a_guide_to_using_internet_to_monitor_and_quantify_wildlife_trade.pdf
 - icon: researchgate
   icon_pack: ai
   name: Full Text & PDF
