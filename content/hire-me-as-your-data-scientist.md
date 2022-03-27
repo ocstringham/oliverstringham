@@ -50,12 +50,12 @@ date: "2021-12-11"
 <div id="skills" class="section level2">
 <h2><i class="fas fa-chart-pie"></i> Data analysis skills</h2>
 <ul>
-<li>Machine Learning, Regression:<br>
+<li>Machine Learning, Regression, Classification:<br>
 <i style="margin-left: 20px;">scikit-learn | tidymodels</i></li>
 <li>Geospatial Analysis:<br>
 <i style="margin-left: 20px;">sf | geopandas | PostGIS</i></li>
 <li>Data Visualization:<br>
-<i style="margin-left: 20px;">ggplot2 | seaborn</i></li>
+<i style="margin-left: 20px;">ggplot2 | seaborn | leaflet | html</i></li>
 </ul>
 
 
