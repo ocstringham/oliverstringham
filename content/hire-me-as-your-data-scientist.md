@@ -47,18 +47,47 @@ date: "2021-12-11"
 <li>HTML / CSS / Javascript</li>
 </ul>
 </div>
+
 <div id="skills" class="section level2">
-<h2><i class="fas fa-chart-pie"></i> Data analysis skills</h2>
-<ul>
-<li>Machine Learning, Regression, Classification:<br>
-<i style="margin-left: 20px;">scikit-learn | tidymodels</i></li>
-<li>Geospatial Analysis:<br>
-<i style="margin-left: 20px;">sf | geopandas | PostGIS</i></li>
-<li>Data Visualization:<br>
-<i style="margin-left: 20px;">ggplot2 | seaborn | leaflet | html</i></li>
-</ul>
+    <h2><i class="fas fa-chart-pie"></i> Data analysis skills</h2>
+    <ul>
+        <li>Machine Learning, Regression, Classification:<br>
+        <i style="margin-left: 20px;">scikit-learn | tidymodels</i></li>
+        <li>Geospatial Analysis:<br>
+        <i style="margin-left: 20px;">sf | geopandas | PostGIS</i></li>
+        <li>Data Visualization:<br>
+        <i style="margin-left: 20px;">ggplot2 | seaborn | leaflet | html</i></li>
+    </ul>
+</div>
 
-
+<div id="skills" class="section level2">
+    <h2><i class="fas fa-suitcase"></i> Professional Experience</h2>
+    <ul>
+        <li><b>Data Scientist</b> | 2020 - present<br>
+        Freelance (UpWork & Contract Work)<br>
+        USA & Australia<br>
+            <ul>
+                <li>Machine Learning models to predict daily number of orders for retail company</li>
+                <li>Spatial optimization to determine zones for delivery trucks</li>
+                <li>Spatial clustering methods to categorize property evaluation</li>
+                <li>Quantitative analysis of country-level deforestation rates from spatial data</li>
+            </ul>
+        </li>
+        <br>
+        <li><b>Research Associate</b> | 2019 - present<br>
+        The University of Adelaide<br>
+        Adelaide, Australia<br>
+        <ul>
+            <li>Applied data science principles to researching wildlife trade</li>
+            <li>Coded over 80 webscrapers to collect data of online wildlife trade</li>
+            <li>Created/maintained MySQL database of >6 million records for wildlife trade</li>
+            <li>Machine learning tools (text classification) to process online data</li>
+            <li>Created web application with python (Flask) for Australian gov’t</li>
+            <li>Communicated results in reports, papers, and talks</li>
+            <li>Supervised and lead a team of skilled professionals</li>
+        </ul>
+    </ul>
+</div>
 
 
 <div id="education" class="section level2" data-concise="true">
