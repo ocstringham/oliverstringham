@@ -1,7 +1,7 @@
 ---
-title: "Drivers of the live pet trade: the role of species traits, socioeconomic attributes and regulatory systems"
+title: "Drivers of the Australian native pet trade: The role of species traits, socioeconomic attributes and regulatory systems"
 author: "Adam Toomes, Pablo García-Díaz, Oliver C. Stringham, Joshua V. Ross, Lewis Mitchell, Phillip Cassey"
-date: '2021-08-27'
+date: '2022-02-14'
 slug: drivers-of-live-pet-trade
 categories: 
   - Research
@@ -10,19 +10,20 @@ tags:
   - legal wildlife trade
   - regulations
   - australia
-doi: '10.32942/osf.io/u5mv9'
-publishDate: '2021-08-27'
-# publication_types:
-#   - '2'
-# publication: 'PDF'
-summary: 'Understanding what drives the pet trade can help anticipate conservation, biosecurity, and welfare risks. We used South Australia’s native wildlife permit reporting system as a data-rich example of a live vertebrate pet market. We tested the influence of 11 a priori variables relating to pets (e.g., species traits), pet owners (e.g., socioeconomic metrics), and regulatory systems (e.g., permit requirements) on the quantities of bird and reptile captive keeping, breeding, trading, and escapes into the wild. We found that species traits are a strong determinant of pet trade dynamics, yet permit systems also play a key role in de-incentivising undesirable trade practices. While our research highlights the potential of trade regulatory systems, we recommend that consistent permit category criteria are established to reduce trade in threatened species, as well as alien species of high biosecurity risk.'
-subtitle: 'Understanding what drives the pet trade can help anticipate conservation, biosecurity, and welfare risks. We used South Australia’s native wildlife permit reporting system as a data-rich example of a live vertebrate pet market. We tested the influence of 11 a priori variables relating to pets (e.g., species traits), pet owners (e.g., socioeconomic metrics), and regulatory systems (e.g., permit requirements) on the quantities of bird and reptile captive keeping, breeding, trading, and escapes into the wild. We found that species traits are a strong determinant of pet trade dynamics, yet permit systems also play a key role in de-incentivising undesirable trade practices. While our research highlights the potential of trade regulatory systems, we recommend that consistent permit category criteria are established to reduce trade in threatened species, as well as alien species of high biosecurity risk.'
+doi: '10.1111/1365-2664.14138'
+publishDate: '2022-02-14'
+summary: 'Understanding what drives the pet trade can help anticipate conservation, biosecurity, and welfare risks. We used South Australia’s native wildlife permit reporting system as a data-rich example of a live vertebrate pet market. We used piecewise structural equation modelling (SEM) to test the influence of 11 a priori variables relating to pets (e.g., species traits), pet owners (e.g., socioeconomic metrics), and regulatory systems (e.g., permit requirements) on the quantities of bird and reptile captive keeping, breeding, trading, and escapes into the wild. We found that species traits are a strong determinant of pet trade dynamics, yet permit systems also play a key role in de-incentivising undesirable trade practices. While our research highlights the potential of trade regulatory systems, we recommend that consistent permit category criteria are established to reduce trade in threatened species, as well as alien species of high biosecurity risk.'
+subtitle: 'Understanding what drives the pet trade can help anticipate conservation, biosecurity, and welfare risks. We used South Australia’s native wildlife permit reporting system as a data-rich example of a live vertebrate pet market. We used piecewise structural equation modelling (SEM) to test the influence of 11 a priori variables relating to pets (e.g., species traits), pet owners (e.g., socioeconomic metrics), and regulatory systems (e.g., permit requirements) on the quantities of bird and reptile captive keeping, breeding, trading, and escapes into the wild. We found that species traits are a strong determinant of pet trade dynamics, yet permit systems also play a key role in de-incentivising undesirable trade practices. While our research highlights the potential of trade regulatory systems, we recommend that consistent permit category criteria are established to reduce trade in threatened species, as well as alien species of high biosecurity risk.'
 featured: no
 links:
-- icon: biorxiv
+- icon: file-pdf
+  icon_pack: fas
+  name: PDF
+  url: https://digital.library.adelaide.edu.au/dspace/bitstream/2440/134582/2/hdl_134582.pdf
+- icon: doi
   icon_pack: ai
-  name: Preprint Full Text
-  url: https://doi.org/10.32942/osf.io/u5mv9
+  name: Publication
+  url: https://doi.org/10.1111/1365-2664.14138
 ---
 
 ## Abstract
