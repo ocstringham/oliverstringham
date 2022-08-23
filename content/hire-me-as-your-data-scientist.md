@@ -3,8 +3,8 @@ text_align_right: false
 show_title_as_headline: false
 title: Hire me as your Data Scientist!
 subtitle: 
-    I'm looking for full time work.
-    I'm also available for freelance/contract work.
+    Starting May 2023, I'll be looking for full time work.
+    I'm currently available for freelance/contract work.
     I'm a trained research scientist who applies rigor to all facets of data science. I specialize in machine learning and geospatial analysis.
 slug: hire-me-as-your-data-scientist
 date: "2021-12-11"
@@ -74,7 +74,7 @@ date: "2021-12-11"
             </ul>
         </li>
         <br>
-        <li><b>Research Associate</b> | 2019 - present<br>
+        <li><b>Research Associate</b> | 2019 - 2022<br>
         The University of Adelaide<br>
         Adelaide, Australia<br>
         <ul>
