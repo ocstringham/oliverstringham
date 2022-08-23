@@ -9,7 +9,7 @@ headline: |
 <!-- this is a subheadline -->
 
 
-I am a postdoctoral research associate in the [Invasion Science and Wildlife Ecology Lab](https://www.cassey-invasion-ecology.org/) at the University of Adelaide, Australia. My research interests include using data science and statistics to solve conservation-related problems. Learn more about my [research interests](/research) and [publications](/publications). 
+I'm a Data Scientist and Scientific Researcher with many interests and skills. Learn more about my [research interests](/research) and [publications](/publications). 
 
 Thanks for taking the time to view my website &#128512;. Please [contact](/contact) me with any questions or comments. 
 
