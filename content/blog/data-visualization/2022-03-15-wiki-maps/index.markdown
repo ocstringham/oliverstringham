@@ -11,7 +11,7 @@ summary: "There are plenty of opportunities to submit new (R) plots to Wikipedia
 [1]: https://www.nytimes.com/2022/03/12/us/census-data-counting-changes.html
 [2]: https://en.wikipedia.org/wiki/New_Jersey#/media/File:Nj_pop_dens.png
 [3]: https://en.wikipedia.org/wiki/Talk:New_Jersey
-[4]: https://en.wikipedia.org/wiki/New_Jersey
+[4]: https://en.wikipedia.org/wiki/New_Jersey#Population
 
 
 ## Introduction 

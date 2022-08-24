@@ -5,7 +5,7 @@ title: Hire me as your Data Scientist!
 subtitle: 
     Starting May 2023, I'll be looking for full time work.
     I'm currently available for freelance/contract work.
-    I'm a trained research scientist who applies rigor to all facets of data science. I specialize in machine learning and geospatial analysis.
+    I'm a trained research scientist who applies rigor to all facets of data science. I have 6+ years doing data science work in various capacities, including at the non-profit, government, and academic level. I have many applied skills including machine learning, geospatial analysis, natural language processing, as well as general data acquisition (i.e. web scraping), cleaning, and analysis. I use a variety of coding environments including R, python, and SQL. I have 20 scientific publications with around 300 citations.
 slug: hire-me-as-your-data-scientist
 date: "2021-12-11"
 # links:

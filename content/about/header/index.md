@@ -9,7 +9,7 @@ headline: |
 <!-- this is a subheadline -->
 
 
-I'm a Data Scientist and Scientific Researcher with many interests and skills. Learn more about my [research interests](/research) and [publications](/publications). 
+I'm a Data Scientist and Scientific Researcher with many interests and skills. Learn more about my [research interests](/research) and [publications](/publications). See my [blog](/blog) for coding tutorials and visualizations. 
 
 Thanks for taking the time to view my website &#128512;. Please [contact](/contact) me with any questions or comments. 
 

@@ -2,7 +2,7 @@
 action_label: More about me &rarr;
 action_link: /about
 action_type: text
-description: I have 6+ years doing data science work in various capacities, including at the non-profit, government, and academic level. I have many applied skills including machine learning, geospatial analysis, natural language processing, as well as general data acquisition (i.e. web scraping), cleaning, and analysis. I use a variety of coding environments including R, python, and SQL. I have 20 scientific publications with around 300 citations. My current role is as a Senior Project Administrator at the Institute of Earth, Ocean, and Atmospheric Sciences of Rutgers University. 
+description: I am a Data Scientist and Scientific Researcher who is interested in using data and code to solve problems. My current role is as a Senior Project Administrator at the Institute of Earth, Ocean, and Atmospheric Sciences of Rutgers University. 
 image_left: true
 images:
 - /img/IMG_7351.JPG
