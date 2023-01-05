@@ -16,7 +16,7 @@ summary: "There are plenty of opportunities to submit new (R) plots to Wikipedia
 
 ## Introduction 
 
-Wikipedia is an amazing and we should contribute where we can! There are plenty of opportunities to add new plots or update existing plots. 
+Wikipedia is an amazing resource and we should contribute where we can! There are plenty of opportunities to add new plots or update existing plots. 
 
 One such opportunity, that I explore below, is the 2020 US census, which now is publicly available. There are many new maps and other data visualizations that can be made for Wikipedia articles using this dataset. Note, the 2020 Census was found to undercount communities of color<sup>[1][1]</sup>. Thus, care should be taken to address/acknowledge this bias when communicating visualizations with this data. 
 
