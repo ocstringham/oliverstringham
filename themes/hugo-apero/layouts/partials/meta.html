@@ -14,6 +14,16 @@
 <meta property="twitter:creator" content="@{{ . }}">
 {{ end }}
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BZCLH1RSP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0BZCLH1RSP');
+</script>
+
 <!--default sharing image-->
 {{- $site_card := printf "%s" site.Params.sharing_image | absURL }}
 
