@@ -135,11 +135,11 @@ enableEmoji = true
 #    title = "Project Themes"
 #    url = "/research/"
 #    weight = 3
-  [[menu.header]]
-    name = "Hire me"
-    title = "Hire me as your freelance data scientist"
-    url = "/hire-me-as-your-data-scientist/"
-    weight = 6
+  # [[menu.header]]
+  #   name = "Hire me"
+  #   title = "Hire me as your freelance data scientist"
+  #   url = "/hire-me-as-your-data-scientist/"
+  #   weight = 6
   [[menu.header]]
     name = "Publications"
     title = "Publications"
