@@ -100,10 +100,6 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://www.researchgate.net/profile/Oliver-Stringham-2"
   [[params.social]]
-      icon      = "twitter" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://twitter.com/OliverStringham"
-  [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://github.com/ocstringham"
