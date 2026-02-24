@@ -53,3 +53,6 @@ docs/
 # translation temp files
 po/*~
 static/resume.html
+
+/.quarto/
+**/*.quarto_ipynb
