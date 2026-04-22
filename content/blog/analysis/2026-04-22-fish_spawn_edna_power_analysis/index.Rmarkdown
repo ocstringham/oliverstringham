@@ -12,6 +12,7 @@ output:
     toc_float: true
     theme: flatly
     highlight: tango
+    code_folding: show
 ---
 
 ```{r setup, include=FALSE}
@@ -332,4 +333,9 @@ If you want to chat about this analysis — whether to poke holes in the methodo
 
 ---
 
+## Session Info
+
+```{r eval=TRUE, class.source='fold-hide', session-info}
+sessionInfo()
+```
 

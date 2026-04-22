@@ -12,6 +12,7 @@ output:
     toc_float: true
     theme: flatly
     highlight: tango
+    code_folding: show
 ---
 
 
@@ -334,4 +335,49 @@ If you want to chat about this analysis — whether to poke holes in the methodo
 
 ---
 
+## Session Info
+
+
+```{.r .fold-hide}
+sessionInfo()
+```
+
+```
+## R version 4.3.3 (2024-02-29 ucrt)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 11 x64 (build 26200)
+## 
+## Matrix products: default
+## 
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.utf8 
+## [2] LC_CTYPE=English_United States.utf8   
+## [3] LC_MONETARY=English_United States.utf8
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.utf8    
+## 
+## time zone: America/New_York
+## tzcode source: internal
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] ggplot2_4.0.1 broom_1.0.7   tidyr_1.3.1   furrr_0.3.1   future_1.34.0
+## [6] purrr_1.0.2   dplyr_1.1.4  
+## 
+## loaded via a namespace (and not attached):
+##  [1] gtable_0.3.6       jsonlite_1.8.8     compiler_4.3.3     tidyselect_1.2.1  
+##  [5] parallel_4.3.3     jquerylib_0.1.4    scales_1.4.0       globals_0.16.3    
+##  [9] yaml_2.3.10        fastmap_1.2.0      R6_2.6.1           generics_0.1.4    
+## [13] knitr_1.49         backports_1.5.0    tibble_3.3.1       bookdown_0.46     
+## [17] RColorBrewer_1.1-3 bslib_0.8.0        pillar_1.11.1      rlang_1.1.6       
+## [21] cachem_1.1.0       xfun_0.49          S7_0.2.1           sass_0.4.9        
+## [25] cli_3.6.5          withr_3.0.2        magrittr_2.0.3     grid_4.3.3        
+## [29] digest_0.6.37      rstudioapi_0.17.1  lifecycle_1.0.5    vctrs_0.6.5       
+## [33] evaluate_1.0.5     glue_1.7.0         farver_2.1.2       blogdown_1.23     
+## [37] listenv_0.9.1      codetools_0.2-19   parallelly_1.39.0  rmarkdown_2.29    
+## [41] tools_4.3.3        pkgconfig_2.0.3    htmltools_0.5.8.1
+```
 
