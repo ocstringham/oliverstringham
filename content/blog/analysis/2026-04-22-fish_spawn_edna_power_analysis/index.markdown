@@ -41,7 +41,7 @@ To answer this, I used the **coefficient of variation (CV = SD / mean)** calcula
 
 ---
 
-## R Library Setup
+## R Package Setup
 
 
 ``` r
