@@ -10,6 +10,8 @@ tags:
   - legal wildlife trade
   - regulations
   - australia
+  - invasive species
+  - conservation
 doi: '10.1111/1365-2664.14138'
 publishDate: '2022-02-14'
 summary: 'Understanding what drives the pet trade can help anticipate conservation, biosecurity, and welfare risks. We used South Australia’s native wildlife permit reporting system as a data-rich example of a live vertebrate pet market. We used piecewise structural equation modelling (SEM) to test the influence of 11 a priori variables relating to pets (e.g., species traits), pet owners (e.g., socioeconomic metrics), and regulatory systems (e.g., permit requirements) on the quantities of bird and reptile captive keeping, breeding, trading, and escapes into the wild. We found that species traits are a strong determinant of pet trade dynamics, yet permit systems also play a key role in de-incentivising undesirable trade practices. While our research highlights the potential of trade regulatory systems, we recommend that consistent permit category criteria are established to reduce trade in threatened species, as well as alien species of high biosecurity risk.'

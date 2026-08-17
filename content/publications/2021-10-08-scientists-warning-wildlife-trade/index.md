@@ -9,6 +9,8 @@ tags:
   - wildlife trade
   - legal wildlife trade
   - unsustainable
+  - invasive species
+  - conservation
 doi: '10.1016/j.biocon.2021.109341'
 publishDate: '2021-10-08'
 # publication_types:
