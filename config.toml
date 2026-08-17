@@ -126,11 +126,11 @@ enableEmoji = true
     title = "Blog"
     url = "/blog/"
     weight = 2
-#  [[menu.header]]
-#    name = "Research"
-#    title = "Project Themes"
-#    url = "/research/"
-#    weight = 3
+  [[menu.header]]
+    name = "Research"
+    title = "Project Themes"
+    url = "/research/"
+    weight = 3
   # [[menu.header]]
   #   name = "Hire me"
   #   title = "Hire me as your freelance data scientist"
